@@ -86,4 +86,35 @@ header span {
 /*************** HEADER ***************/
 h1 {
     margin-left: 10px;
+    color: var(--deep-slate-blue);
+}
+
+/*************** FOOTER ***************/
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: auto;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
 }
