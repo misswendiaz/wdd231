@@ -1,0 +1,131 @@
+
+:root {
+    /*----- COLOR SCHEME -----*/
+    --salmon-pink: #FA8072;
+    --light-blush: #FADCD9;
+    --warm-beige: #FFEFD5;
+    --warm-gray: #E5E5E5;
+    --charcoal: #333333;
+
+    /*----- FONTS -----*/
+    --serif: "Playfair Display";
+    --sans-serif: "Quicksand";
+    --script: "Dancing Script"
+}
+
+
+/*************** SITE WIDE ***************/
+* {
+    font-family: var(--sans-serif), sans-serif;
+    box-sizing: border-box;
+}
+
+/*************** HEADER ***************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10 px;
+    align-items: end;
+    border-bottom: solid 1px var(--salmon-pink);
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--charcoal);
+}
+
+/*************** HAMBURGER ***************/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--charcoal);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/*************** NAVIGATION ***************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.8rem 10px;
+    color: var(--charcoal);
+    text-decoration: none;
+    border-bottom: solid 1px var(--salmon-pink);
+}
+
+.navigation li.current {
+    background-color: var(--light-blush);
+}
+
+.navigation a:hover {
+    background-color: var(--salmon-pink);
+}
+
+/*************** HEADER ***************/
+h1 {
+    margin-left: 10px;
+    color: var(--salmon-pink);
+}
+
+/*************** FOOTER ***************/
+footer {
+    background-color: var(--light-blush);
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: var(--charcoal) solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}

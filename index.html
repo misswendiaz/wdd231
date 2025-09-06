@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Laureen Diaz's WDD 231 Home Page!">
+    <meta name="author" content="Laureen Diaz">
+    <title>WDD 231 Home Page</title>
+
+    <!--------------------GOOGLE FONTS-------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair:opsz@5..1200&family=Quicksand&display=swap" rel="stylesheet">
+
+
+    <!--------------------STYLES-------------------->
+    <link rel="stylesheet" href="styles/normailze.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--------------------JAVASCRIPTS-------------------->
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/house-fill.svg" alt="Site Logo" width="512" height="512">
+        <span>Laureen Diaz</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello, I’m Laureen Diaz!
+                I love learning, teaching, and connecting with others.
+                I teach mathematics at the University of the Philippines Diliman,
+                and outside of work I enjoy music, family history, solving puzzles,
+                and playing card and board games.
+                I also love watching K- and C-dramas,
+                and I find deep fulfillment in serving the Lord—both in the temple and through music.
+            </p>
+        </section>
+
+        <section id="photo">
+            <h2>Student Photo</h2>
+            <img src="images/myphoto.webp" alt="Laureen Diaz's phot">
+        </section>
+
+        <section id="certificates">
+            <h2>Web Certification Courses</h2>
+            <div class="courses">
+                <button id="all-btn">All</button>
+                <span id="all"></span>
+
+                <button id="cse-btn">CSE</button>
+                <span id="cse"></span>
+
+                <button id="wdd-btn">WDD</button>
+                <span id="wdd"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/dashboard" target="_blank">
+                <img src="images/github.svg" alt="GitHub" width="16" height="16">
+            </a>
+
+            <a href="https://www.linkedin.com/in/laureendiaz/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+            </a>
+
+            <a href="https://www.facebook.com/laureenadiaz" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook" width="16" height="16">
+            </a>
+        </div>
+        <p>
+            &copy
+
+            <span id="currentyear"></span>
+            
+            <span id="name">&#10024;Laureen Diaz&#10024;</span>
+
+            <span id="country">Philippines</span>
+        </p>
+        <p id="lastModified">Last Modified: </p>
+    </footer>
+</body>
+</html>
