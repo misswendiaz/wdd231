@@ -154,6 +154,7 @@ h1 {
     font-family: var(--serif), serif;
     color: var(--charcoal);
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 #about p {
@@ -171,6 +172,7 @@ h1 {
     font-family: var(--serif), serif;
     color: var(--charcoal);
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 #photo img {
@@ -186,6 +188,12 @@ h1 {
 #photo img:hover {
     transform: scale(1.05);
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*************** CERTIFICATES ***************/
+#certificates h2 {
+    text-align: center;
+    width: 100%;
 }
 
 /*************** COURSE CARDS ***************/
@@ -207,16 +215,24 @@ h1 {
 /* Completed courses → slightly green background */
 .courseCard.completed {
     background-color: #DFF2E1;
-    /* pale green for AAA contrast */
 }
 
 /* Not completed courses → slightly red background */
 .courseCard.not-completed {
     background-color: #FAD4D4;
-    /* pale red/pink for AAA contrast */
+}
+/*************** BUTTONS ***************/
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-/*************** BUTTONS ***************/
+.buttons button {
+    width: 100%;
+}
+
 #certificates button {
     margin: 0.3rem;
     padding: 0.5rem 1rem;
@@ -237,6 +253,11 @@ h1 {
 
 #certificates button:active {
     transform: scale(0.97);
+}
+
+/*************** CREDITS ***************/
+#credits {
+    text-align: center;
 }
 
 /*************** FOOTER ***************/
