@@ -36,11 +36,12 @@ body {
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
-    padding: 5px;
+    padding: 1rem 10px;
+    margin-bottom: 2rem;
     align-items: center;
     border-bottom: solid 1px var(--salmon-pink);
     column-gap: 8px;
-    background-color: var(--light-blush);
+    background-color: var(--light-blush);    
 }
 
 header img {
@@ -132,6 +133,14 @@ h1 {
     color: white;
 }
 
+#certificates button.active {
+    background-color: var(--salmon-pink);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
 
 /*************** ABOUT ME ***************/
 #about {

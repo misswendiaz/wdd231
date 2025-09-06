@@ -79,66 +79,82 @@ const courses = [
 ]
 
 
-// Create course cards and display them on the page
+// Create course cards
 function createCourseCards(coursesArray) {
     return coursesArray.map(course => {
         return `<div class="courseCard">
                     <p>
-                    ${course.subject} ${course.number} 
+                        ${course.subject} ${course.number} 
                         <span class="status ${course.completed ? "completed" : "not-completed"}">
                             ${course.completed ? "✔️ Completed" : "❌ Not Completed"}
                         </span>
-
                     </p>
                 </div>`;
     }).join("");
 }
 
-// Insert the course cards into the element with ID "courseCards"
-document.getElementById("courseCards").innerHTML = createCourseCards(courses);
+// Display credits for given array
+function displayCredits(coursesArray) {
+    const totalCredits = coursesArray.reduce((sum, course) => sum + course.credits, 0);
+    const completedCredits = coursesArray
+        .filter(course => course.completed)
+        .reduce((sum, course) => sum + course.credits, 0);
 
+    document.getElementById("credits").innerHTML = `
+        <p><strong>Total Credits:</strong> ${totalCredits}</p>
+        <p><strong>Completed Credits:</strong> ${completedCredits}</p>
+    `;
+}
+
+// Helper: update UI with courses + credits
+function updateUI(coursesArray) {
+    document.getElementById("courseCards").innerHTML = createCourseCards(coursesArray);
+    displayCredits(coursesArray);
+}
+
+// Helper: set active button
+function setActiveButton(buttonId) {
+    document.querySelectorAll("#certificates button").forEach(btn => {
+        btn.classList.remove("active");
+    });
+    document.getElementById(buttonId).classList.add("active");
+}
 
 // Show all courses
 function getAllCourses() {
-    document.getElementById("courseCards").innerHTML = createCourseCards(courses);
-    // document.getElementById("filter").innerHTML = `Home`
+    updateUI(courses);
+    setActiveButton("all-btn");
 }
 
-// Add event listener for the "All" button to show all the courses
+// Filter CSE
+function getCSECourses() {
+    const cseCourses = courses.filter(course => course.subject === "CSE");
+    updateUI(cseCourses);
+    setActiveButton("cse-btn");
+}
+
+// Filter WDD
+function getWDDCourses() {
+    const wddCourses = courses.filter(course => course.subject === "WDD");
+    updateUI(wddCourses);
+    setActiveButton("wdd-btn");
+}
+
+// Event listeners
 document.getElementById("all-btn").addEventListener("click", (e) => {
-    e.preventDefault(); // prevent anchor default behavior
+    e.preventDefault();
     getAllCourses();
 });
 
-// Filter CSE courses
-function getCSECourses() {
-    const cseCourses = courses.filter(course => {
-        return course.subject === "CSE"
-    }
-    );
-    document.getElementById("courseCards").innerHTML = createCourseCards(cseCourses);
-}
-
-
-// Add event listener for the "CSE" button to filter CSE courses
 document.getElementById("cse-btn").addEventListener("click", (e) => {
-    e.preventDefault(); // prevent anchor default behavior
+    e.preventDefault();
     getCSECourses();
 });
 
-
-// Filter WDD courses
-function getWDDCourses() {
-    const wddCourses = courses.filter(course => {
-        return course.subject === "WDD"
-    }
-    );
-    document.getElementById("courseCards").innerHTML = createCourseCards(wddCourses);
-}
-
-
-// Add event listener for the "WDD" button to filter CSE courses
 document.getElementById("wdd-btn").addEventListener("click", (e) => {
-    e.preventDefault(); // prevent anchor default behavior
+    e.preventDefault();
     getWDDCourses();
 });
+
+// Initial load
+getAllCourses();
