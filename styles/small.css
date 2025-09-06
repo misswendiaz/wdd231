@@ -12,9 +12,9 @@
     --light-red: #FDECEA;
 
     /*----- FONTS -----*/
-    --serif: "Playfair Display";
-    --sans-serif: "Quicksand";
-    --script: "Dancing Script"
+    --serif: "Playfair Display", serif;
+    --sans-serif: "Quicksand", sans-serif;
+    --script: "Dancing Script";
 }
 
 
