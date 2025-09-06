@@ -225,8 +225,12 @@ h1 {
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 1rem;
+}
+
+.buttons button {
+    width: 100%;
 }
 
 #certificates button {
