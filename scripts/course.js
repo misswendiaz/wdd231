@@ -77,3 +77,68 @@ const courses = [
         completed: false
     }
 ]
+
+
+// Create course cards and display them on the page
+function createCourseCards(coursesArray) {
+    return coursesArray.map(course => {
+        return `<div class="courseCard">
+                    <p>
+                    ${course.subject} ${course.number} 
+                        <span class="status ${course.completed ? "completed" : "not-completed"}">
+                            ${course.completed ? "✔️ Completed" : "❌ Not Completed"}
+                        </span>
+
+                    </p>
+                </div>`;
+    }).join("");
+}
+
+// Insert the course cards into the element with ID "courseCards"
+document.getElementById("courseCards").innerHTML = createCourseCards(courses);
+
+
+// Show all courses
+function getAllCourses() {
+    document.getElementById("courseCards").innerHTML = createCourseCards(courses);
+    // document.getElementById("filter").innerHTML = `Home`
+}
+
+// Add event listener for the "All" button to show all the courses
+document.getElementById("all-btn").addEventListener("click", (e) => {
+    e.preventDefault(); // prevent anchor default behavior
+    getAllCourses();
+});
+
+// Filter CSE courses
+function getCSECourses() {
+    const cseCourses = courses.filter(course => {
+        return course.subject === "CSE"
+    }
+    );
+    document.getElementById("courseCards").innerHTML = createCourseCards(cseCourses);
+}
+
+
+// Add event listener for the "CSE" button to filter CSE courses
+document.getElementById("cse-btn").addEventListener("click", (e) => {
+    e.preventDefault(); // prevent anchor default behavior
+    getCSECourses();
+});
+
+
+// Filter WDD courses
+function getWDDCourses() {
+    const wddCourses = courses.filter(course => {
+        return course.subject === "WDD"
+    }
+    );
+    document.getElementById("courseCards").innerHTML = createCourseCards(wddCourses);
+}
+
+
+// Add event listener for the "WDD" button to filter CSE courses
+document.getElementById("wdd-btn").addEventListener("click", (e) => {
+    e.preventDefault(); // prevent anchor default behavior
+    getWDDCourses();
+});

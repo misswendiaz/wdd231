@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!--------------------JAVASCRIPTS-------------------->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
     <script src="scripts/date.js" defer></script>
 </head>
 <body>
@@ -59,16 +61,10 @@
 
         <section id="certificates">
             <h2>Web Certification Courses</h2>
-            <div class="courses">
-                <button id="all-btn">All</button>
-                <span id="all"></span>
-
-                <button id="cse-btn">CSE</button>
-                <span id="cse"></span>
-
-                <button id="wdd-btn">WDD</button>
-                <span id="wdd"></span>
-            </div>
+            <button id="all-btn">All</button>
+            <button id="cse-btn">CSE</button>
+            <button id="wdd-btn">WDD</button>
+            <div id="courseCards"></div>
         </section>
     </main>
 

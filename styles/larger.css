@@ -56,4 +56,8 @@
     #certificates {
         grid-column: 1/3;
     }
+
+    #courseCards {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
