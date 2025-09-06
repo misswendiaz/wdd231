@@ -190,11 +190,7 @@ h1 {
 
 /*************** COURSE CARDS ***************/
 #courseCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* responsive columns */
-    gap: 1rem;
-    /* space between cards */
+    display: block;
 }
 
 .courseCard {

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 320px) {
 
     header,
     main,
@@ -58,6 +58,8 @@
     }
 
     #courseCards {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
 }
