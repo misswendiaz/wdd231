@@ -105,13 +105,13 @@ header span {
 
 .navigation a:hover {
     background-color: var(--salmon-pink);
-    color: white;
+    color: black;
 }
 
 /*************** MAIN ***************/
 h1 {
     margin: 1rem 10px;
-    color: var(--salmon-pink);
+    color: var(--charcoal);
 }
 
 #certificates {
@@ -130,12 +130,12 @@ h1 {
 
 #certificates button:hover {
     background: var(--salmon-pink);
-    color: white;
+    color: black;
 }
 
 #certificates button.active {
     background-color: var(--salmon-pink);
-    color: white;
+    color: black;
     font-weight: bold;
     border: none;
     padding: 0.5rem 1rem;
@@ -153,7 +153,7 @@ h1 {
 
 #about h2 {
     font-family: var(--serif), serif;
-    color: var(--salmon-pink);
+    color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
@@ -170,7 +170,7 @@ h1 {
 
 #photo h2 {
     font-family: var(--serif), serif;
-    color: var(--salmon-pink);
+    color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
@@ -192,56 +192,33 @@ h1 {
 /*************** COURSE CARDS ***************/
 #courseCards {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* responsive columns */
     gap: 1rem;
-    margin: 1rem 0;
+    /* space between cards */
 }
 
 .courseCard {
-    background: var(--warm-beige);
     border: 1px solid var(--salmon-pink);
     border-radius: 8px;
     padding: 1rem;
-    margin: 1rem 0;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: justify;
-}
-
-.courseCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.courseCard h3 {
-    font-family: var(--serif), serif;
+    margin: 0.5rem 0;
+    background-color: var(--warm-beige);
+    /* restore your original neutral background */
     color: var(--charcoal);
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
+    /* keep original text color */
 }
 
-.courseCard p {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.courseCard .status {
-    font-weight: bold;
-    margin-left: 0.5rem;
-}
-
+/* Completed courses → slightly green background */
 .courseCard.completed {
-    background: var(--light-green);
-    border: 1px solid var(--green);
+    background-color: #DFF2E1;
+    /* pale green for AAA contrast */
 }
 
-.courseCard .status.completed {
-    color: var(--green);
-}
-
-.courseCard .status.not-completed {
-    color: var(--red);
+/* Not completed courses → slightly red background */
+.courseCard.not-completed {
+    background-color: #FAD4D4;
+    /* pale red/pink for AAA contrast */
 }
 
 /*************** BUTTONS ***************/
@@ -259,7 +236,7 @@ h1 {
 
 #certificates button:hover {
     background: var(--salmon-pink);
-    color: white;
+    color: black;
     transform: scale(1.05);
 }
 

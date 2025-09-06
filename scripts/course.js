@@ -89,17 +89,9 @@ const courses = [
 function createCourseCards(coursesArray) {
     return coursesArray.map(course => {
         return `
-            <div class="courseCard">
-                <p>
-                    ${course.subject} ${course.number}
-                    <span class="status ${course.completed ? "completed" : "not-completed"}">
-                        ${course.completed ? "✔️ Completed" : "❌ Not Completed"}
-                    </span>
-                </p>
-                <h3>${course.title}</h3>
-                <p><strong>Credits:</strong> ${course.credits}</p>
-                <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
-                <p class="desc">${course.description}</p>
+            <div class="courseCard ${course.completed ? "completed" : "not-completed"}">
+                <p>${course.subject} ${course.number}</p>
+                <p>${course.completed ? "✔️ Completed" : "❌ Not Completed"}</p>
             </div>
         `;
     }).join(""); // join makes it one string instead of an array
