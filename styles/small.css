@@ -205,6 +205,7 @@ h1 {
     margin: 1rem 0;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: justify;
 }
 
 .courseCard:hover {

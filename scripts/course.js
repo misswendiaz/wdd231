@@ -1,3 +1,6 @@
+// ==========================
+// COURSE DATA
+// ==========================
 const courses = [
     {
         subject: 'CSE',
@@ -79,21 +82,34 @@ const courses = [
 ]
 
 
-// Create course cards
+// ==========================
+// CREATE COURSE CARDS
+// ==========================
+// This builds HTML cards for each course dynamically
 function createCourseCards(coursesArray) {
     return coursesArray.map(course => {
-        return `<div class="courseCard">
-                    <p>
-                        ${course.subject} ${course.number} 
-                        <span class="status ${course.completed ? "completed" : "not-completed"}">
-                            ${course.completed ? "✔️ Completed" : "❌ Not Completed"}
-                        </span>
-                    </p>
-                </div>`;
-    }).join("");
+        return `
+            <div class="courseCard">
+                <p>
+                    ${course.subject} ${course.number}
+                    <span class="status ${course.completed ? "completed" : "not-completed"}">
+                        ${course.completed ? "✔️ Completed" : "❌ Not Completed"}
+                    </span>
+                </p>
+                <h3>${course.title}</h3>
+                <p><strong>Credits:</strong> ${course.credits}</p>
+                <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
+                <p class="desc">${course.description}</p>
+            </div>
+        `;
+    }).join(""); // join makes it one string instead of an array
 }
 
-// Display credits for given array
+
+// ==========================
+// DISPLAY CREDITS
+// ==========================
+// Calculates and displays total + completed credits for a given array
 function displayCredits(coursesArray) {
     const totalCredits = coursesArray.reduce((sum, course) => sum + course.credits, 0);
     const completedCredits = coursesArray
@@ -106,13 +122,21 @@ function displayCredits(coursesArray) {
     `;
 }
 
-// Helper: update UI with courses + credits
+
+// ==========================
+// UPDATE UI
+// ==========================
+// Re-renders both the course cards and the credits at the same time
 function updateUI(coursesArray) {
     document.getElementById("courseCards").innerHTML = createCourseCards(coursesArray);
     displayCredits(coursesArray);
 }
 
-// Helper: set active button
+
+// ==========================
+// ACTIVE BUTTON HANDLER
+// ==========================
+// Highlights the currently selected button
 function setActiveButton(buttonId) {
     document.querySelectorAll("#certificates button").forEach(btn => {
         btn.classList.remove("active");
@@ -120,27 +144,36 @@ function setActiveButton(buttonId) {
     document.getElementById(buttonId).classList.add("active");
 }
 
+
+// ==========================
+// FILTER FUNCTIONS
+// ==========================
+
 // Show all courses
 function getAllCourses() {
     updateUI(courses);
     setActiveButton("all-btn");
 }
 
-// Filter CSE
+// Show only CSE courses
 function getCSECourses() {
     const cseCourses = courses.filter(course => course.subject === "CSE");
     updateUI(cseCourses);
     setActiveButton("cse-btn");
 }
 
-// Filter WDD
+// Show only WDD courses
 function getWDDCourses() {
     const wddCourses = courses.filter(course => course.subject === "WDD");
     updateUI(wddCourses);
     setActiveButton("wdd-btn");
 }
 
-// Event listeners
+
+// ==========================
+// EVENT LISTENERS
+// ==========================
+// These connect the buttons to the filter functions
 document.getElementById("all-btn").addEventListener("click", (e) => {
     e.preventDefault();
     getAllCourses();
@@ -156,5 +189,9 @@ document.getElementById("wdd-btn").addEventListener("click", (e) => {
     getWDDCourses();
 });
 
-// Initial load
+
+// ==========================
+// INITIAL LOAD
+// ==========================
+// Start with "All" selected when the page loads
 getAllCourses();
