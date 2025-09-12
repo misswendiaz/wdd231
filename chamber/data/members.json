@@ -1,0 +1,112 @@
+{
+    "members" : [
+        {
+            "name" : "BDO Unibank, Inc.",
+            "addresses" : {
+                "address1" : "7899 Makati Avenue",
+                "address2" : "Makati City, Philippines 0726"
+            },
+            "phonenumbers" : "(+632) 8888-0000",
+            "url" : "https://www.bdo.com.ph/personal",
+            "image" : "https://misswendiaz.github.io/wdd231/chamber/images/bdo.svg",
+            "membershiplevel" : "1",
+            "other" : ""
+        },
+        {
+            "name": "Bank of the Philippine Islands",
+            "addresses": {
+                "address1": "6768 Ayala Avenue",
+                "address2": "Makati City, Philippines 1226"
+            },
+            "phonenumbers": "(+632) 8891-0000",
+            "url": "https://www.bpi.com.ph/",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/bpi.webp",
+            "membershiplevel": "1",
+            "other": ""
+        },
+        {
+            "name": "Chevron Philippines, Inc.",
+            "addresses": {
+                "address1": "6/F 6750 Ayala Avenue",
+                "address2": "Makati City, Philippines 1226"
+            },
+            "phonenumbers": "(+632) 8813-6013",
+            "url": "https://www.chevron.com/worldwide/philippines",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/chevron.webp",
+            "membershiplevel": "3",
+            "other": ""
+        },
+        {
+            "name": "Monde Nissin Corp.",
+            "addresses": {
+                "address1": "22F 6750 Ayala Avenue",
+                "address2": "Makati City, Philippines 1224"
+            },
+            "phonenumbers": "(+632) 8810-3550",
+            "url": "https://mondenissin.com/",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/mondenissin.webp",
+            "membershiplevel": "2",
+            "other": ""
+        },
+        {
+            "name": "Nestle Philippines, Inc",
+            "addresses": {
+                "address1": "31 Plaza Drive, Rockwell Center",
+                "address2": "Makati City, Philippines 1200"
+            },
+            "phonenumbers": "",
+            "url": "https://www.nestle.com.ph/",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/nestle.webp",
+            "membershiplevel": "3",
+            "other": ""
+        },
+        {
+            "name": "Petron Corp.",
+            "addresses": {
+                "address1": "358 Sen. Gil J. Puyat Avenue",
+                "address2": "Makati City, Philippines 1227"
+            },
+            "phonenumbers": "(+632) 8478-5152",
+            "url": "https://www.petron.com/#",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/petron.webp",
+            "membershiplevel": "3",
+            "other": ""
+        },
+        {
+            "name": "PLDT, Inc.",
+            "addresses": {
+                "address1": "Ramon Cojuangco Bldg., Makati Ave. cor Ayala Ave.",
+                "address2": "Makati City, Philippines 1200"
+            },
+            "phonenumbers": "(+632) 8888-8171",
+            "url": "https://pldthome.com/",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/pldt.webp",
+            "membershiplevel": "",
+            "other": ""
+        },
+        {
+            "name": "Semirara Mining and Power Corp.",
+            "addresses": {
+                "address1": "2/F DMCI Plaza, 2281 Don Chino Roces Ave.",
+                "address2": "Makati City, Philippines 1231"
+            },
+            "phonenumbers": "(+632) 8888-3955",
+            "url": "https://www.semiraramining.com/",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/semirara.webp",
+            "membershiplevel": "",
+            "other": ""
+        },
+        {
+            "name": "Smart Communications, Inc.",
+            "addresses": {
+                "address1": "6799 Ayala Avenue",
+                "address2": "Makati City, Philippines 1226"
+            },
+            "phonenumbers": "(+632) 8888-1111",
+            "url": "https://smart.com.ph/corporate",
+            "image": "https://misswendiaz.github.io/wdd231/chamber/images/smart.webp",
+            "membershiplevel": "",
+            "other": ""
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+:root {
+    /***** COLOR PALETTE *****/
+    --golden-yellow: #FFC107;
+    --green: #4CAF50;
+    --very-light-gray: #FAFAFA;
+    --dark-charcoal: #212121;
+    --deep-green: #1B5E20;
+    --dark-gold: #B8860B;
+
+
+    /***** TYPOGRAPHY *****/
+    --serif: Merriweather;
+    --sans-serif: "Source Code Pro";
+}
+
+
+
+/***** SITE WIDE *****/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/***** HEADER *****/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 1rem 10px;
+    margin-bottom: 2rem;
+    align-items: center;
+    border-bottom: solid 1px var(--dark-gold);
+    column-gap: 8px;
+    background-color: var(--golden-yellow);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--charcoal);
+}
