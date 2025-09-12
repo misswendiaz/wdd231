@@ -10,7 +10,8 @@
             "url" : "https://www.bdo.com.ph/personal",
             "image" : "https://misswendiaz.github.io/wdd231/chamber/images/bdo.svg",
             "membershiplevel" : "1",
-            "other" : ""
+            "tagline" : "We Find Ways",
+            "email" : "callcenter@bdo.com.ph"
         },
         {
             "name": "Bank of the Philippine Islands",
@@ -22,7 +23,8 @@
             "url": "https://www.bpi.com.ph/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/bpi.webp",
             "membershiplevel": "1",
-            "other": ""
+            "tagline": "Do More with BPI",
+            "email": "bizlink@bpi.com.ph"
         },
         {
             "name": "Chevron Philippines, Inc.",
@@ -34,7 +36,8 @@
             "url": "https://www.chevron.com/worldwide/philippines",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/chevron.webp",
             "membershiplevel": "3",
-            "other": ""
+            "tagline": "Enjoy the Journey",
+            "email": "askcaltex@chevron.com"
         },
         {
             "name": "Monde Nissin Corp.",
@@ -46,7 +49,8 @@
             "url": "https://mondenissin.com/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/mondenissin.webp",
             "membershiplevel": "2",
-            "other": ""
+            "tagline": "Making Better Possible",
+            "email": "inquiry@mondenissin.com"
         },
         {
             "name": "Nestle Philippines, Inc",
@@ -58,7 +62,8 @@
             "url": "https://www.nestle.com.ph/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/nestle.webp",
             "membershiplevel": "3",
-            "other": ""
+            "tagline": "Good food, Good life",
+            "email": "consumer.services@ph.nestle.com"
         },
         {
             "name": "Petron Corp.",
@@ -70,7 +75,8 @@
             "url": "https://www.petron.com/#",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/petron.webp",
             "membershiplevel": "3",
-            "other": ""
+            "tagline": "talk2us@petron.com",
+            "email": "Tapat Sa'yo"
         },
         {
             "name": "PLDT, Inc.",
@@ -82,7 +88,8 @@
             "url": "https://pldthome.com/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/pldt.webp",
             "membershiplevel": "",
-            "other": ""
+            "tagline": "PLDT — Leading and inspiring Filipinos to create a better tomorrow",
+            "email": "enterprisecare@pldt.com.ph"
         },
         {
             "name": "Semirara Mining and Power Corp.",
@@ -94,7 +101,8 @@
             "url": "https://www.semiraramining.com/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/semirara.webp",
             "membershiplevel": "",
-            "other": ""
+            "tagline": "Transforming for the Nation",
+            "email": "corpcomm@semirarampc.com"
         },
         {
             "name": "Smart Communications, Inc.",
@@ -106,7 +114,8 @@
             "url": "https://smart.com.ph/corporate",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/smart.webp",
             "membershiplevel": "",
-            "other": ""
+            "tagline": "Live More Today",
+            "email": " enterprisesupport@smart.com.ph"
         }
     ]
 }
