@@ -47,7 +47,7 @@ header {
 
 header img {
     width: 50px;
-    height: auto;
+    height: 46px;
 }
 
 header span {
@@ -199,8 +199,8 @@ section {
 }
 
 .member-logo {
-    width: 100%;
-    max-width: 120px;
+    width: 120px;
+    height: 120px;
     aspect-ratio: 1 / 1;
     object-fit: contain;
     background-color: white;
@@ -212,6 +212,8 @@ section {
 
 .member-name {
     font-size: 1.25rem;
+    line-height: 1.4;
+    min-height: 1.8rem;
     font-weight: bold;
     margin: 0.5rem 0;
     font-family: var(--serif);
@@ -263,10 +265,22 @@ footer {
     font-size: 0.8rem;
 }
 
+.footer-details p {
+    line-height: 1.2;
+    min-height: 1.4rem;
+    white-space: nowrap;
+}
+
 footer .social img {
-    min-width: 44px;
-    width: auto;
-    height: auto;
+    width: 44px;
+    height: 44px;
+}
+
+#currentyear,
+#lastModified {
+    min-height: 1.4rem;
+    display: block;
+    font-size: 0.8rem;
 }
 
 /***** LARGER SCREENS *****/
