@@ -305,6 +305,14 @@ footer {
     max-width: 100%;
 }
 
+.footer-details {
+    min-height: 4rem;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .footer-details p {
     line-height: 1.2;
     white-space: nowrap;
