@@ -42,7 +42,7 @@ async function getMemberData() {
 };
 
 const displayMembers = (members) => {
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         //Create elements to add to the div.cards element and their class
         let card = document.createElement('section');
 
