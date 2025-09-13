@@ -51,14 +51,16 @@ const displayMembers = (members) => {
         image.classList.add("member-logo");
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Logo of ${member.name}`);
-        image.setAttribute('loading', 'lazy');
         image.setAttribute('width', '120');
         image.setAttribute('height', '120');
 
         // fetchpriority="high" only to the first image
-        if (index === 0) {
+        if (index === 0 || index === 1) {
             image.setAttribute('fetchpriority', 'high');
-            image.removeAttribute('loading'); // avoid conflict
+            // Don't lazy-load these two
+        } else {
+            image.setAttribute('loading', 'lazy');
+        }
 
         // Name
         let name = document.createElement('h2');
