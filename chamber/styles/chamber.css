@@ -300,12 +300,12 @@ footer {
 
 .footer-member, .footer-details {
     font-size: 0.8rem;
+    min-height: 1.4rem;
+    max-width: 100%;
 }
 
 .footer-details p {
     line-height: 1.2;
-    min-height: 1.4rem;
-    max-width: 100%;
     white-space: nowrap;
 }
 
