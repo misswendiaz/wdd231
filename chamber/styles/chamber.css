@@ -295,7 +295,8 @@ footer {
     background-color: var(--golden-yellow);
     border-top: 5px solid var(--dark-gold);
     text-align: center;
-    min-height: 120px;
+    min-height: 1.4rem;
+    max-width: 100%;
 }
 
 .footer-member, .footer-details {
