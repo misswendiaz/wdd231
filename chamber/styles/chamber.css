@@ -23,7 +23,7 @@
     font-family: var(--sans-serif);
 }
 
-h1, h2 {
+h1 {
     font-family: var(--serif);
     color: var(--deep-green);
 }
@@ -109,6 +109,7 @@ header span {
 
 .navigation a:hover {
     background-color: var(--dark-gold);
+    color: var(--very-light-gray);
 }
 
 
@@ -137,9 +138,11 @@ h1 {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 2rem;
-    color: var(--deep-green);
-    transition:transform 0.2s;
+}
+
+.view-toggle button img {
+    width: 40px;
+    height: auto;
 }
 
 .view-toggle button:hover {
@@ -154,6 +157,10 @@ h1 {
 
 #cards.list {
     display: block;
+}
+
+#cards.list .member-logo {
+    display: none;
 }
 
 #cards.list .member-card {
@@ -184,7 +191,7 @@ section {
     border-radius: 8px;
     padding: 20px;
     background-color: var(--very-light-gray);
-    gap: 10px;
+    gap: 5px;
 }
 
 .member-logo {
@@ -201,6 +208,7 @@ section {
     font-size: 1.25rem;
     font-weight: bold;
     margin: 0.5rem 0;
+    font-family: var(--serif);
 }
 
 .member-tagline {
@@ -208,7 +216,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.member-contact {
+.member-details {
     font-size: 0.85rem;
     margin: 0.2rem 0;
 }
@@ -221,20 +229,29 @@ footer {
     padding: 1rem;
     background-color: var(--golden-yellow);
     border-top: 5px solid var(--dark-gold);
-    gap: 10px;
+    gap: 1rem;
+    text-align: center;
 }
 
-footer p:first-child {
+footer .footer-member {
+    grid-column: 1/2;
     text-align: left;
 }
 
 footer .social {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
-footer p:last-child {
+footer .social img {
+    min-width: 44px;
+    height: auto;
+}
+
+footer .footer-details {
+    grid-column: 3/4;
     text-align: right;
 }
 

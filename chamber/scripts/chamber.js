@@ -56,13 +56,13 @@ const displayMembers = (members) => {
         image.classList.add("member-logo");
 
         let email = document.createElement('p');
-        email.classList.add("member-contact");
+        email.classList.add("member-details");
 
         let phonenumbers = document.createElement('p');
-        phonenumbers.classList.add("member-contact");
+        phonenumbers.classList.add("member-details");
 
         let url = document.createElement('p');
-        url.classList.add("member-contact");
+        url.classList.add("member-details");
 
         //Build the h2 content out to show the member's full name
         name.textContent = `${member.name}`;
@@ -102,15 +102,15 @@ getMemberData();
 const currentYear = new Date().getFullYear();
 
 // Insert the current year into the element with ID "currentyear"
-document.getElementById("currentyear").textContent = currentYear;
+document.getElementById("currentyear").textContent = `© ${currentYear}`;
 
 // Get the raw date when the document was last modified
 const rawDate = new Date(document.lastModified);
 
 // Create a date formatter for US English, with full date and 24-hour time
 const formatter = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "full", // e.g., Friday, July 4, 2025
-    timeStyle: "long", // e.g. 21:21:25 GMT+8
+    dateStyle: "medium",
+    timeStyle: "short",
     hour12: false // 24-hour format
 })
 
