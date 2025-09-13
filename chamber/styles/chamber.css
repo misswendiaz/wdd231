@@ -154,7 +154,6 @@ h1 {
 .view-toggle button img {
     min-width: 44px;
     height: auto;
-    aspect-ratio: 1 / 1;
 }
 
 .view-toggle button:hover {
