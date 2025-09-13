@@ -126,7 +126,7 @@ const displayMembers = (members) => {
 
             // Name column
             let name = document.createElement('div');
-            name.classList.add("member-col");
+            name.classList.add("member-name-col");
             name.textContent = member.name;
 
             // Address column

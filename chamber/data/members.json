@@ -3,7 +3,7 @@
         {
             "name" : "BDO Unibank, Inc.",
             "addresses" : {
-                "address1" : "7899 Makati Avenue",
+                "address1" : "7899 Makati Ave.",
                 "address2" : "Makati City, Philippines 0726"
             },
             "phonenumbers" : "(+632) 8888-0000",
@@ -16,7 +16,7 @@
         {
             "name": "Bank of the Philippine Islands",
             "addresses": {
-                "address1": "6768 Ayala Avenue",
+                "address1": "6768 Ayala Ave.",
                 "address2": "Makati City, Philippines 1226"
             },
             "phonenumbers": "(+632) 8891-0000",
@@ -29,7 +29,7 @@
         {
             "name": "Chevron Philippines, Inc.",
             "addresses": {
-                "address1": "6/F 6750 Ayala Avenue",
+                "address1": "6/F 6750 Ayala Ave.",
                 "address2": "Makati City, Philippines 1226"
             },
             "phonenumbers": "(+632) 8813-6013",
@@ -42,7 +42,7 @@
         {
             "name": "Monde Nissin Corp.",
             "addresses": {
-                "address1": "22F 6750 Ayala Avenue",
+                "address1": "22F 6750 Ayala Ave.",
                 "address2": "Makati City, Philippines 1224"
             },
             "phonenumbers": "(+632) 8810-3550",
@@ -53,9 +53,9 @@
             "email": "inquiry@mondenissin.com"
         },
         {
-            "name": "Nestle Philippines, Inc",
+            "name": "Nestle Philippines, Inc.",
             "addresses": {
-                "address1": "31 Plaza Drive, Rockwell Center",
+                "address1": "31 Plaza Drive",
                 "address2": "Makati City, Philippines 1200"
             },
             "phonenumbers": "(+632) 4790-2705",
@@ -68,7 +68,7 @@
         {
             "name": "Petron Corp.",
             "addresses": {
-                "address1": "358 Sen. Gil J. Puyat Avenue",
+                "address1": "358 Sen. Gil J. Puyat Ave.",
                 "address2": "Makati City, Philippines 1227"
             },
             "phonenumbers": "(+632) 8478-5152",
@@ -81,7 +81,7 @@
         {
             "name": "PLDT, Inc.",
             "addresses": {
-                "address1": "Ramon Cojuangco Bldg., Makati Ave. cor Ayala Ave.",
+                "address1": "Makati Ave. cor Ayala Ave.",
                 "address2": "Makati City, Philippines 1200"
             },
             "phonenumbers": "(+632) 8888-8171",
@@ -94,7 +94,7 @@
         {
             "name": "Semirara Mining and Power Corp.",
             "addresses": {
-                "address1": "2/F DMCI Plaza, 2281 Don Chino Roces Ave.",
+                "address1": "2281 Don Chino Roces Ave.",
                 "address2": "Makati City, Philippines 1231"
             },
             "phonenumbers": "(+632) 8888-3955",
@@ -107,7 +107,7 @@
         {
             "name": "Smart Communications, Inc.",
             "addresses": {
-                "address1": "6799 Ayala Avenue",
+                "address1": "6799 Ayala Ave.",
                 "address2": "Makati City, Philippines 1226"
             },
             "phonenumbers": "(+632) 8888-1111",
