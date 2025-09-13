@@ -20,7 +20,7 @@
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:opsz@18..144&family=Source+Code+Pro&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:opsz@18..144&display=swap"
         rel="stylesheet">
 
     <!--STYLES-->
@@ -32,21 +32,29 @@
 </head>
 <body>
     <header>
-        <img src="images/makati-logo.png" alt="Site Logo" width="120" height="110">
-        <span>Makati City Chamber of Commerce</span>
+        <div class="branding">
+            <img src="images/makati-logo.png" alt="Site Logo" width="120" height="110">
+            <span>Makati City Chamber of Commerce</span>
+        </div>
+
         <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li class="current"><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav id="nav-bar" class="navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Discover</a></li>
-            <li class="current"><a href="#">Directory</a></li>
-            <li><a href="#">Join</a></li>
-        </ul>
-    </nav>
 
     <main>
+        <div class="view-toggle">
+            <button id="grid-btn" aria-label="Grid View">🔳</button>
+            <button id="list-btn" aria-label="List View">📄</button>
+        </div>
+
         <div id="cards"></div>
     </main>
 

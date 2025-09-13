@@ -1,3 +1,35 @@
+// HAMBURGER
+//Store the selected elements that we are going to use.
+const navButton = document.querySelector("#ham-btn");
+const navLinks = document.querySelector("#nav-bar");
+
+//Toggle the show class off and on
+navButton.addEventListener("click", () => {
+    navButton.classList.toggle("show");
+    navLinks.classList.toggle("show");
+});
+
+
+// VIEW
+// Grid & List view toggle
+const gridBtn = document.querySelector("#grid-btn");
+const listBtn = document.querySelector("#list-btn");
+
+const display = document.getElementById("cards");
+
+gridBtn.addEventListener("click", () => {
+    display.classList.add("grid");
+    display.classList.remove("list");
+});
+
+listBtn.addEventListener("click", () => {
+    display.classList.add("list");
+    display.classList.remove("grid");
+});
+
+
+
+// MEMBER CARDS
 const url = 'https://misswendiaz.github.io/wdd231/chamber/data/members.json';
 
 const cards = document.querySelector('#cards');
@@ -11,14 +43,26 @@ async function getMemberData() {
 
 const displayMembers = (members) => {
     members.forEach((member) => {
-        //Create elements to add to the div.cards element
+        //Create elements to add to the div.cards element and their class
         let card = document.createElement('section');
+
         let name = document.createElement('h2');
+        name.classList.add("member-name");
+
         let tagline = document.createElement('p');
+        tagline.classList.add("member-tagline");
+
         let image = document.createElement('img');
+        image.classList.add("member-logo");
+
         let email = document.createElement('p');
+        email.classList.add("member-contact");
+
         let phonenumbers = document.createElement('p');
+        phonenumbers.classList.add("member-contact");
+
         let url = document.createElement('p');
+        url.classList.add("member-contact");
 
         //Build the h2 content out to show the member's full name
         name.textContent = `${member.name}`;
@@ -51,7 +95,7 @@ getMemberData();
 
 
 
-
+// Grid and List View Buttons
 
 
 // Get the current year

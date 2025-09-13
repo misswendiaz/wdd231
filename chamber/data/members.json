@@ -75,8 +75,8 @@
             "url": "https://www.petron.com/#",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/petron.webp",
             "membershiplevel": "3",
-            "tagline": "talk2us@petron.com",
-            "email": "Tapat Sa'yo"
+            "tagline": "Tapat Sa'yo",
+            "email": "talk2us@petron.com"
         },
         {
             "name": "PLDT, Inc.",
@@ -115,7 +115,7 @@
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/smart.webp",
             "membershiplevel": "",
             "tagline": "Live More Today",
-            "email": " enterprisesupport@smart.com.ph"
+            "email": "enterprisesupport@smart.com.ph"
         }
     ]
 }
