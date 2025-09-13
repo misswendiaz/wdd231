@@ -52,6 +52,8 @@ const displayMembers = (members) => {
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Logo of ${member.name}`);
         image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '120');
+        image.setAttribute('height', '120');
 
         // Name
         let name = document.createElement('h2');
