@@ -45,6 +45,7 @@ const displayMembers = (members) => {
     members.forEach((member) => {
         //Create elements to add to the div.cards element and their class
         let card = document.createElement('section');
+        card.classList.add("member-card");
 
         let name = document.createElement('h2');
         name.classList.add("member-name");
