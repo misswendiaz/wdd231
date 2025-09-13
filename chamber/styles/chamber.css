@@ -48,6 +48,7 @@ header {
 header img {
     width: 50px;
     height: auto;
+    aspect-ratio: 1 / 1;
 }
 
 header span {
@@ -153,6 +154,7 @@ h1 {
 .view-toggle button img {
     min-width: 44px;
     height: auto;
+    aspect-ratio: 1 / 1;
 }
 
 .view-toggle button:hover {
@@ -265,6 +267,7 @@ footer .social img {
     min-width: 44px;
     width: auto;
     height: auto;
+    aspect-ratio: 1 / 1;
 }
 
 /***** LARGER SCREENS *****/
