@@ -46,51 +46,58 @@ const displayMembers = (members) => {
         //Create elements to add to the div.cards element and their class
         let card = document.createElement('section');
 
-        let name = document.createElement('h2');
-        name.classList.add("member-name");
-
-        let tagline = document.createElement('p');
-        tagline.classList.add("member-tagline");
-
+        // Logo
         let image = document.createElement('img');
         image.classList.add("member-logo");
-
-        let email = document.createElement('p');
-        email.classList.add("member-details");
-
-        let phonenumbers = document.createElement('p');
-        phonenumbers.classList.add("member-details");
-
-        let url = document.createElement('p');
-        url.classList.add("member-details");
-
-        //Build the h2 content out to show the member's full name
-        name.textContent = `${member.name}`;
-
-        //Build the p content out to show the member's data
-        tagline.textContent = `${member.tagline}`;
-        email.textContent = `EMAIL: ${member.email}`;
-        phonenumbers.textContent = `PHONE: ${member.phonenumbers}`;
-        url.textContent = `URL: ${member.url}`;
-
-        //Build the image by setting all the relevant attributes
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Logo of ${member.name}`);
         image.setAttribute('loading', 'lazy');
         image.setAttribute('width', '100');
         image.setAttribute('height', '100');
 
-        //Append the section(card) with the created elements
-        card.appendChild(image);
-        card.appendChild(name);
-        card.appendChild(tagline);
-        card.appendChild(email);
-        card.appendChild(phonenumbers);
-        card.appendChild(url);
+        // Name
+        let name = document.createElement('h2');
+        name.classList.add("member-name");
+        name.textContent = member.name;
 
+        // Tagline
+        let tagline = document.createElement('p');
+        tagline.classList.add("member-tagline");
+        tagline.textContent = member.tagline;
+
+        // Email
+        let email = document.createElement('p');
+        email.classList.add("member-details");
+        email.innerHTML = `
+            <img src="images/envelope.svg" alt="Email" class="icon">
+            <a href="mailto:${member.email}">${member.email}</a>
+        `;
+
+        // PHONE
+        let phone = document.createElement('p');
+        phone.classList.add("member-details");
+        phone.innerHTML = `
+            <img src="images/phone.svg" alt="Phone" class="icon">
+            <a href="tel:${member.phonenumbers}">${member.phonenumbers}</a>
+        `;
+
+
+        // URL
+        let link = document.createElement('p');
+        link.classList.add("member-details");
+        link.innerHTML = `
+            <img src="images/url.svg" alt="Website" class="icon">
+            <a href="${member.url}" target="_blank" rel="noopener noreferrer">
+                ${new URL(member.url).hostname.replace(/^www\./, '')}
+            </a>
+        `;
+
+        // Append elements
+        card.append(image, name, tagline, email, phone, link);
         cards.appendChild(card);
     });
 }
+
 getMemberData();
 
 
@@ -102,7 +109,7 @@ getMemberData();
 const currentYear = new Date().getFullYear();
 
 // Insert the current year into the element with ID "currentyear"
-document.getElementById("currentyear").textContent = `© ${currentYear}`;
+document.getElementById("currentyear").textContent = `© ${currentYear} Makati City Chamber of Commerece`;
 
 // Get the raw date when the document was last modified
 const rawDate = new Date(document.lastModified);
