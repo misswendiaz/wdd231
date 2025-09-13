@@ -81,7 +81,7 @@
         {
             "name": "PLDT, Inc.",
             "addresses": {
-                "address1": "Makati Ave. cor Ayala Ave.",
+                "address1": "Makati cor Ayala Ave.",
                 "address2": "Makati City, Philippines 1200"
             },
             "phonenumbers": "(+632) 8888-8171",
@@ -94,7 +94,7 @@
         {
             "name": "Semirara Mining and Power Corp.",
             "addresses": {
-                "address1": "2281 Don Chino Roces Ave.",
+                "address1": "2281 Chino Roces Ave.",
                 "address2": "Makati City, Philippines 1231"
             },
             "phonenumbers": "(+632) 8888-3955",
