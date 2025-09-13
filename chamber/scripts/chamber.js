@@ -55,6 +55,11 @@ const displayMembers = (members) => {
         image.setAttribute('width', '120');
         image.setAttribute('height', '120');
 
+        // fetchpriority="high" only to the first image
+        if (index === 0) {
+            image.setAttribute('fetchpriority', 'high');
+            image.removeAttribute('loading'); // avoid conflict
+
         // Name
         let name = document.createElement('h2');
         name.classList.add("member-name");
