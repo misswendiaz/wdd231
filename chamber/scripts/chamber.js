@@ -72,6 +72,11 @@ const displayMembers = (members) => {
         tagline.classList.add("member-tagline");
         tagline.textContent = member.tagline;
 
+        // Address
+        let address1 = document.createElement('p');
+        address1.classList.add("member-details");
+        address1.textContent = member.address1;
+
         // Email
         let email = document.createElement('p');
         email.classList.add("member-details");
@@ -100,7 +105,7 @@ const displayMembers = (members) => {
         `;
 
         // Append elements
-        card.append(image, name, tagline, email, phone, link);
+        card.append(image, name, tagline, address1, email, phone, link);
         cards.appendChild(card);
     });
 }
