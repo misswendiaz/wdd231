@@ -274,6 +274,10 @@ section {
 .member-details {
     font-size: 1.05rem;
     margin: 0.2rem 0;
+    line-height: 1.4;
+    min-height: 1.4em;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .member-details a {
@@ -306,8 +310,13 @@ footer {
     background-color: var(--golden-yellow);
     border-top: 5px solid var(--dark-gold);
     text-align: center;
-    min-height: 1.4rem;
+    min-height: 6rem;
     max-width: 100%;
+}
+
+footer p {
+    line-height: 1.3;
+    margin: 0.1rem 0;
 }
 
 .footer-member, .footer-details {
@@ -317,10 +326,12 @@ footer {
 }
 
 .footer-details {
-    min-height: 4rem;
+    min-height: auto;
     max-width: 300px;
     white-space: normal;
-    overflow: break-word;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.3;
 }
 
 .footer-details p {
@@ -377,6 +388,7 @@ footer .social img {
         border-top: 5px solid var(--dark-gold);
         gap: 1rem;
         text-align: center;
+        min-height: 6rem;
     }
 
     footer .footer-member {
@@ -396,6 +408,7 @@ footer .social img {
         grid-column: 3/4;
         text-align: right;
         margin-right: 1rem;
+        white-space: normal;
     }
 }
 
