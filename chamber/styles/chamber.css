@@ -48,7 +48,6 @@ header {
 header img {
     width: 50px;
     height: auto;
-    aspect-ratio: 1 / 1;
 }
 
 header span {
@@ -296,34 +295,34 @@ footer .social img {
         align-items: stretch;
     }
 
-        footer {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            padding: 1rem;
-            background-color: var(--golden-yellow);
-            border-top: 5px solid var(--dark-gold);
-            gap: 1rem;
-            text-align: center;
-        }
-    
-        footer .footer-member {
-            grid-column: 1/2;
-            text-align: left;
-            margin-left: 1rem;
-        }
-    
-        footer .social {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-        }
-    
-        footer .footer-details {
-            grid-column: 3/4;
-            text-align: right;
-            margin-right: 1rem;
-        }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--golden-yellow);
+        border-top: 5px solid var(--dark-gold);
+        gap: 1rem;
+        text-align: center;
+    }
+
+    footer .footer-member {
+        grid-column: 1/2;
+        text-align: left;
+        margin-left: 1rem;
+    }
+
+    footer .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer .footer-details {
+        grid-column: 3/4;
+        text-align: right;
+        margin-right: 1rem;
+    }
 }
 
