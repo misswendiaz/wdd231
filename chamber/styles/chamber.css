@@ -175,11 +175,35 @@ h1 {
     display: none;
 }
 
-#cards.list .member-card {
-    display: flex;
-    align-items: center;
+
+/***** LIST VIEW STYLES *****/
+#cards.list .member-card.list-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 2fr;
     gap: 1rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    background-color: white;
+    font-size: 0.95rem;
+}
+
+.member-col {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    #cards.list .member-card.list-row {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .member-col {
+        white-space: normal;
+        margin-bottom: 0.5rem;
+    }
 }
 
 /***** CARDS *****/
@@ -201,6 +225,7 @@ section {
 .member-logo {
     width: 120px;
     height: 120px;
+    max-width: 120px;
     aspect-ratio: 1 / 1;
     object-fit: contain;
     background-color: white;
