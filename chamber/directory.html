@@ -26,6 +26,8 @@
     <!--STYLES-->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <!--JAVASCRIPTS-->
     <script src="scripts/chamber.js" defer></script>
@@ -34,7 +36,7 @@
     <header>
         <div class="branding">
             <img src="images/makati-logo.png" alt="Site Logo" width="120" height="110">
-            <h1>Makati City Chamber of Commerce</h1>
+            <span>Makati City Chamber of Commerce</span>
         </div>
 
         <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
@@ -50,9 +52,15 @@
     </header>
 
     <main>
+        <h1>Directory</h1>
         <div class="view-toggle">
-            <button id="grid-btn" aria-label="Grid View">🔳</button>
-            <button id="list-btn" aria-label="List View">📄</button>
+            <button id="grid-btn" aria-label="Grid View">
+                <i class="fas fa-th"></i>
+            </button>
+            <button id="list-btn" aria-label="List View">
+                <i class="fas fa-list"></i>
+            </button>
+
         </div>
 
         <div id="cards"></div>
