@@ -45,7 +45,6 @@ const displayMembers = (members) => {
     members.forEach((member) => {
         //Create elements to add to the div.cards element and their class
         let card = document.createElement('section');
-        card.classList.add("member-card");
 
         let name = document.createElement('h2');
         name.classList.add("member-name");
@@ -82,9 +81,9 @@ const displayMembers = (members) => {
         image.setAttribute('height', '100');
 
         //Append the section(card) with the created elements
+        card.appendChild(image);
         card.appendChild(name);
         card.appendChild(tagline);
-        card.appendChild(image);
         card.appendChild(email);
         card.appendChild(phonenumbers);
         card.appendChild(url);
