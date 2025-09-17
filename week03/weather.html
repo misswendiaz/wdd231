@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 231 Weather Data</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="styles/weather.css">
 
     <!--JAVASCRIPT-->
-    <script src="/scripts/weather.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 <body>
-    <h1>OpenWeatherMap.org API Test</h1>
     <main>
+        <h1>API Weather Lab</h1>
+        <div class="card">
+            <h2 id="town"></h2>
+            <img id="graphic" src="" alt="">
+            <p id="description"></p>
+            <p id="temperature"></p>
+        </div>
+
         <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
         <figure>
             <img id="weather-icon" src="" alt="">
