@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="styles/chamber.css" />
 
     <!--JAVASCRIPTS-->
-    <script src="scripts/chamber.js" defer></script>
+    <script type="module" src="scripts/chamber.js" defer></script>
 </head>
 <body>
     <header>
@@ -61,17 +61,43 @@
         <div id="hero">
             <img src="images/makati-hero.webp" alt="Makati City Chamber of Commerce">
         </div>
+
+        <!-- CTA -->
         <button id="cta">Join Now!</button>
-        <section id="events">
+
+        <!-- CARDS -->
+        <section class="cards" id="events">
             <h2>Events</h2>
         </section>
-        <section id="current-weather">
+
+        <section class="cards" id="current-weather">
             <h2>Current Weather</h2>
+            <img id="weather-icon" src="" alt="">
+            <p id="description"></p>
+            <p id="temperature"></p>
+            <p id="high"></p>
+            <p id="low"></p>
+            <p id="humidity"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
         </section>
-        <section id="weather-forecast">
-            <h2>Weather Forecast</h2>
+        <section class="cards" id="temperature-forecast">
+            <h2>Temperature Forecast</h2>
+            <p id="day1"></p>
+            <p id="day2"></p>
+            <p id="day3"></p>
         </section>
-        <section id="spotlight"></section>
+
+        <!-- SPOTLIGHT -->
+        <section id="spotlight">
+            <div id="member1">
+                <h3 id="name1"></h3>
+                <p id="tagline"></p>
+                <p id="email"></p>
+                <p id="phone"></p>
+                <p id="url"></p>
+            </div>
+        </section>
     </main>
 
     <footer>
