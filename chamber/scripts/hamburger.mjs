@@ -12,9 +12,3 @@ export function initHamburger(navButton, navLinks) {
         navLinks.classList.toggle("show");
     });
 }
-
-// //Toggle the show class off and on
-// export function toggleMenu(button, nav) {
-//     button.classList.toggle("show");
-//     nav.classList.toggle("show");
-// };

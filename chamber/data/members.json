@@ -2,9 +2,9 @@
     "members" : [
         {
             "name" : "BDO Unibank, Inc.",
-            "addresses" : {
-                "address1" : "7899 Makati Ave.",
-                "address2" : "Makati City, Philippines 0726"
+            "address" : {
+                "street" : "7899 Makati Ave.",
+                "city" : "Makati City, Philippines 0726"
             },
             "phonenumbers" : "(+632) 8888-0000",
             "url" : "https://www.bdo.com.ph/personal",
@@ -15,9 +15,9 @@
         },
         {
             "name": "Bank of the Philippine Islands",
-            "addresses": {
-                "address1": "6768 Ayala Ave.",
-                "address2": "Makati City, Philippines 1226"
+            "address": {
+                "street": "6768 Ayala Ave.",
+                "city": "Makati City, Philippines 1226"
             },
             "phonenumbers": "(+632) 8891-0000",
             "url": "https://www.bpi.com.ph/",
@@ -28,9 +28,9 @@
         },
         {
             "name": "Chevron Philippines, Inc.",
-            "addresses": {
-                "address1": "6/F 6750 Ayala Ave.",
-                "address2": "Makati City, Philippines 1226"
+            "address": {
+                "street": "6/F 6750 Ayala Ave.",
+                "city": "Makati City, Philippines 1226"
             },
             "phonenumbers": "(+632) 8813-6013",
             "url": "https://www.chevron.com/worldwide/philippines",
@@ -41,9 +41,9 @@
         },
         {
             "name": "Monde Nissin Corp.",
-            "addresses": {
-                "address1": "22F 6750 Ayala Ave.",
-                "address2": "Makati City, Philippines 1224"
+            "address": {
+                "street": "22F 6750 Ayala Ave.",
+                "city": "Makati City, Philippines 1224"
             },
             "phonenumbers": "(+632) 8810-3550",
             "url": "https://mondenissin.com/",
@@ -54,9 +54,9 @@
         },
         {
             "name": "Nestle Philippines, Inc.",
-            "addresses": {
-                "address1": "31 Plaza Drive",
-                "address2": "Makati City, Philippines 1200"
+            "address": {
+                "street": "31 Plaza Drive",
+                "city": "Makati City, Philippines 1200"
             },
             "phonenumbers": "(+632) 4790-2705",
             "url": "https://www.nestle.com.ph/",
@@ -67,9 +67,9 @@
         },
         {
             "name": "Petron Corp.",
-            "addresses": {
-                "address1": "358 Sen. Gil J. Puyat Ave.",
-                "address2": "Makati City, Philippines 1227"
+            "address": {
+                "street": "358 Sen. Gil J. Puyat Ave.",
+                "city": "Makati City, Philippines 1227"
             },
             "phonenumbers": "(+632) 8478-5152",
             "url": "https://www.petron.com/#",
@@ -80,9 +80,9 @@
         },
         {
             "name": "PLDT, Inc.",
-            "addresses": {
-                "address1": "Makati cor Ayala Ave.",
-                "address2": "Makati City, Philippines 1200"
+            "address": {
+                "street": "Makati cor Ayala Ave.",
+                "city": "Makati City, Philippines 1200"
             },
             "phonenumbers": "(+632) 8888-8171",
             "url": "https://pldthome.com/",
@@ -93,9 +93,9 @@
         },
         {
             "name": "Semirara Mining and Power Corp.",
-            "addresses": {
-                "address1": "2281 Chino Roces Ave.",
-                "address2": "Makati City, Philippines 1231"
+            "address": {
+                "street": "2281 Chino Roces Ave.",
+                "city": "Makati City, Philippines 1231"
             },
             "phonenumbers": "(+632) 8888-3955",
             "url": "https://www.semiraramining.com/",
@@ -106,9 +106,9 @@
         },
         {
             "name": "Smart Communications, Inc.",
-            "addresses": {
-                "address1": "6799 Ayala Ave.",
-                "address2": "Makati City, Philippines 1226"
+            "address": {
+                "street": "6799 Ayala Ave.",
+                "city": "Makati City, Philippines 1226"
             },
             "phonenumbers": "(+632) 8888-1111",
             "url": "https://smart.com.ph/corporate",

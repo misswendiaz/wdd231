@@ -85,11 +85,11 @@ const displayMembers = (members) => {
             tagline.textContent = member.tagline;
 
             // Address
-            let addresses = document.createElement('p');
-            addresses.classList.add("member-details");
-            addresses.innerHTML =
+            let address = document.createElement('p');
+            address.classList.add("member-details");
+            address.innerHTML =
                 `<img src="images/office.svg" alt="Office" class="icon">
-                ${member.addresses.address1} ${member.addresses.address2}`;
+                ${member.address.street}, ${member.address.city}`;
 
             // Email
             let email = document.createElement('p');
@@ -118,7 +118,7 @@ const displayMembers = (members) => {
             `;
 
             // Append
-            card.append(image, name, tagline, addresses, email, phone, link);
+            card.append(image, name, tagline, address, email, phone, link);
 
         } else {
             // --- LIST VIEW CONTENT ---
@@ -134,7 +134,7 @@ const displayMembers = (members) => {
             // Address column
             let address = document.createElement('div');
             address.classList.add("member-col");
-            address.textContent = `${member.addresses.address1} ${member.addresses.address2}`;
+            address.textContent = `${member.address.street} ${member.address.city}`;
 
             // Phone column
             let phone = document.createElement('div');
