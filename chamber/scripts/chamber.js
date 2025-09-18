@@ -9,6 +9,11 @@ import { getMemberData } from "./members.mjs";
 // Date
 import { updateDates } from "./date.mjs";
 
+// Current Weather
+import { apiFetch } from "./weather.mjs"
+
+
+
 // === HAMBURGER MENU ===
 //Store the selected elements that we are going to use.
 const navButton = document.querySelector("#ham-btn");
@@ -41,6 +46,10 @@ listBtn.addEventListener("click", () => {
 
 // Load members initially
 getMemberData(cards);
+
+
+// === WEATHER ===
+apiFetch();
 
 // === FOOTER ===
 

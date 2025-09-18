@@ -20,20 +20,21 @@ export function updateDates(
     // Get the raw date when the document was last modified
     const rawDate = new Date(document.lastModified);
 
-    // Create a date formatter for US English
-    const formatter = new Intl.DateTimeFormat("en-US", {
-        dateStyle: "medium",
-        timeStyle: "short",
-        hour12: false // 24-hour format
+    // Format the date
+    const formattedDate = rawDate.toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
     });
 
-    // Format the raw date
-    const formattedDate = formatter.format(rawDate);
 
     // Insert the formatted date string into the selected element
-    const modifiedELement = document.querySelector(modifiedSelector);
-    if (modifiedELement) {
-        modifiedELement.textContent =
+    const modifiedElement = document.querySelector(modifiedSelector);
+    if (modifiedElement) {
+        modifiedElement.textContent =
             `Last Modified: ${formattedDate}`;
     }
 }
