@@ -1,7 +1,9 @@
-// HAMBURGER
+
 
 import { initHamburger } from "./hamburger.mjs";
+import { getMemberData } from "./members.mjs";
 
+// === HAMBURGER ===
 //Store the selected elements that we are going to use.
 const navButton = document.querySelector("#ham-btn");
 const navLinks = document.querySelector("#nav-bar");
@@ -12,151 +14,29 @@ navButton.addEventListener("click", () => {
 });
 
 
-// VIEW
-// Grid & List view toggle
+// === GRID or LIST VIEW ===
 const gridBtn = document.querySelector("#grid-btn");
 const listBtn = document.querySelector("#list-btn");
-
-const display = document.getElementById("cards");
+const cards = document.querySelector("#cards");
 
 gridBtn.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
+    cards.classList.add("grid");
+    cards.classList.remove("list");
     cards.innerHTML = ""; // clear current
-    getMemberData();      // reload
+    getMemberData(cards); // reload
 });
 
 listBtn.addEventListener("click", () => {
-    display.classList.add("list");
-    display.classList.remove("grid");
-    cards.innerHTML = ""; // clear current
-    getMemberData();      // reload
+    cards.classList.add("list");
+    cards.classList.remove("grid");
+    cards.innerHTML = ""; //clear current
+    getMemberData(cards); // reload
 });
 
+// Load members initially
+getMemberData(cards);
 
-
-
-// MEMBER CARDS
-const url = 'https://misswendiaz.github.io/wdd231/chamber/data/members.json';
-
-const cards = document.querySelector('#cards');
-
-async function getMemberData() {
-    const response = await fetch(url); // request
-    const data = await response.json(); // parse the JSON data
-    // console.table(data.prophets); // temp output test of data response 
-    displayMembers(data.members); // note that you reference the members array of the JSON data object, not just the object
-};
-
-const displayMembers = (members) => {
-    members.forEach((member, index) => {
-        // Create the card
-        let card = document.createElement('section');
-        card.classList.add("member-card");
-
-        // Determine if we are in grid or list view
-        const isListView = display.classList.contains('list');
-
-        if (!isListView) {
-            // --- GRID VIEW CONTENT ---
-
-            // Logo
-            let image = document.createElement('img');
-            image.classList.add("member-logo");
-            image.setAttribute('src', member.image);
-            image.setAttribute('alt', `Logo of ${member.name}`);
-            image.setAttribute('width', '120');
-            image.setAttribute('height', '120');
-
-            if (index === 0 || index === 1) {
-                image.setAttribute('fetchpriority', 'high');
-            } else {
-                image.setAttribute('loading', 'lazy');
-            }
-
-            // Name
-            let name = document.createElement('h2');
-            name.classList.add("member-name");
-            name.textContent = member.name;
-
-            // Tagline
-            let tagline = document.createElement('p');
-            tagline.classList.add("member-tagline");
-            tagline.textContent = member.tagline;
-
-            // Address
-            let address = document.createElement('p');
-            address.classList.add("member-details");
-            address.innerHTML =
-                `<img src="images/office.svg" alt="Office" class="icon">
-                ${member.address.street}, ${member.address.city}`;
-
-            // Email
-            let email = document.createElement('p');
-            email.classList.add("member-details");
-            email.innerHTML = `
-                <img src="images/envelope.svg" alt="Email" class="icon">
-                <a href="mailto:${member.email}">${member.email}</a>
-            `;
-
-            // Phone
-            let phone = document.createElement('p');
-            phone.classList.add("member-details");
-            phone.innerHTML = `
-                <img src="images/phone.svg" alt="Phone" class="icon">
-                <a href="tel:${member.phonenumbers}">${member.phonenumbers}</a>
-            `;
-
-            // URL
-            let link = document.createElement('p');
-            link.classList.add("member-details");
-            link.innerHTML = `
-                <img src="images/url.svg" alt="Website" class="icon">
-                <a href="${member.url}" target="_blank" rel="noopener noreferrer">
-                    ${new URL(member.url).hostname.replace(/^www\./, '')}
-                </a>
-            `;
-
-            // Append
-            card.append(image, name, tagline, address, email, phone, link);
-
-        } else {
-            // --- LIST VIEW CONTENT ---
-
-            // Add a class for flex layout
-            card.classList.add("list-row");
-
-            // Name column
-            let name = document.createElement('div');
-            name.classList.add("member-name-col");
-            name.textContent = member.name;
-
-            // Address column
-            let address = document.createElement('div');
-            address.classList.add("member-col");
-            address.textContent = `${member.address.street} ${member.address.city}`;
-
-            // Phone column
-            let phone = document.createElement('div');
-            phone.classList.add("member-col");
-            phone.innerHTML = `<a href="tel:${member.phonenumbers}">${member.phonenumbers}</a>`;
-
-            // URL column
-            let url = document.createElement('div');
-            url.classList.add("member-col");
-            url.innerHTML = `<a href="${member.url}" target="_blank" rel="noopener noreferrer">${new URL(member.url).hostname.replace(/^www\./, '')}</a>`;
-
-            // Append in row order
-            card.append(name, address, phone, url);
-        }
-
-        cards.appendChild(card);
-    });
-};
-
-
-getMemberData();
-
+// === FOOTER ===
 
 // Get the current year
 const currentYear = new Date().getFullYear();

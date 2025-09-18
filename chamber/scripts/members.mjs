@@ -64,14 +64,14 @@ function displayMembers(members, container) {
             tagline.textContent = member.tagline;
 
             // Address with Office icon
-            let addresses = document.createElement("p");
-            addresses.classList.add("member-details");
-            addresses.innerHTML =
+            let address = document.createElement("p");
+            address.classList.add("member-details");
+            address.innerHTML =
                 `<img src="images/office.svg"
                 alt="Office"
                 class="icon">
-                ${member.addresses.address1}, ${member.addresses.address2}`;
-            
+                ${member.address.street}, ${member.address.city}`;
+
             // Email with Envelope icon and mailto link
             let email = document.createElement("p");
             email.classList.add("member-details");
@@ -79,7 +79,7 @@ function displayMembers(members, container) {
                 `<img src="images/envelope.svg"
                 alt="Email" class="icon">
                 <a href="mailto:${member.email}">${member.email}</a>`;
-            
+
             // Phone number with Phone icon and Tel link
             let phone = document.createElement("p");
             phone.classList.add("member-details");
@@ -88,7 +88,7 @@ function displayMembers(members, container) {
                 alt="Phone"
                 class="icon">
                 <a href="tel:${member.phonenumbers}">${member.phonenumbers}</a>`;
-            
+
             // Shortened Website URL with Globe icon
             let link = document.createElement("p");
             link.classList.add("member-details");
@@ -102,12 +102,26 @@ function displayMembers(members, container) {
                 rel="noopener noreferrer">
                 ${new URL(member.url).hostname.replace(/^www\./, "")}
                 </a>`;
-            
-            // Append the columns into the row (card)
-            card.append(image, name, tagline, addresses, email, phone, link);
+
+            // Append the columns into the container (grid or list)
+            card.append(image, name, tagline, address, email, phone, link);
+        } else {
+            // --- LIST VIEW CONTENT ---
+            card.innerHTML =
+                `<h2>${member.name}</h2>
+                <p>${member.tagline}</p>
+                <p>${member.address.street}, ${member.address.city}</p>
+                <p><a href="mailto:${member.email}">${member.email}</a></p>
+                <p><a href="tel:${member.phonenumbers}">${member.phonenumbers}</a></p>
+                <p><a href="${member.url}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        ${new URL(member.url).hostname.replace(/^www\./, "")}
+                    </a>
+                </p>`;
         }
 
-        // Finally, add the card into the container (grid or list area)
+        // Finally, add the card into the container (grid or list)
         container.appendChild(card);
     });
 }
