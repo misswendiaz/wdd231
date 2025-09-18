@@ -9,7 +9,7 @@ const sunrise = document.querySelector("#sunrise");
 const sunset = document.querySelector("#sunset");
 
 // OpenWeatherMap Credentials and Location
-const APIKey = "1e08c4fc57a3294e16414fd0a18d8f33"
+const APIKey = "434d1a43740c015186a3d355806974c6"
 const latitude = "14.554398820974072"
 const longitude = "121.023873395248"
 
