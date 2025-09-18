@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample directory of local businesses and organizations that are presented as members of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
+    <meta name="description" content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample landing (home) page of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
     <meta name="author" content="Laureen Diaz">
-
+    
     <!--SOCIAL MEDIA (FACEBOOK) META-->
-    <meta property="og:title" content="Directory - Makati City Chamber of Commerce">
-    <meta property="og:description"
-        content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample directory of local businesses and organizations that are presented as members of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
+    <meta property="og:title" content="Home - Makati City Chamber of Commerce">
+    <meta property="og:description" content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample landing (home) page of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
     <meta property="og:image" content="https://misswendiaz.github.io/wdd231/chamber/images/makati.jpg">
-    <meta property="og:url" content="https://misswendiaz.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://misswendiaz.github.io/wdd231/chamber/index.html">
 
-    <title>Directory - Makati City Chamber of Commerce</title>
+    <title>Home - Makati City Chamber of Commerce</title>
 
     <!--FAV ICON-->
     <link rel="icon" href="images/favicon.ico">
@@ -29,10 +26,10 @@
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:opsz@18..144&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" crossorigin>
-
+   
     <!--STYLES-->
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/chamber.css" />
@@ -40,7 +37,6 @@
     <!--JAVASCRIPTS-->
     <script src="scripts/chamber.js" defer></script>
 </head>
-
 <body>
     <header>
         <div class="branding">
@@ -52,21 +48,21 @@
 
         <nav id="nav-bar" class="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
-                <li class="current"><a href="directory.html">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Directory</h1>
+        <h1>Home</h1>
         <div class="view-toggle">
             <button id="grid-btn" aria-label="Grid View">
                 <img src="images/grid.svg" alt="Grid view icon" width="24" height="24" loading="lazy">
             </button>
-
+        
             <button id="list-btn" aria-label="List View">
                 <img src="images/list.svg" alt="List view icon" width="24" height="24" loading="lazy">
             </button>
@@ -92,18 +88,17 @@
             <a href="https://www.youtube.com/playlist?list=PLsQnpnkppSL4i4Q2P8q_UFp6AYwK71Hom" target="_blank">
                 <img src="images/youtube.svg" alt="YouTube logo" width="16" height="16" loading="lazy">
             </a>
-
+    
             <a href="https://www.linkedin.com/company/makati-city-government/" target="_blank">
                 <img src="images/linkedin.svg" alt="LinkedIn logo" width="16" height="16" loading="lazy">
             </a>
         </div>
         <div class="footer-details">
             <p>WDD231 Class Project</p>
-            <p>&#10024;Laureen Diaz&#10024;</p>
+            <p>&#10024;Laureen Diaz&#10024;</p>    
             <p id="currentyear">© 2025 Makati City Chamber of Commerce</p>
             <p id="lastModified">Last Modification: Sep 14, 2025</p>
         </div>
     </footer>
 </body>
-
 </html>
