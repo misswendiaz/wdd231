@@ -1,9 +1,15 @@
 
-
+// === IMPORTS ===
+// Hamburger Toggle
 import { initHamburger } from "./hamburger.mjs";
+
+// Member Functions
 import { getMemberData } from "./members.mjs";
 
-// === HAMBURGER ===
+// Date
+import { updateDates } from "./date.mjs";
+
+// === HAMBURGER MENU ===
 //Store the selected elements that we are going to use.
 const navButton = document.querySelector("#ham-btn");
 const navLinks = document.querySelector("#nav-bar");
@@ -38,24 +44,7 @@ getMemberData(cards);
 
 // === FOOTER ===
 
-// Get the current year
-const currentYear = new Date().getFullYear();
-
-// Insert the current year into the element with ID "currentyear"
-document.getElementById("currentyear").textContent = `© ${currentYear} Makati City Chamber of Commerce`;
-
-// Get the raw date when the document was last modified
-const rawDate = new Date(document.lastModified);
-
-// Create a date formatter for US English, with full date and 24-hour time
-const formatter = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-    hour12: false // 24-hour format
-})
-
-// Format the raw date using the formatter
-const formattedDate = formatter.format(rawDate);
-
-// Insert the formated date string into the element with ID "lastModified"
-document.getElementById("lastModified").textContent += formattedDate;
+// Call the updateDates function when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+    updateDates(); // uses defaults: #currentyear and #lastModified
+});

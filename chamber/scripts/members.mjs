@@ -25,75 +25,87 @@ export async function getMemberData(container) {
 function displayMembers(members, container) {
     // Loop through each member object in the array
     members.forEach((member, index) => {
-        // Create a <section> element that will hold the member card
-        let card = document.createElement("section");
-        card.classList.add("member-card");
 
-        // Check if the container currently has the "list" class
-        // If true -> render LIST view, else -> render GRID view
+        // Decide which renderer to use (grid or list)
         const isListView = container.classList.contains("list");
+        const card = isListView
+            ? renderListCard(member) // if list view
+            : renderGridCard(member, index); // if grid view
 
-        if (!isListView) {
-            // --- GRID VIEW CONTENT ---
+        container.appendChild(card);
+    });
+}
 
-            // Create <img> for the member's logo
-            let image = document.createElement("img");
-            image.classList.add("member-logo");
-            image.setAttribute("src", member.image);
-            image.setAttribute("alt", `Logo of ${member.name}`);
-            image.setAttribute("width", 120);
-            image.setAttribute("height", 120);
+/**
+ * Render a single member card in GRID view.
+ * @param {Object} member - Member object from JSON.
+ * @param {number} index - Position in the array (for image loading priority).
+ * @returns {HTMLElement} - A <section> element representing the grid card.
+ */
 
-            // Optimize loading:
-            // First two images load with "high" priority,
-            // others load lazily as you scroll
-            if (index === 0 || index === 1) {
-                image.setAttribute("fetchpriority", "high");
-            } else {
-                image.setAttribute("loading", "lazy");
-            }
+function renderGridCard(member, index) {
+    // Create a <section> element that will hold the member card
+    let card = document.createElement("section");
+    card.classList.add("member-card");
 
-            //Member Name
-            let name = document.createElement("h2");
-            name.classList.add("member-name");
-            name.textContent = member.name;
+    // Logo
+    let image = document.createElement("img");
+    image.classList.add("member-logo");
+    image.setAttribute("src", member.image);
+    image.setAttribute("alt", `Logo of ${member.name}`);
+    image.setAttribute("width", 120);
+    image.setAttribute("height", 120);
 
-            // Tagline
-            let tagline = document.createElement("p");
-            tagline.classList.add("member-tagline");
-            tagline.textContent = member.tagline;
+    // Optimize loading:
+    // First two images load with "high" priority,
+    // others load lazily as you scroll
+    if (index === 0 || index === 1) {
+        image.setAttribute("fetchpriority", "high");
+    } else {
+        image.setAttribute("loading", "lazy");
+    }
 
-            // Address with Office icon
-            let address = document.createElement("p");
-            address.classList.add("member-details");
-            address.innerHTML =
-                `<img src="images/office.svg"
+    // Name
+    let name = document.createElement("h2");
+    name.classList.add("member-name");
+    name.textContent = member.name;
+
+    // Tagline
+    let tagline = document.createElement("p");
+    tagline.classList.add("member-tagline");
+    tagline.textContent = member.tagline;
+
+    // Address
+    let address = document.createElement("p");
+    address.classList.add("member-details");
+    address.innerHTML =
+        `<img src="images/office.svg"
                 alt="Office"
                 class="icon">
                 ${member.address.street}, ${member.address.city}`;
 
-            // Email with Envelope icon and mailto link
-            let email = document.createElement("p");
-            email.classList.add("member-details");
-            email.innerHTML =
-                `<img src="images/envelope.svg"
+    // Email
+    let email = document.createElement("p");
+    email.classList.add("member-details");
+    email.innerHTML =
+        `<img src="images/envelope.svg"
                 alt="Email" class="icon">
                 <a href="mailto:${member.email}">${member.email}</a>`;
 
-            // Phone number with Phone icon and Tel link
-            let phone = document.createElement("p");
-            phone.classList.add("member-details");
-            phone.innerHTML =
-                `<img src="images/phone.svg"
+    // Phone
+    let phone = document.createElement("p");
+    phone.classList.add("member-details");
+    phone.innerHTML =
+        `<img src="images/phone.svg"
                 alt="Phone"
                 class="icon">
                 <a href="tel:${member.phonenumbers}">${member.phonenumbers}</a>`;
 
-            // Shortened Website URL with Globe icon
-            let link = document.createElement("p");
-            link.classList.add("member-details");
-            link.innerHTML =
-                `<img src="images/url.svg"
+    // Shortened Website URL
+    let link = document.createElement("p");
+    link.classList.add("member-details");
+    link.innerHTML =
+        `<img src="images/url.svg"
                 alt="Website"
                 class="icon">
 
@@ -103,25 +115,49 @@ function displayMembers(members, container) {
                 ${new URL(member.url).hostname.replace(/^www\./, "")}
                 </a>`;
 
-            // Append the columns into the container (grid or list)
-            card.append(image, name, tagline, address, email, phone, link);
-        } else {
-            // --- LIST VIEW CONTENT ---
-            card.innerHTML =
-                `<h2>${member.name}</h2>
-                <p>${member.tagline}</p>
-                <p>${member.address.street}, ${member.address.city}</p>
-                <p><a href="mailto:${member.email}">${member.email}</a></p>
-                <p><a href="tel:${member.phonenumbers}">${member.phonenumbers}</a></p>
-                <p><a href="${member.url}"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        ${new URL(member.url).hostname.replace(/^www\./, "")}
-                    </a>
-                </p>`;
-        }
+    // Append the columns into the container (grid or list)
+    card.append(image, name, tagline, address, email, phone, link);
+    return card;
+}
 
-        // Finally, add the card into the container (grid or list)
-        container.appendChild(card);
-    });
+/**
+* Render a single member card in LIST view.
+* @param {Object} member - Member object from JSON.
+* @returns { HTMLElement} - A <section> element representing the list card.
+*/
+function renderListCard(member) {
+    // Create a <section> element that will hold the member card
+    let card = document.createElement("section");
+    card.classList.add("member-card", "list-row");
+
+    // Name
+    let nameCol = document.createElement("div");
+    nameCol.classList.add("member-name-col");
+    nameCol.textContent = member.name;
+
+    // Address
+    let addressCol = document.createElement("div");
+    addressCol.classList.add("member-col");
+    addressCol.textContent = `${member.address.street}, ${member.address.city}`;
+
+    // Phone
+    let phoneCol = document.createElement("div");
+    phoneCol.classList.add("member-col");
+    phoneCol.innerHTML =
+        `<a href="tel:${member.phonenumbers}">${member.phonenumbers}</a>`;
+
+    // Shortened Website URL
+    let urlCol = document.createElement("div");
+    urlCol.classList.add("member-col");
+    urlCol.innerHTML =
+        `<a href="${member.url}"
+        target="_blank"
+        rel="noopener noreferrer">
+        ${new URL(member.url).hostname.replace(/^www\./, "")}
+        </a>`;
+
+    // Append all columns into one row (section)
+    card.append(nameCol, addressCol, phoneCol, urlCol);
+
+    return card;
 }
