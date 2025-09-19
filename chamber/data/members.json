@@ -9,7 +9,7 @@
             "phonenumbers" : "(+632) 8888-0000",
             "url" : "https://www.bdo.com.ph/personal",
             "image" : "https://misswendiaz.github.io/wdd231/chamber/images/bdo.webp",
-            "membershiplevel" : "1",
+            "membershiplevel": "1",
             "tagline" : "We Find Ways",
             "email" : "callcenter@bdo.com.ph"
         },
@@ -87,7 +87,7 @@
             "phonenumbers": "(+632) 8888-8171",
             "url": "https://pldthome.com/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/pldt.webp",
-            "membershiplevel": "",
+            "membershiplevel": "2",
             "tagline": "Leading and inspiring Filipinos to create a better tomorrow",
             "email": "enterprisecare@pldt.com.ph"
         },
@@ -100,7 +100,7 @@
             "phonenumbers": "(+632) 8888-3955",
             "url": "https://www.semiraramining.com/",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/semirara.webp",
-            "membershiplevel": "",
+            "membershiplevel": "3",
             "tagline": "Transforming for the Nation",
             "email": "corpcomm@semirarampc.com"
         },
@@ -113,7 +113,7 @@
             "phonenumbers": "(+632) 8888-1111",
             "url": "https://smart.com.ph/corporate",
             "image": "https://misswendiaz.github.io/wdd231/chamber/images/smart.webp",
-            "membershiplevel": "",
+            "membershiplevel": "2",
             "tagline": "Live More Today",
             "email": "enterprisesupport@smart.com.ph"
         }
