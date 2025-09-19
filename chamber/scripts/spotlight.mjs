@@ -9,7 +9,7 @@ export async function loadSpotlights() {
         const data = await response.json();
         const members = data.members;
 
-        // Filter for Gold (1) or Silver (2) members
+        // Filter for Gold (3) or Silver (2) members
         const goldSilverMembers = members.filter(member =>
             member.membershiplevel === "3" || member.membershiplevel === "2"
         );
@@ -19,8 +19,13 @@ export async function loadSpotlights() {
         const spotlightCount = Math.floor(Math.random() * 2) + 2;
         const selected = shuffled.slice(0, spotlightCount);
 
-        // Clear container
-        spotlightContainer.innerHTML = "";
+        // Clear spotlight cards
+        const children = Array.from(spotlightContainer.children);
+        children.forEach(child => {
+            if (!child.matches("h2")) {
+                spotlightContainer.removeChild(child);
+            }
+        });
 
         // Render each selected member
         selected.forEach((member, index) => {
@@ -59,7 +64,7 @@ function renderSpotlightCard(member, index) {
     }
 
     // Name
-    const name = document.createElement("h2");
+    const name = document.createElement("h3");
     name.classList.add("member-name");
     name.textContent = member.name;
 
