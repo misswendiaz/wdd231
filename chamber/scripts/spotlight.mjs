@@ -11,7 +11,7 @@ export async function loadSpotlights() {
 
         // Filter for Gold (1) or Silver (2) members
         const goldSilverMembers = members.filter(member =>
-            member.membershiplevel === "1" || member.membershiplevel === "2"
+            member.membershiplevel === "3" || member.membershiplevel === "2"
         );
 
         // Randomly shuffle and select 2 or 3
