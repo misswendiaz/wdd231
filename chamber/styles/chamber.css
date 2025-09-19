@@ -137,6 +137,92 @@ h1 {
 }
 
 
+/***** HERO *****/
+#hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/***** CTA BUTTON *****/
+#cta {
+    position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: var(--green);
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+    
+    #cta a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    #cta:hover {
+        background-color: var(--deep-green);
+    }
+
+/* === WEATHER & EVENTS GRID === */
+#events-container,
+#weather-container,
+#forecast {
+    margin: 0;
+}
+
+/* Group container */
+.weather-events-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.weather-events-grid section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* === SPOTLIGHT BELOW GRID === */
+#spotlight-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    background-color: var(--very-light-gray);
+    border: 5px solid var(--green);
+    border-radius: 8px;
+}
+
+/* === CTA RESPONSIVE FIX === */
+@media (max-width: 768px) {
+    #cta {
+        position: static;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .weather-events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /***** TOGGLE VIEW *****/
 
 .view-toggle {

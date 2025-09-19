@@ -1,3 +1,6 @@
+// Imports API Key
+import { APIKey } from "./secret.mjs";
+
 // Select HTML elements in the document
 const weatherIcon = document.querySelector("#weather-icon");
 const description = document.querySelector("#description");
@@ -8,8 +11,7 @@ const humidity = document.querySelector("#humidity");
 const sunrise = document.querySelector("#sunrise");
 const sunset = document.querySelector("#sunset");
 
-// OpenWeatherMap Credentials and Location
-const APIKey = "434d1a43740c015186a3d355806974c6"
+// OpenWeatherMap Location
 const latitude = "14.554398820974072"
 const longitude = "121.023873395248"
 
@@ -22,7 +24,7 @@ export async function apiFetch() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            displayResults(data); // uncomment when ready
+            displayResults(data);
         } else {
             throw Error(await response.text());
         }

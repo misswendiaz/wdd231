@@ -17,12 +17,6 @@
     <!--FAV ICON-->
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Preload LCP Image -->
-    <link rel="preload" as="image" href="https://misswendiaz.github.io/wdd231/chamber/images/bdo.webp" type="image/webp"
-        fetchpriority="high">
-    <link rel="preload" as="image" href="https://misswendiaz.github.io/wdd231/chamber/images/bpi.webp" type="image/webp"
-        fetchpriority="high">
-
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +51,6 @@
     </header>
 
     <main>
-        <h1>Home</h1>
         <div id="hero">
             <img src="images/makati-hero.webp" alt="Makati City Chamber of Commerce">
         </div>
@@ -67,31 +60,36 @@
             <a href="join.html">Join Now!</a>
         </button>
 
-        <!-- CARDS -->
-        <section class="cards" id="events">
-            <h2>Events</h2>
-        </section>
+        <h1 #id="home">Home</h1>
 
-        <section class="cards" id="current-weather">
-            <h2>Current Weather</h2>
-            <img id="weather-icon" src="" alt="">
-            <p id="description"></p>
-            <p id="temperature"></p>
-            <p id="high"></p>
-            <p id="low"></p>
-            <p id="humidity"></p>
-            <p id="sunrise"></p>
-            <p id="sunset"></p>
-        </section>
-        <section class="cards" id="temperature-forecast">
-            <h2>Temperature Forecast</h2>
-            <p id="day1"></p>
-            <p id="day2"></p>
-            <p id="day3"></p>
-        </section>
+        <div class="weather-events-grid">
+            <!-- EVENTS -->
+            <section class="cards" id="events-container">
+                <h2>Events</h2>
+            </section>
+            
+            <!-- CURRENT WEATHER -->
+            <section class="cards" id="weather-container">
+                <h2>Current Weather</h2>
+                <img id="weather-icon" src="" alt="">
+                <p id="description"></p>
+                <p id="temperature"></p>
+                <p id="high"></p>
+                <p id="low"></p>
+                <p id="humidity"></p>
+                <p id="sunrise"></p>
+                <p id="sunset"></p>
+            </section>
+            
+            <!-- WEATHER FORECAST -->
+            <section class="cards" id="forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-container"></div>
+            </section>
 
+        </div>
         <!-- SPOTLIGHT -->
-        <section id="spotlight">
+        <section id="spotlight-container">
             <div id="member1">
                 <h3 id="name1"></h3>
                 <p id="tagline"></p>

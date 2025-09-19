@@ -12,6 +12,9 @@ import { updateDates } from "./date.mjs";
 // Current Weather
 import { apiFetch } from "./weather.mjs"
 
+// Forecast
+import { fetchForecast } from "./forecast.mjs"
+
 
 
 // === HAMBURGER MENU ===
@@ -19,10 +22,12 @@ import { apiFetch } from "./weather.mjs"
 const navButton = document.querySelector("#ham-btn");
 const navLinks = document.querySelector("#nav-bar");
 
-//Toggle the show class off and on
-navButton.addEventListener("click", () => {
-    initHamburger(navButton, navLinks);
-});
+if(navButton && navLinks) {
+    //Toggle the show class off and on
+    navButton.addEventListener("click", () => {
+        initHamburger(navButton, navLinks);
+    });
+}
 
 
 // === GRID or LIST VIEW ===
@@ -30,30 +35,35 @@ const gridBtn = document.querySelector("#grid-btn");
 const listBtn = document.querySelector("#list-btn");
 const cards = document.querySelector("#cards");
 
-gridBtn.addEventListener("click", () => {
-    cards.classList.add("grid");
-    cards.classList.remove("list");
-    cards.innerHTML = ""; // clear current
-    getMemberData(cards); // reload
-});
+if (gridBtn && listBtn && cards) {
+    gridBtn.addEventListener("click", () => {
+        cards.classList.add("grid");
+        cards.classList.remove("list");
+        cards.innerHTML = ""; // clear current
+        getMemberData(cards); // reload
+    });
 
-listBtn.addEventListener("click", () => {
-    cards.classList.add("list");
-    cards.classList.remove("grid");
-    cards.innerHTML = ""; //clear current
-    getMemberData(cards); // reload
-});
+    listBtn.addEventListener("click", () => {
+        cards.classList.add("list");
+        cards.classList.remove("grid");
+        cards.innerHTML = ""; //clear current
+        getMemberData(cards); // reload
+    });
 
-// Load members initially
-getMemberData(cards);
+    // Load members initially
+    getMemberData(cards);
+
+}
 
 
 // === WEATHER ===
 apiFetch();
 
-// === FOOTER ===
+// === FORECAST ===
+fetchForecast();
 
+// === FOOTER ===
 // Call the updateDates function when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-    updateDates(); // uses defaults: #currentyear and #lastModified
+    updateDates(); // Last Modified Time Stamp
 });
