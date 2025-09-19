@@ -21,25 +21,14 @@ export function updateDates(
     const rawDate = new Date(document.lastModified);
 
     // Format the date
-    // const formattedDate = rawDate.toLocaleString("en-US", {
-    //     month: "short",
-    //     day: "numeric",
-    //     year: "numeric",
-    //     hour: "2-digit",
-    //     minute: "2-digit",
-    //     hour12: false
-    // });
-
-    const formatter = new Intl.DateTimeFormat("en-US", {
+    const formattedDate = rawDate.toLocaleString("en-US", {
         month: "short",
         day: "numeric",
         year: "numeric",
         hour: "2-digit",
         minute: "2-digit",
         hour12: false
-    })
-        
-    const formattedDate = formatter.format(rawDate);
+    });
 
     // Insert the formatted date string into the selected element
     const modifiedElement = document.querySelector(modifiedSelector);
