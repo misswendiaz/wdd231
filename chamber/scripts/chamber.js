@@ -36,7 +36,7 @@ if(navButton && navLinks) {
 // === GRID or LIST VIEW ===
 const gridBtn = document.querySelector("#grid-btn");
 const listBtn = document.querySelector("#list-btn");
-const cards = document.querySelector("#cards");
+const cards = document.querySelector(".cards");
 
 if (gridBtn && listBtn && cards) {
     gridBtn.addEventListener("click", () => {

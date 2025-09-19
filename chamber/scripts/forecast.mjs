@@ -93,11 +93,13 @@ function displayForecast(data, forecastContainer) {
         var dayDiv = document.createElement("div");
         dayDiv.classList.add("day");
 
-        dayDiv.innerHTML =
-            "<h3>" + formattedDate + "</h3>" +
-            "<img src='" + iconUrl + "' alt='" + description + "' />" +
-            "<p>" + temperature + "</p>" +
-            "<p>" + description + "</p>";
+        dayDiv.innerHTML = `
+            <h3>${formattedDate}</h3>
+            <img class="forecast-icon" src="${iconUrl}" alt="${description}" />
+            <p>${temperature}</p>
+            <p>${description}</p>
+        `;
+
 
         forecastContainer.appendChild(dayDiv);
     }
