@@ -15,6 +15,9 @@ import { apiFetch } from "./weather.mjs"
 // Forecast
 import { fetchForecast } from "./forecast.mjs"
 
+// Spotlights
+import { loadSpotlights } from "./spotlight.mjs";
+
 
 
 // === HAMBURGER MENU ===
@@ -61,6 +64,9 @@ apiFetch();
 
 // === FORECAST ===
 fetchForecast();
+
+// === SPOTLIGHTS ===
+loadSpotlights();
 
 // === FOOTER ===
 // Call the updateDates function when DOM is ready
