@@ -40,6 +40,7 @@ function displayResults(data) {
     const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     weatherIcon.setAttribute("src", iconsrc)
     weatherIcon.setAttribute("alt", data.weather[0].description)
+    weatherIcon.hidden = false; 
 
     // Current Weather Description
     description.textContent = capitalize(data.weather[0].description);
