@@ -227,11 +227,12 @@ footer .social img {
     padding: 1rem;
 }
 
+
+
 .weather-events-grid section {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--deep-green);
 }
 
 #weather-icon, .forecast-icon {

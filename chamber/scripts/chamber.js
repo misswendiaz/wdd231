@@ -10,7 +10,7 @@ import { getMemberData } from "./members.mjs";
 import { updateDates } from "./date.mjs";
 
 // Current Weather
-import { apiFetch } from "./weather.mjs"
+import { getWeather } from "./weather.mjs"
 
 // Forecast
 import { fetchForecast } from "./forecast.mjs"
@@ -60,7 +60,7 @@ if (gridBtn && listBtn && cards) {
 
 
 // === WEATHER ===
-apiFetch();
+getWeather();
 
 // === FORECAST ===
 fetchForecast();
