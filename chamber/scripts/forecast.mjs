@@ -1,7 +1,8 @@
-// Imports API Key
-import { APIKey } from "./secret.mjs";
+// // Imports API Key
+// import { APIKey } from "./secret.mjs";
 
-// OpenWeatherMap Location
+// OpenWeatherMap Credentials and Location
+const APIKey = "434d1a43740c015186a3d355806974c6"
 const latitude = "14.554398820974072";
 const longitude = "121.023873395248";
 
