@@ -41,27 +41,27 @@ function displayResults(data) {
 
     // Current Temp
     const temp = document.createElement("p");
-    temp.textContent = `Current: ${data.main.temp.toFixed(1)}°C`;
+    temp.innerHTML = `<strong>Temperature:</strong> ${data.main.temp.toFixed(1)}°C`;
 
     // High
     const high = document.createElement("p");
-    high.textContent = `High: ${data.main.temp_max.toFixed(1)}°C`;
+    high.innerHTML = `<strong>High:</strong> ${data.main.temp_max.toFixed(1)}°C`;
 
     // Low
     const low = document.createElement("p");
-    low.textContent = `Low: ${data.main.temp_min.toFixed(1)}°C`;
+    low.innerHTML = `<strong>Low:</strong> ${data.main.temp_min.toFixed(1)}°C`;
 
     // Humidity
     const humidity = document.createElement("p");
-    humidity.textContent = `Humidity: ${data.main.humidity}%`;
+    humidity.innerHTML = `<strong>Humidity:</strong> ${data.main.humidity}%`;
 
     // Sunrise
     const sunrise = document.createElement("p");
-    sunrise.textContent = `Sunrise: ${formatTime(data.sys.sunrise)}`;
+    sunrise.innerHTML = `<strong>Sunrise:</strong> ${formatTime(data.sys.sunrise)}`;
 
     // Sunset
     const sunset = document.createElement("p");
-    sunset.textContent = `Sunset: ${formatTime(data.sys.sunset)}`;
+    sunset.innerHTML = `<strong>Sunset:</strong> ${formatTime(data.sys.sunset)}`;
 
     // Append everything into #weather-content
     container.append(weatherIcon, description, temp, high, low, humidity, sunrise, sunset);

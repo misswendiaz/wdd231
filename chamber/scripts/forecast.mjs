@@ -1,6 +1,3 @@
-// // Imports API Key
-// import { APIKey } from "./secret.mjs";
-
 // OpenWeatherMap Credentials and Location
 const APIKey = "434d1a43740c015186a3d355806974c6"
 const latitude = "14.554398820974072";
@@ -96,9 +93,13 @@ function displayForecast(data, forecastContainer) {
 
         dayDiv.innerHTML = `
             <h3>${formattedDate}</h3>
-            <img class="forecast-icon" src="${iconUrl}" alt="${description}" />
-            <p>${temperature}</p>
-            <p>${description}</p>
+            <div class="forecast-row">
+                <img class="forecast-icon" src="${iconUrl}" alt="${description}" />
+                <div class="forecast-info">
+                    <p>${description}</p>
+                    <p>${temperature}</p>
+                </div>
+            </div>
         `;
 
 
