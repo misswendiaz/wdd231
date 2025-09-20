@@ -103,8 +103,19 @@ function renderSpotlightCard(member, index) {
         </a>
     `;
 
+    // Membership Level
+    const membership = document.createElement("p");
+    membership.classList.add("member-details");
+    let level;
+    if (member.membershiplevel === "3") {
+        level = "Gold";
+    } else {
+        level = "Silver";
+    }
+    membership.textContent = level;
+
     // Append all elements
-    card.append(image, name, tagline, address, email, phone, website);
+    card.append(image, name, tagline, address, email, phone, website, membership);
 
     return card;
 }
