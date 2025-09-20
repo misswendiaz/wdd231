@@ -1,4 +1,4 @@
-const spotlightContainer = document.getElementById("spotlight-container");
+const spotlightContainer = document.getElementById("spotlight-cards");
 const spotlightDataUrl = "https://misswendiaz.github.io/wdd231/chamber/data/members.json"; // or adjust if local
 
 export async function loadSpotlights() {
@@ -20,12 +20,7 @@ export async function loadSpotlights() {
         const selected = shuffled.slice(0, spotlightCount);
 
         // Clear spotlight cards
-        const children = Array.from(spotlightContainer.children);
-        children.forEach(child => {
-            if (!child.matches("h2")) {
-                spotlightContainer.removeChild(child);
-            }
-        });
+        spotlightContainer.innerHTML = "";
 
         // Render each selected member
         selected.forEach((member, index) => {
