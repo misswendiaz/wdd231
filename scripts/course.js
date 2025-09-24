@@ -120,7 +120,15 @@ function displayCredits(coursesArray) {
 // ==========================
 // Re-renders both the course cards and the credits at the same time
 function updateUI(coursesArray) {
-    document.getElementById("courseCards").innerHTML = createCourseCards(coursesArray);
+    const container = document.getElementById("courseCards");
+    container.innerHTML = createCourseCards(coursesArray);
+
+    // Add click listeners to each card
+    container.querySelectorAll(".courseCard").forEach((card, i) => {
+        card.addEventListener("click", () => {
+            displayCourseDetails(coursesArray[i]);
+        });
+    });
     displayCredits(coursesArray);
 }
 
@@ -187,3 +195,32 @@ document.getElementById("wdd-btn").addEventListener("click", (e) => {
 // ==========================
 // Start with "All" selected when the page loads
 getAllCourses();
+
+
+
+// ==========================
+// COURSE DETAILS
+// ==========================
+//
+
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = "";
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+    `;
+    courseDetails.showModal();
+
+    const closeDetails = courseDetails.querySelector("#closeModal");
+
+    closeDetails.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}

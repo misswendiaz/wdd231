@@ -207,19 +207,35 @@ h1 {
     padding: 1rem;
     margin: 0.5rem 0;
     background-color: var(--warm-beige);
-    /* restore your original neutral background */
     color: var(--charcoal);
-    /* keep original text color */
 }
 
-/* Completed courses → slightly green background */
 .courseCard.completed {
     background-color: #DFF2E1;
 }
 
-/* Not completed courses → slightly red background */
 .courseCard.not-completed {
     background-color: #FAD4D4;
+}
+
+dialog {
+    background-color: var(--light-blush);
+    border: 1px solid var(--salmon-pink);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+;;::backdrop {
+    background-color: var(--red);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--salmon-pink);
 }
 /*************** BUTTONS ***************/
 .buttons {
