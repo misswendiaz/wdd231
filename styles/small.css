@@ -219,15 +219,19 @@ h1 {
 }
 
 dialog {
-    background-color: var(--light-blush);
+    background-color: var(--warm-beige);
     border: 1px solid var(--salmon-pink);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
 }
 
-;;::backdrop {
-    background-color: var(--red);
+::backdrop {
+    background-color: rgba(250, 220, 217, 0.5);
 }
 
 dialog button {
