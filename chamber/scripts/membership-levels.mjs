@@ -13,7 +13,7 @@ export async function initMembershipDetails() {
         benefits.innerHTML = `<strong>Benefits:</strong><br><ul>${level.benefits.map(b => `<li>${b}</li>`).join("")}</ul>`;
     }
 
-    // ✅ Make sure fetch path is correct
+    // Make sure fetch path is correct
     const response = await fetch("./data/membership-level.json");
     const data = await response.json();
     const membershipLevels = data.membershipLevels;
