@@ -495,6 +495,220 @@ footer .social img {
 
 
 
+/* ===== JOIN PAGE ===== */
+#form-container, #membership-levels-container {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 5px solid var(--green);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--very-light-gray);
+    color: var(--dark-charcoal);
+}
+
+#form-container h2, #membership-levels-container h2 {
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Application Form */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+legend {
+    font-family: var(--serif);
+    font-weight: bold;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+label {
+    margin: 0.5rem;
+}
+
+input, textarea {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    min-height: 44px;
+    border: 1px solid var(--dark-gold);
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+/* Input Validation */
+
+input:required, textarea:required {
+    border-left: 8px solid var(--golden-yellow);
+}
+
+input.valid, textarea.valid {
+    border-left: 8px solid var(--green);
+    border-color: var(--green);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+input.invalid, textarea.invalid {
+    border-left: 8px solid red;
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+#membership-level {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+}
+
+input[type="radio"] {
+    transform: scale(0.5);
+    margin: 0;
+}
+
+#submit-button, .membershipLevelDetailsButton {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: var(--golden-yellow);
+    border: 1px solid var(--dark-gold);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#submit-button:hover {
+    background-color: var(--dark-gold);
+    color: var(--very-light-gray);
+}
+
+
+/* Membership Levels */
+#membership-levels-container div {
+    margin: 2.5rem;
+    padding: 1rem;
+    border: 1px solid var(--dark-charcoal);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#membership-levels-container div:hover {
+    transform: scale(1.05);
+}
+
+#non-profit {
+    background-color: #008080;
+    color: var(--very-light-gray);
+}
+
+#bronze {
+    background-color: #CD7F32;
+}
+
+#silver {
+    background-color: silver;
+}
+
+#gold {
+    background-color: gold;
+}
+
+.membershipLevelDetailsButton {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-weight: normal;
+    background-color: var(--very-light-gray);
+}
+
+.membershipLevelDetailsButton:hover {
+    background-color: var(--dark-charcoal);
+    color: var(--very-light-gray);
+}
+
+#membership-levels-container h3, dialog h3 {
+    font-family: var(--serif);
+    text-align: center;
+}
+
+.membership-level-details-dialog-box {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid var(--dark-gold);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--golden-yellow);
+    color: var(--dark-charcoal);
+}
+
+.membership-level-details-dialog-box::backdrop {
+    background-color: rgba(2, 89, 15, 0.5);
+}
+
+.membership-level-details-dialog-box p {
+    margin: 1rem;
+}
+
+.membership-level-details-dialog-box ul {
+    margin-left: 1.5rem;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+}
+
+.membership-level-details-dialog-box li {
+    margin-bottom: 0.5rem;
+}
+
+.membership-level-details-dialog-box #closeButton {
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    border: 1px solid var(--dark-charcoal);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+/* Membership cards animation */
+.membership-level-cards {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
+/* Delay each card for a staggered effect */
+#non-profit {
+    animation-delay: 0.2s;
+}
+
+#bronze {
+    animation-delay: 0.4s;
+}
+
+#silver {
+    animation-delay: 0.6s;
+}
+
+#gold {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /***** LARGER SCREENS *****/
 @media only screen and (min-width: 768px) {
@@ -608,5 +822,14 @@ footer .social img {
         margin: 1rem;
         align-items: stretch;
     }
+
+    /* ===== JOIN PAGE ===== */
+    #join-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: first baseline;
+    }
+
+    /***** Weather & Events *****/
 }
 

@@ -1,0 +1,54 @@
+{
+    "membershipLevels": [
+        {
+            "name": "Non-Profit",
+            "description": "For NGOs, schools, and community organizations",
+            "cost": "Free",
+            "benefits": [
+                "Access to chamber newsletters & updates",
+                "Invitation to community networking events",
+                "Eligibility for basic training sessions",
+                "Recognition as a non-profit member"
+            ]
+        },
+        {
+            "name": "Bronze",
+            "description": "Entry-level for small businesses/startups",
+            "cost": "₱8,000",
+            "benefits": [
+                "All Non-Profit benefits",
+                "Access to member-only networking events",
+                "Discounted event tickets (10–15% off)",
+                "Listing in the Chamber business directory",
+                "Access to basic advertising opportunities (small ad placements)"
+            ]
+        },
+        {
+            "name": "Silver",
+            "description": "For growing businesses seeking visibility",
+            "cost": "₱18,000",
+            "benefits": [
+                "All Bronze benefits",
+                "Spotlight feature on Chamber’s website (rotating banner or homepage listing)",
+                "Increased event discounts (20–25% off)",
+                "Access to specialized training workshops",
+                "Priority invitations to business mixers & networking events",
+                "Ability to host a Chamber event once a year"
+            ]
+        },
+        {
+            "name": "Gold",
+            "description": "Premium level for established businesses",
+            "cost": "₱35,000",
+            "benefits": [
+                "All Silver benefits",
+                "Premium advertising placement (homepage spotlight, newsletter features)",
+                "VIP event discounts (30–40% off)",
+                "Exclusive invitations to high-level networking events with city leaders",
+                "Recognition as a Gold Sponsor at Chamber events",
+                "Option to lead a training or seminar for members",
+                "Priority placement in Chamber publications & social media highlights"
+            ]
+        }
+    ]
+}

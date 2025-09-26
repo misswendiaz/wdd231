@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://misswendiaz.github.io/wdd231/chamber/images/makati.jpg">
     <meta property="og:url" content="https://misswendiaz.github.io/wdd231/chamber/directory.html">
 
-    <title>Directory - Makati City Chamber of Commerce</title>
+    <title>Join - Makati City Chamber of Commerce</title>
 
     <!--FAV ICON-->
     <link rel="icon" href="images/favicon.ico">
@@ -62,18 +62,163 @@
 
     <main>
         <h1>Join</h1>
-        <div class="view-toggle">
-            <button id="grid-btn" aria-label="Grid View">
-                <img src="images/grid.svg" alt="Grid view icon" width="24" height="24" loading="lazy">
-            </button>
 
-            <button id="list-btn" aria-label="List View">
-                <img src="images/list.svg" alt="List view icon" width="24" height="24" loading="lazy">
-            </button>
+        <div id="join-page">
+            <section id="form-container">
+                <form id="form" method="get" action="thankyou.html">
+                    <h2>Membership Application Form</h2>
+            
+                    <fieldset>
+                        <legend>Personal Information</legend>
+            
+                        <label for="first-name">First Name: </label>
+                        <input
+                            type="text"
+                            name="First_Name"
+                            id="first-name"
+                            title="Type your given name."
+                            pattern="^[A-Za-zÀ-ÿ'\- ]{2,}$"
+                            title="Only letters, spaces, apostrophes and hyphens. Min 2 characters."
+                            placeholder="Juan"
+                            autocomplete="given-name"
+                            required>
+            
+                        <label for="last-name">Last Name: </label>
+                        <input
+                            type="text"
+                            name="Last_Name"
+                            id="last-name"
+                            title="Type your family name."
+                            pattern="^[A-Za-zÀ-ÿ'\- ]{2,}$"
+                            title="Only letters, spaces, apostrophes and hyphens. Min 2 characters."
+                            placeholder="dela Cruz"
+                            autocomplete="family-name"
+                            required>
+            
+                        <label for="title">Organizational Title</label>
+                        <input
+                            type="text"
+                            name="Title"
+                            id="title"
+                            title="Type your organization title/position. Only letters, spaces, and hyphens allowed. Minimum 7 characters."
+                            pattern="^[A-Za-z\s-]{7,}$"
+                            placeholder="Manager"
+                            autocomplete="organization-title">
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>Contact Information</legend>
+            
+                        <label for="email">Email Address: </label>
+                        <input
+                            type="email"
+                            name="Email"
+                            id="email"
+                            title="Type your email address."
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            placeholder="username@email.com"
+                            autocomplete="email"
+                            required>
+            
+                        <label for="phone">Mobile Phone Number</label>
+                        <input
+                            type="tel"
+                            name="Phone"
+                            id="phone"
+                            title="Enter a 10-digit phone number (e.g. 920-123-4567 or 920 123 4567 or 9201234567)."
+                            pattern="^[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{4}$"
+                            placeholder="920-123-4567"
+                            autocomplete="tel"
+                            required>
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>Business/Organization Information</legend>
+            
+                        <label for="organization">Business/Organization Name</label>
+                        <input
+                            type="text"
+                            name="Organization"
+                            id="organization"
+                            title="Enter your business/organization/company name (letters, numbers and common punctuation)."
+                            pattern="^[A-Za-z0-9 .,&'\-()]{2,}$"
+                            placeholder="ABC Company"
+                            autocomplete="organization"
+                            required>
+            
+                        <label for="description">Business/Organization Description</label>
+                        <textarea
+                            name="Description"
+                            id="description"
+                            title="Provide a brief description of your business/organization (e.g., mission, services, or focus)."
+                            placeholder="Mission:
+            
+Vision: 
+
+Services: 
+
+Focus:
+            
+            " required></textarea>
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>Membership Level</legend>
+            
+                        <div id="membership-level">
+                            <input type="radio" name="Membership_Level" id="np">
+                            <label for="np">Non-Profit</label>
+            
+                            <input type="radio" name="Membership_Level" id="bronze">
+                            <label for="bronze">Bronze</label>
+            
+                            <input type="radio" name="Membership_Level" id="silver">
+                            <label for="silver">Silver</label>
+            
+                            <input type="radio" name="Membership_Level" id="gold">
+                            <label for="gold">Gold</label>
+                        </div>
+                    </fieldset>
+            
+                    <input type="hidden" name="Time_Stamp" id="time-stamp">
+            
+                    <input type="submit" value="Join Now!" id="submit-button">
+                </form>
+            </section>
+            
+            <section id="membership-levels-container">
+                <h2>Membership Levels</h2>
+            
+                <div class="membership-level-cards" id="non-profit">
+                    <h3>Non-Profit Membership</h3>
+                    <button class="membershipLevelDetailsButton">Details</button>
+                </div>
+            
+                <div class="membership-level-cards" id="bronze">
+                    <h3>Bronze Membership</h3>
+                    <button class="membershipLevelDetailsButton">Details</button>
+                </div>
+            
+                <div class="membership-level-cards" id="silver">
+                    <h3>Silver Membership</h3>
+                    <button class="membershipLevelDetailsButton">Details</button>
+                </div>
+            
+                <div class="membership-level-cards" id="gold">
+                    <h3>Gold Membership</h3>
+                    <button class="membershipLevelDetailsButton">Details</button>
+                </div>
+            </section>
+
         </div>
+        <dialog class="membership-level-details-dialog-box">
+            <h3>Membeship Level</h3>
+            <p class="level-description"></p>
+            <p class="level-cost"></p>
+            <p class="level-benefits"></p>
+            <button id="closeButton">Close</button>
+        </dialog>
 
-
-        <div id="cards"></div>
     </main>
 
     <footer>

@@ -18,6 +18,12 @@ import { fetchForecast } from "./forecast.mjs"
 // Spotlights
 import { loadSpotlights } from "./spotlight.mjs";
 
+// Membership Level Details
+import { initMembershipDetails } from "./membership-levels.mjs";
+
+// Form Validation
+import { initFormValidation } from "./form-validation.mjs";
+
 
 
 // === HAMBURGER MENU ===
@@ -67,6 +73,18 @@ fetchForecast();
 
 // === SPOTLIGHTS ===
 loadSpotlights();
+
+// === MEMBERSHIP LEVELS ===
+initMembershipDetails();
+
+// === FORM VALIDATION ===
+document.addEventListener("DOMContentLoaded", () => {
+    // initialize your existing chamber.js stuff
+    // ...
+
+    // initialize form validation
+    initFormValidation();
+});
 
 // === FOOTER ===
 // Call the updateDates function when DOM is ready
