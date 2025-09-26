@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample directory of local businesses and organizations that are presented as members of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
+        content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample Join page of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
     <meta name="author" content="Laureen Diaz">
 
     <!--SOCIAL MEDIA (FACEBOOK) META-->
@@ -125,9 +125,9 @@
                             type="tel"
                             name="Phone"
                             id="phone"
-                            title="Enter a 10-digit phone number (e.g. 920-123-4567 or 920 123 4567 or 9201234567)."
-                            pattern="^[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{4}$"
-                            placeholder="920-123-4567"
+                            title="Phone number must contain only numbers (0–9)"
+                            pattern="^[0-9]+$"
+                            placeholder="9201234567"
                             autocomplete="tel"
                             required>
                     </fieldset>
@@ -162,23 +162,30 @@ Focus:
             " required></textarea>
                     </fieldset>
             
-                    <fieldset>
-                        <legend>Membership Level</legend>
-            
-                        <div id="membership-level">
-                            <input type="radio" name="Membership_Level" id="np">
-                            <label for="np">Non-Profit</label>
-            
-                            <input type="radio" name="Membership_Level" id="bronze">
-                            <label for="bronze">Bronze</label>
-            
-                            <input type="radio" name="Membership_Level" id="silver">
-                            <label for="silver">Silver</label>
-            
-                            <input type="radio" name="Membership_Level" id="gold">
-                            <label for="gold">Gold</label>
-                        </div>
+                    <fieldset id="membership-level">
+                        <legend>Choose Membership Level</legend>
+                    
+                        <label>
+                            <input type="radio" name="membership" value="non-profit">
+                            Non-Profit
+                        </label>
+                    
+                        <label>
+                            <input type="radio" name="membership" value="bronze">
+                            Bronze
+                        </label>
+                    
+                        <label>
+                            <input type="radio" name="membership" value="silver">
+                            Silver
+                        </label>
+                    
+                        <label>
+                            <input type="radio" name="membership" value="gold">
+                            Gold
+                        </label>
                     </fieldset>
+
             
                     <input type="hidden" name="Time_Stamp" id="time-stamp">
             

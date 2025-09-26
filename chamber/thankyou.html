@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample directory of local businesses and organizations that are presented as members of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
+    <meta name="author" content="Laureen Diaz">
+
+    <!--SOCIAL MEDIA (FACEBOOK) META-->
+    <meta property="og:title" content="Directory - Makati City Chamber of Commerce">
+    <meta property="og:description"
+        content="This webpage was created as part of a Web Frontend Development I (WDD 231) course assignment. It provides a sample thank you message after completing the Membership Application Form of the Makati City Chamber of Commerce. Please note that this is a fictitious site developed for educational purposes only and is not an official website.">
+    <meta property="og:image" content="https://misswendiaz.github.io/wdd231/chamber/images/makati.jpg">
+    <meta property="og:url" content="https://misswendiaz.github.io/wdd231/chamber/directory.html">
+
+    <title>Thank You | Join - Makati City Chamber of Commerce</title>
+
+    <!--FAV ICON-->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="https://misswendiaz.github.io/wdd231/chamber/images/bdo.webp" type="image/webp"
+        fetchpriority="high">
+    <link rel="preload" as="image" href="https://misswendiaz.github.io/wdd231/chamber/images/bpi.webp" type="image/webp"
+        fetchpriority="high">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:opsz@18..144&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" crossorigin>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/chamber.css" />
+
+    <!--JAVASCRIPTS-->
+    <script type="module" src="scripts/thankyou.mjs" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <img src="images/makati-logo.webp" alt="Site Logo" width="50" height="46" fetchpriority="high">
+            <span>Makati City Chamber of Commerce</span>
+        </div>
+
+        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li></li><a href="directory.html">Directory</a></li>
+                <li ><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Thank You for Joining!</h1>
+
+        <div class="thankyou-container">
+            <h2>Application Form Details</h2>
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="phone"></span></p>
+            <p><strong>Business / Organization:</strong> <span id="business"></span></p>
+            <p><strong>Submitted On:</strong> <span id="timestamp"></span></p>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-member">
+            <p><strong>Makati City Chamber of Commerce</strong></p>
+            <p>Paseo de Roxas</p>
+            <p>Makati City, Philippines 1226</p>
+            <p>info@makaticitycc.org</p>
+            <p>(+632) 6252-8422</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/MyMakatiVerified" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook logo" width="16" height="16" loading="lazy">
+            </a>
+
+            <a href="https://www.youtube.com/playlist?list=PLsQnpnkppSL4i4Q2P8q_UFp6AYwK71Hom" target="_blank">
+                <img src="images/youtube.svg" alt="YouTube logo" width="16" height="16" loading="lazy">
+            </a>
+
+            <a href="https://www.linkedin.com/company/makati-city-government/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn logo" width="16" height="16" loading="lazy">
+            </a>
+        </div>
+        <div class="footer-details">
+            <p>WDD231 Class Project</p>
+            <p>&#10024;Laureen Diaz&#10024;</p>
+            <p id="currentyear">© 2025 Makati City Chamber of Commerce</p>
+            <p id="lastModified">Last Modification: Sep 14, 2025</p>
+        </div>
+    </footer>
+</body>
+
+</html>
