@@ -25,6 +25,8 @@ import { initMembershipDetails } from "./membership-levels.mjs";
 import { initFormValidation } from "./form-validation.mjs";
 
 
+const page = document.body.dataset.page;
+
 
 // === HAMBURGER MENU ===
 //Store the selected elements that we are going to use.
@@ -65,14 +67,16 @@ if (gridBtn && listBtn && cards) {
 }
 
 
-// === WEATHER ===
-getWeather();
+if (page === "home") {
+    // === WEATHER ===
+    getWeather();
 
-// === FORECAST ===
-fetchForecast();
+    // === FORECAST ===
+    fetchForecast();
 
-// === SPOTLIGHTS ===
-loadSpotlights();
+    // === SPOTLIGHTS ===
+    loadSpotlights();
+}
 
 // === MEMBERSHIP LEVELS ===
 initMembershipDetails();
