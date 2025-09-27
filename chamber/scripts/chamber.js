@@ -92,25 +92,22 @@ if (page === "directory") {
     const listBtn = document.querySelector("#list-btn");
     const cards = document.querySelector(".cards");
 
-    if (gridBtn && listBtn && cards) {
-        gridBtn.addEventListener("click", () => {
-            cards.classList.add("grid");
-            cards.classList.remove("list");
-            cards.innerHTML = ""; // clear current
-            getMemberData(cards); // reload
-        });
+    gridBtn.addEventListener("click", () => {
+        cards.classList.add("grid");
+        cards.classList.remove("list");
+        cards.innerHTML = ""; // clear current
+        getMemberData(cards); // reload
+    });
 
-        listBtn.addEventListener("click", () => {
-            cards.classList.add("list");
-            cards.classList.remove("grid");
-            cards.innerHTML = ""; //clear current
-            getMemberData(cards); // reload
-        });
+    listBtn.addEventListener("click", () => {
+        cards.classList.add("list");
+        cards.classList.remove("grid");
+        cards.innerHTML = ""; //clear current
+        getMemberData(cards); // reload
+    });
 
-        // Load members initially
-        getMemberData(cards);
-
-    }
+    // Load members initially
+    getMemberData(cards);
 }
 
 
