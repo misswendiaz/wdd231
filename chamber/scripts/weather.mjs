@@ -24,6 +24,7 @@ export async function getWeather() {
 
 function displayResults(data) {
     const container = document.querySelector("#weather-content");
+    if (!container) return; // Prevent crash if not on the home page
     container.innerHTML = "";
 
     // Weather Icon
