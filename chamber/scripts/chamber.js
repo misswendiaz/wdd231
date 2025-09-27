@@ -3,11 +3,12 @@
 // Hamburger Toggle
 import { initHamburger } from "./hamburger.mjs";
 
-// Member Functions
-import { getMemberData } from "./members.mjs";
-
 // Date
 import { updateDates } from "./date.mjs";
+
+
+// *****
+
 
 // Current Weather
 import { getWeather } from "./weather.mjs"
@@ -18,6 +19,20 @@ import { fetchForecast } from "./forecast.mjs"
 // Spotlights
 import { loadSpotlights } from "./spotlight.mjs";
 
+
+// *****
+
+
+
+// *****
+
+
+// Member Functions
+import { getMemberData } from "./members.mjs";
+
+
+// *****
+
 // Membership Level Details
 import { initMembershipDetails } from "./membership-levels.mjs";
 
@@ -25,8 +40,12 @@ import { initMembershipDetails } from "./membership-levels.mjs";
 import { initFormValidation } from "./form-validation.mjs";
 
 
+
+// Get the current page from data attribute
 const page = document.body.dataset.page;
 
+
+// ********** ALL PAGES **********
 
 // === HAMBURGER MENU ===
 //Store the selected elements that we are going to use.
@@ -40,32 +59,15 @@ if(navButton && navLinks) {
     });
 }
 
+// === FOOTER ===
+// Call the updateDates function when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+    updateDates(); // Last Modified Time Stamp
+});
 
-// === GRID or LIST VIEW ===
-const gridBtn = document.querySelector("#grid-btn");
-const listBtn = document.querySelector("#list-btn");
-const cards = document.querySelector(".cards");
 
-if (gridBtn && listBtn && cards) {
-    gridBtn.addEventListener("click", () => {
-        cards.classList.add("grid");
-        cards.classList.remove("list");
-        cards.innerHTML = ""; // clear current
-        getMemberData(cards); // reload
-    });
 
-    listBtn.addEventListener("click", () => {
-        cards.classList.add("list");
-        cards.classList.remove("grid");
-        cards.innerHTML = ""; //clear current
-        getMemberData(cards); // reload
-    });
-
-    // Load members initially
-    getMemberData(cards);
-
-}
-
+// ********** HOME PAGE **********
 
 if (page === "home") {
     // === WEATHER ===
@@ -78,20 +80,49 @@ if (page === "home") {
     loadSpotlights();
 }
 
-// === MEMBERSHIP LEVELS ===
-initMembershipDetails();
+// ********** DISCOVER PAGE **********
 
-// === FORM VALIDATION ===
-document.addEventListener("DOMContentLoaded", () => {
-    // initialize your existing chamber.js stuff
-    // ...
 
-    // initialize form validation
-    initFormValidation();
-});
 
-// === FOOTER ===
-// Call the updateDates function when DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-    updateDates(); // Last Modified Time Stamp
-});
+// ********** DIRECTORY PAGE **********
+
+if (page === "directory") {
+    // === GRID or LIST VIEW ===
+    const gridBtn = document.querySelector("#grid-btn");
+    const listBtn = document.querySelector("#list-btn");
+    const cards = document.querySelector(".cards");
+
+    if (gridBtn && listBtn && cards) {
+        gridBtn.addEventListener("click", () => {
+            cards.classList.add("grid");
+            cards.classList.remove("list");
+            cards.innerHTML = ""; // clear current
+            getMemberData(cards); // reload
+        });
+
+        listBtn.addEventListener("click", () => {
+            cards.classList.add("list");
+            cards.classList.remove("grid");
+            cards.innerHTML = ""; //clear current
+            getMemberData(cards); // reload
+        });
+
+        // Load members initially
+        getMemberData(cards);
+
+    }
+}
+
+
+// ********** JOIN PAGE **********
+
+if (page === "join") {
+    // === MEMBERSHIP LEVELS ===
+    initMembershipDetails();
+
+    // === FORM VALIDATION ===
+    document.addEventListener("DOMContentLoaded", () => {
+
+        initFormValidation();
+    });
+}
