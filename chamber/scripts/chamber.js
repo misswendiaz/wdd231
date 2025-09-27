@@ -52,12 +52,17 @@ const page = document.body.dataset.page;
 const navButton = document.querySelector("#ham-btn");
 const navLinks = document.querySelector("#nav-bar");
 
-if(navButton && navLinks) {
-    //Toggle the show class off and on
-    navButton.addEventListener("click", () => {
-        initHamburger(navButton, navLinks);
-    });
+// if(navButton && navLinks) {
+//     //Toggle the show class off and on
+//     navButton.addEventListener("click", () => {
+//         initHamburger(navButton, navLinks);
+//     });
+// }
+
+if (navButton && navLinks) {
+    initHamburger(navButton, navLinks);
 }
+
 
 // === FOOTER ===
 // Call the updateDates function when DOM is ready
