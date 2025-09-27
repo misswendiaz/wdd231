@@ -757,6 +757,17 @@ input[type="radio"] {
 
 /* ===== THANK YOU PAGE =====*/
 
+.thankyou-page {
+    display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;;
+}
+
+.thankyou-page main {
+    flex: 1;
+}
+
 .thankyou-container {
     max-width: 600px;
     margin: 1rem auto;
