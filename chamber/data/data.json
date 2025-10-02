@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Art in the Park",
+        "description": "A beloved one-day outdoor art fair in Salcedo Park featuring 60+ galleries, student groups, and collectives. Visitors enjoy affordable contemporary art, live music, and food stalls under the trees.",
+        "image": "https://images.openai.com/thumbnails/url/_c2ihHicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw5J8Yp3jUp2CzPPKHN2NC7w8_T3iUpN9y0Nc89Ody7wMk4MCDUs9HLJs8jO8wnK9fOrMq80SC03CvdQKwYAvDso5g"
+    },
+    {
+        "title": "Ayala Museum",
+        "description": "Makati’s premier museum showcasing Philippine art, history, and culture. Highlights include the Diorama Experience, pre-colonial gold artifacts, Southeast Asian ceramics, and rotating contemporary exhibits.",
+        "image": "https://images.openai.com/thumbnails/url/4t6mc3icu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw60cCn2izI3dgwuL3LxLioyjTdJ8sp3Mcwr8Y43LC5M8s-tDMs3SYqMCDbKjPD2iSpLjDLKybEMjEjMCFQrBgAQSynd"
+    },
+    {
+        "title": "Ayala Triangle Gardens",
+        "description": "An urban oasis in Makati’s business district with shaded walkways, landscaped lawns, and seasonal light displays. Perfect for lunch breaks, evening strolls, or quiet reading under trees.",
+        "image": "https://images.openai.com/thumbnails/url/rtPm0Hicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw5yS84KLYnPdfaOSDOr8srzqqwozgzxSXcyc4uoyA5xTQ5OM0nONnA0tPRKyUwJyLc0SjIJ88oqMc-OSlcrBgAtBSoE"
+    },
+    {
+        "title": "Dream Lab",
+        "description": "An immersive 4,000m² simulation playground in Circuit Makati with 20+ interactive zones. Kids and families role-play entrepreneurs, create installations, and explore imaginative worlds.",
+        "image": "https://images.openai.com/thumbnails/url/tdP60Xicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw5MSy30N8vP8jYxTPN2MTA1cS5JtPDItwh18ytJ1M0pKchLNy82iMwOd_UMKy0LLXX2dXQ2iDeqMjBRKwYArVgoSA"
+    },
+    {
+        "title": "Glorietta",
+        "description": "A landmark shopping hub in the Ayala Center with retail shops, dining, cinemas, and events. Connected to surrounding malls and gardens, it’s a go-to for shopping and entertainment.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Glorietta_Mall%2C_Makati_City.jpg"
+    },
+    {
+        "title": "Greenbelt Mall",
+        "description": "An upscale lifestyle mall blending luxury shopping, fine dining, and open garden courtyards. Known for international brands, cultural events, and relaxing garden paths.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Greenbelt_Mall_Makati.jpg"
+    },
+    {
+        "title": "Guadalupe Ruins",
+        "description": "Remnants of a 17th-century stone church, offering a tranquil heritage site amid modern Makati. Its weathered walls and arches are perfect for history lovers and photographers.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Guadalupe_Old_Church_ruins_Makati.jpg"
+    },
+    {
+        "title": "Legazpi Active Park",
+        "description": "A 0.75-hectare park in Legazpi Village with jogging paths, playground, and open lawns. It also hosts the popular Legazpi Sunday Market, a hub for foodies and local artisans.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Legazpi_Active_Park_2017.jpg"
+    },
+    {
+        "title": "Washington SyCip Park",
+        "description": "A serene green space named after banker Washington SyCip, featuring a koi pond, gazebos, and sculptures by Impy Pilapil. Ideal for quiet breaks, reading, or casual strolls.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Washington_SyCip_Park_in_Makati.jpg"
+    },
+    {
+        "title": "Salcedo Weekend Market",
+        "description": "A bustling Saturday morning market in Salcedo Village. Find fresh produce, gourmet food, crafts, plants, and local delicacies in a lively open-air setting.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Salcedo_Saturday_Market_Makati.jpg"
+    },
+    {
+        "title": "Poblacion Linear Park",
+        "description": "A riverside park along the Pasig River in historic Poblacion, linking heritage sites and Rockwell. Enjoy shaded benches, walking paths, and scenic views.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Poblacion_Park_Makati.jpg"
+    },
+    {
+        "title": "De La Rosa Elevated Walkway",
+        "description": "A 1.1 km network of pedestrian walkways above Makati’s busy streets. Connecting malls, offices, and hospitals, it makes urban walking safe and convenient.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/De_La_Rosa_Elevated_Walkway_Makati.jpg"
+    },
+    {
+        "title": "Yuchengco Museum",
+        "description": "An art and design museum in Makati hosting contemporary exhibits, cultural showcases, and heritage displays. A complement to the Ayala Museum’s collections.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Yuchengco_Museum_Makati.jpg"
+    },
+    {
+        "title": "Salcedo Nights Live",
+        "description": "An evening concert series in Salcedo Park featuring orchestras, choirs, and classical performances under the stars. A cultural highlight for locals and visitors alike.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Salcedo_Park_Makati_City.jpg"
+    }
+]
