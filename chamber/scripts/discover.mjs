@@ -1,72 +1,74 @@
+// The URL of the JSON data file that contains discover items information.
+const url = "https://misswendiaz.github.io/wdd231/chamber/data/discover.json";
+
 /**
- * Loop through discover items and display them
- * @param {Array} discover - The array of discover objects from JSON
- * @param {HTMLElement} container - The container element where cards will be appended
+ * Fetch the item data from the JSON file and call displayItems.
+ * @param {HTMLElement} container - The DOM element to render the items into.
+ */
+export async function getItemData(container) {
+    try {
+        // Fetch the JSON file
+        const response = await fetch(url);
+
+        // Parse the response into a JavaScript object
+        const data = await response.json();
+
+        // Call displayItems to render items
+        displayItems(data.discover, container);
+    } catch (error) {
+        console.error("Error fetching discover data:", error);
+    }
+}
+
+/**
+ * Display discover items in a simple grid layout.
+ * @param {Array} discover - Array of discover objects.
+ * @param {HTMLElement} container - The DOM element to render the items into.
  */
 function displayItems(discover, container) {
     discover.forEach((item, index) => {
-        // ✅ Detect if current view is "list" or "grid"
-        const isListView = container.classList.contains("list");
-
-        // ✅ Use the appropriate renderer
-        const card = isListView
-            ? renderListCard(item)
-            : renderGridCard(item, index);
-
-        // ✅ Append the card into the container
+        const card = renderGridCard(item, index);
         container.appendChild(card);
     });
 }
 
 /**
- * Render a discover item in GRID view
- * @param {Object} item - A single discover object from JSON
- * @param {number} index - Index of the item (for image fetch priority)
- * @returns {HTMLElement} A <section> card in grid format
+ * Render a single item card (Grid style).
+ * @param {Object} item - Discover object from JSON.
+ * @param {number} index - Position in the array (for image loading priority).
+ * @returns {HTMLElement} - A <section> element representing the item card.
  */
 function renderGridCard(item, index) {
-    // Create section for the card
     let card = document.createElement("section");
     card.classList.add("item-card");
 
     // Name
     let name = document.createElement("h2");
     name.classList.add("item-name");
-    name.textContent = item.name; // ✅ FIXED: was using discover.name
+    name.textContent = item.name;
 
     // Image
     let image = document.createElement("img");
     image.classList.add("item-image");
-    image.setAttribute("src", item.image);   // ✅ FIXED
-    image.setAttribute("alt", item.name);    // ✅ FIXED
+    image.setAttribute("src", item.image);
+    image.setAttribute("alt", item.name);
     image.setAttribute("width", 300);
     image.setAttribute("height", 200);
 
-    // ✅ Optimize image loading
+    // Optimize image loading
     if (index === 0 || index === 1) {
-        // First 2 images load immediately
         image.setAttribute("fetchpriority", "high");
     } else {
-        // Others load lazily
         image.setAttribute("loading", "lazy");
     }
 
     // Description
     let description = document.createElement("p");
     description.classList.add("item-tagline");
-    description.textContent = item.tagline;  // ✅ FIXED
+    description.textContent = item.tagline;
 
-    // Append elements into card
+    // Append into card
     card.append(name, image, description);
 
     return card;
 }
-
-/**
- * Render a discover item in LIST view
- * @param {Object} item - A single discover object from JSON
- * @returns {HTMLElement} A <section> card in list-row format
- */
-function renderListCard(item) {
-    // Create section for the row
-    let card = document.createElemen

@@ -1,19 +1,19 @@
 { "discover": [
     {
         "name": "Art in the Park",
-        "photo": "https://misswendiaz.github.io/wdd231/chamber/images/art-in-the-park.webp",
+        "image": "https://misswendiaz.github.io/wdd231/chamber/images/art-in-the-park.webp",
         "desciption": "Art in the Park is a beloved one-day outdoor art fair held in Jaime Velasquez (Salcedo) Park, Makati. It gathers over 60 galleries, collectives, and student groups to showcase contemporary art in an accessible, relaxed setting. Artworks are often priced with a cap (e.g. ₱70,000) to encourage wider patronage. It also features food stalls, live music, and interactive elements for visitors to immerse themselves in Filipino creativity. Visitors can stroll among booths under trees, discover emerging artists, and enjoy the park’s ambiance."
     },
 
     {
         "name": "Ayala Museum",
-        "photo": "https://misswendiaz.github.io/wdd231/chamber/images/ayala-museum.webp",
+        "image": "https://misswendiaz.github.io/wdd231/chamber/images/ayala-museum.webp",
         "desciption": "The Ayala Museum is Makati’s premier museum of Philippine art, history, and culture. It features the Diorama Experience, which traces Philippine history through 60 handcrafted scenes, and exhibits such as Gold of Ancestors (pre-colonial gold artifacts), Southeast Asian ceramics, and rotating contemporary art. After a major renovation, the museum reopened with enhanced galleries, digital installations, and renewed commitment to cultural education. Situated in the Ayala Center, it offers a contemplative cultural anchor amid the shopping and green spaces of Makati."
     },
 
     {
         "name": "Ayala Triangle Gardens",
-        "photo": "https://misswendiaz.github.io/wdd231/chamber/images/ayala-triangle-gardens.webp",
+        "image": "https://misswendiaz.github.io/wdd231/chamber/images/ayala-triangle-gardens.webp",
         "desciption": "Ayala Triangle Gardens is a signature green sanctuary in the heart of Makati’s business district. It occupies the triangular block formed by Ayala, Makati, and Paseo de Roxas Avenues and provides a refreshing urban retreat. n daylight it’s great for strolling, lunch breaks, or a quiet read under shade. At night, it’s beautifully lit—perfect for relaxing walks or casual photo moments. With trees, landscaped paths, and an open lawn, it’s often compared to a mini “Central Park” for Makati."
     },
 
