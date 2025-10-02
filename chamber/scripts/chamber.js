@@ -88,9 +88,13 @@ if (page === "home") {
 }
 
 // ********** DISCOVER PAGE **********
+if (page === "discover") {
+    const cards = document.querySelector(".cards");
+    
+    // Load items initially
+    getItemData(cards);
+}
 
-// Load items initially
-getItemData(cards);
 
 // ********** DIRECTORY PAGE **********
 
