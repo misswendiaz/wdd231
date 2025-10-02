@@ -25,6 +25,8 @@ import { loadSpotlights } from "./spotlight.mjs";
 // Discover Item Function
 import { getItemData } from "./discover.mjs";
 
+import { initItemDetails } from "./description.mjs";
+
 
 // *****
 
@@ -93,6 +95,9 @@ if (page === "discover") {
     
     // Load items initially
     getItemData(cards);
+
+    // === EXPLORE BUTTON ===
+    initItemDetails();
 }
 
 

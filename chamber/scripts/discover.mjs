@@ -62,13 +62,18 @@ function renderGridCard(item, index) {
         image.setAttribute("loading", "lazy");
     }
 
-    // Description
-    let description = document.createElement("p");
-    description.classList.add("item-description");
-    description.textContent = item.description;
+    // // Description
+    // let description = document.createElement("p");
+    // description.classList.add("item-description");
+    // description.textContent = item.description;
+
+    // Learn More button
+    let learnMoreButton = document.createElement("button");
+    learnMoreButton.classList.add("learnMoreButton")
+    learnMoreButton.textContent = "Learn More"
 
     // Append into card
-    card.append(name, image, description);
+    card.append(name, image, learnMoreButton);
 
     return card;
 }
