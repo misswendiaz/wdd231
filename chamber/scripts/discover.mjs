@@ -64,8 +64,8 @@ function renderGridCard(item, index) {
 
     // Description
     let description = document.createElement("p");
-    description.classList.add("item-tagline");
-    description.textContent = item.tagline;
+    description.classList.add("item-description");
+    description.textContent = item.description;
 
     // Append into card
     card.append(name, image, description);
