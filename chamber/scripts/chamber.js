@@ -22,6 +22,8 @@ import { loadSpotlights } from "./spotlight.mjs";
 
 // *****
 
+// Discover Item Function
+import { getItemData } from "./discover.mjs";
 
 
 // *****
@@ -87,7 +89,8 @@ if (page === "home") {
 
 // ********** DISCOVER PAGE **********
 
-
+// Load items initially
+getItemData(cards);
 
 // ********** DIRECTORY PAGE **********
 
