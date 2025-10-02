@@ -48,12 +48,6 @@
     },
 
     {
-        "name": "Washington SyCip Park",
-        "image": "https://misswendiaz.github.io/wdd231/chamber/images/washington-sycip-park.webp",
-        "description": "Washington SyCip Park is a quiet, contemplative green space tucked beside the Legazpi Active Park and Greenbelt. Named after the Filipino banker Washington SyCip, the park opened in 2006. The setting includes gazebos, landscaped walkways, a koi pond, and ornamental plantings, all designed for passive enjoyment. Sculptural works by Impy Pilapil—such as the “Mangrove Nature’s Embrace” installation—add artistic touches. It’s a favorite hideaway for readers, lunchtime al fresco breaks, or moments of calm in the city."
-    },
-
-    {
         "name": "Salcedo Weekend Market",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/salcedo-weekend-market.webp",
         "description": "Held every Saturday morning at Salcedo Village (adjacent to Salcedo Park), this bustling open-air market offers fresh produce, specialty foods, plants, crafts, and local delicacies. It’s a beloved weekend ritual for residents and visitors seeking local flavors and artisan finds."
@@ -63,6 +57,12 @@
         "name": "Salcedo Nights Live",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/salcedo-nights-live.webp",
         "description": "Salcedo Nights Live is a concert series typically held in Salcedo Park, featuring classical music performances, choirs, and orchestras in an evening outdoor setting. It’s a cultural treat bringing live music to a neighborhood park under the stars."
+    },
+
+    {
+        "name": "Washington SyCip Park",
+        "image": "https://misswendiaz.github.io/wdd231/chamber/images/washington-sycip-park.webp",
+        "description": "Washington SyCip Park is a quiet, contemplative green space tucked beside the Legazpi Active Park and Greenbelt. Named after the Filipino banker Washington SyCip, the park opened in 2006. The setting includes gazebos, landscaped walkways, a koi pond, and ornamental plantings, all designed for passive enjoyment. Sculptural works by Impy Pilapil—such as the “Mangrove Nature’s Embrace” installation—add artistic touches. It’s a favorite hideaway for readers, lunchtime al fresco breaks, or moments of calm in the city."
     },
 
     {
