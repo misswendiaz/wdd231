@@ -27,6 +27,9 @@ import { getItemData } from "./discover.mjs";
 
 import { initItemDetails } from "./description.mjs";
 
+// Last Visit
+import { lastVisit } from "./last-visit.mjs";
+
 
 // *****
 
@@ -91,13 +94,16 @@ if (page === "home") {
 
 // ********** DISCOVER PAGE **********
 if (page === "discover") {
-    const cards = document.querySelector(".cards");
+    const cards = document.querySelector(".discover");
     
     // Load items initially
     getItemData(cards);
 
     // === EXPLORE BUTTON ===
     initItemDetails();
+
+    // Last Visit
+    lastVisit();
 }
 
 

@@ -27,18 +27,18 @@ export async function getItemData(container) {
  */
 function displayItems(discover, container) {
     discover.forEach((item, index) => {
-        const card = renderGridCard(item, index);
+        const card = renderCard(item, index);
         container.appendChild(card);
     });
 }
 
 /**
- * Render a single item card (Grid style).
+ * Render a card.
  * @param {Object} item - Discover object from JSON.
  * @param {number} index - Position in the array (for image loading priority).
  * @returns {HTMLElement} - A <section> element representing the item card.
  */
-function renderGridCard(item, index) {
+function renderCard(item, index) {
     let card = document.createElement("section");
     card.classList.add("item-card");
 
@@ -62,10 +62,16 @@ function renderGridCard(item, index) {
         image.setAttribute("loading", "lazy");
     }
 
-    // // Description
-    // let description = document.createElement("p");
-    // description.classList.add("item-description");
-    // description.textContent = item.description;
+    // Address
+    let address = document.createElement("p");
+    address.classList.add("item-address");
+    address.textContent = item.address;
+
+    // Overview
+    let overview = document.createElement("p");
+    overview.classList.add("item-overview");
+    overview.textContent = item.overview;
+
 
     // Learn More button
     let learnMoreButton = document.createElement("button");
@@ -73,7 +79,7 @@ function renderGridCard(item, index) {
     learnMoreButton.textContent = "Learn More"
 
     // Append into card
-    card.append(name, image, learnMoreButton);
+    card.append(name, image, address, overview,learnMoreButton);
 
     return card;
 }

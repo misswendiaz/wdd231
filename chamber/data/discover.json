@@ -2,72 +2,96 @@
     {
         "name": "Art in the Park",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/art-in-the-park.webp",
+        "address":"Jaime Velasquez Park, Salcedo Village, Makati City",
+        "overview": "A one-day outdoor art fair bringing together galleries, collectives, and independent artists in a community setting.",
         "description": "Art in the Park is a beloved one-day outdoor art fair held in Jaime Velasquez (Salcedo) Park, Makati. It gathers over 60 galleries, collectives, and student groups to showcase contemporary art in an accessible, relaxed setting. Artworks are often priced with a cap (e.g. ₱70,000) to encourage wider patronage. It also features food stalls, live music, and interactive elements for visitors to immerse themselves in Filipino creativity. Visitors can stroll among booths under trees, discover emerging artists, and enjoy the park’s ambiance."
     },
 
     {
         "name": "Ayala Museum",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/ayala-museum.webp",
+        "address": "Makati Avenue corner De La Rosa Street, Greenbelt Park, Makati City, Metro Manila",
+        "overview": "A modern museum showcasing Filipino art, history, and culture with immersive galleries and rotating exhibitions.",
         "description": "The Ayala Museum is Makati’s premier museum of Philippine art, history, and culture. It features the Diorama Experience, which traces Philippine history through 60 handcrafted scenes, and exhibits such as Gold of Ancestors (pre-colonial gold artifacts), Southeast Asian ceramics, and rotating contemporary art. After a major renovation, the museum reopened with enhanced galleries, digital installations, and renewed commitment to cultural education. Situated in the Ayala Center, it offers a contemplative cultural anchor amid the shopping and green spaces of Makati."
     },
 
     {
         "name": "Ayala Triangle Gardens",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/ayala-triangle-gardens.webp",
+        "address": "Paseo de Roxas Street corner Makati Avenue, Makati City, Metro Manila",
+        "overview": "A landscaped public park in Makati’s central business district that offers green space, walking paths, and public art.",
         "description": "Ayala Triangle Gardens is a signature green sanctuary in the heart of Makati’s business district. It occupies the triangular block formed by Ayala, Makati, and Paseo de Roxas Avenues and provides a refreshing urban retreat. n daylight it’s great for strolling, lunch breaks, or a quiet read under shade. At night, it’s beautifully lit—perfect for relaxing walks or casual photo moments. With trees, landscaped paths, and an open lawn, it’s often compared to a mini “Central Park” for Makati."
     },
 
     {
         "name": "Dream Lab",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/dream-lab.webp",
+        "address": "Upper Ground Level, Ayala Malls Circuit, Hippodromo St., Barangay Carmona, Makati City, Metro Manila",
+        "overview": "An immersive, interactive science & entrepreneurial exploration center blending education and play.",
         "description": "Dream Lab is an immersive “simulation playground” located in Circuit Makati (Upper Ground floor). Spanning about 4,000 m², it offers over 20 interactive zones where children and families can role-play as entrepreneurs, solve challenges, create city installations, and explore imaginative worlds like 'Wunderville.' It is designed as an edutainment space: fun, colorful, and photo-friendly, with various set pieces ideal for social media snapshots. Dream Lab blends creativity, business thinking, and play into a single attraction in Makati."
     },
 
     {
         "name": "Glorietta",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/glorietta.webp",
+        "address": "Ayala Center, Makati City (e.g. Glorietta 1 at 205 Hotel Drive, Makati)",
+        "overview": "A major shopping, dining, and entertainment mall complex in the heart of Makati.",
         "description": "Glorietta is one of Makati’s landmark shopping and lifestyle centers, anchored in the Ayala Center complex. It features a mix of retail, dining, cinemas, and entertainment venues across multiple levels. Glorietta is often integrated into itineraries for shopping sprees, mall hopping, or catching the latest films. As a hub, it also connects to surrounding malls, gardens, and walkways."
     },
 
     {
         "name": "Greenbelt Mall",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/greenbelt-mall.webp",
+        "address": "Paseo de Roxas, Ayala Center, Makati City, 1228 Metro Manila",
+        "overview": "An upscale mixed-use mall complex combining high-end retail, gardens, restaurants, and a chapel.",
         "description": "Greenbelt Mall is a premier upscale shopping, dining, and lifestyle destination in Makati, set within lush garden courtyards. Its unique layout blends indoor shops and outdoor garden paths, making the mall a relaxed yet stylish environment. Greenbelt is known for top-tier international brands, designer boutiques, fine and casual dining, and cultural events in its open plazas. It also sits adjacent to the Ayala Museum and the Triangle Gardens, allowing visitors to combine shopping and cultural stops."
     },
 
     {
         "name": "Guadalupe Ruins",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/guadalupe-ruins.webp",
+        "address": "7440 Bernardino St., Guadalupe Viejo, Makati City, Metro Manila",
+        "overview": "Remains of the 17th-century Nuestra Señora de Gracia Church offering a glimpse into Makati’s Spanish colonial past.",
         "description": "The Guadalupe Ruins (also known as the “old Guadalupe Church ruins”) are remnants of a 17th-century stone church once part of the San Pedro de Macati estate. Today, these weathered stone walls and arches evoke a sense of tranquil history amid Makati’s modernity. The site is small and quiet, offering a contemplative stop for those interested in heritage, architecture, or atmospheric photography."
     },
 
     {
         "name": "Legazpi Active Park",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/legazpi-active-park.webp",
+        "address": "Rada Street, Legazpi Village, Makati City, Metro Manila, 1229",
+        "overview": "A small urban pocket park in Makati’s CBD, often hosting markets and serving as a green respite amid the city.",
         "description": "Legazpi Active Park is a pocket urban park in Legazpi Village, Makati, optimized for movement and recreation. Spanning 0.75 hectare, it includes jogging paths, open lawns, a children’s playground, and zones for yoga, calisthenics, or light exercise. It also hosts the Legazpi Sunday Market, where local vendors and artisans gather. Positioned between Greenbelt and Makati Medical Center, it’s a favored daily green spot for workers, mall visitors, and families."
     },
 
     {
         "name": "Salcedo Weekend Market",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/salcedo-weekend-market.webp",
+        "address": "Jaime C. Velasquez Park (Salcedo Park), Salcedo Village, Makati City",
+        "overview": "A vibrant Saturday open-air market featuring local food, artisanal goods, and fresh produce.",
         "description": "Held every Saturday morning at Salcedo Village (adjacent to Salcedo Park), this bustling open-air market offers fresh produce, specialty foods, plants, crafts, and local delicacies. It’s a beloved weekend ritual for residents and visitors seeking local flavors and artisan finds."
     },
 
     {
         "name": "Salcedo Nights Live",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/salcedo-nights-live.webp",
+        "address": "Jaime C. Velasquez Park / Salcedo Village, Makati City",
+        "overview": "An evening event series in Salcedo Park featuring live music, food, and community gathering (typically in the evenings).",
         "description": "Salcedo Nights Live is a concert series typically held in Salcedo Park, featuring classical music performances, choirs, and orchestras in an evening outdoor setting. It’s a cultural treat bringing live music to a neighborhood park under the stars."
     },
 
     {
         "name": "Washington SyCip Park",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/washington-sycip-park.webp",
+        "address": "Legazpi Street, Legazpi Village, Makati City, Metro Manila, 1229",
+        "overview": "A privately owned public park near Greenbelt, named after banker Washington SyCip, featuring landscaped walkways, gardens, and relaxation zones.",
         "description": "Washington SyCip Park is a quiet, contemplative green space tucked beside the Legazpi Active Park and Greenbelt. Named after the Filipino banker Washington SyCip, the park opened in 2006. The setting includes gazebos, landscaped walkways, a koi pond, and ornamental plantings, all designed for passive enjoyment. Sculptural works by Impy Pilapil—such as the “Mangrove Nature’s Embrace” installation—add artistic touches. It’s a favorite hideaway for readers, lunchtime al fresco breaks, or moments of calm in the city."
     },
 
     {
         "name": "Yuchengco Museum",
         "image": "https://misswendiaz.github.io/wdd231/chamber/images/yuchengco-museum.webp",
+        "address": "RCBC Plaza, corner of Ayala Avenue and Senator Gil J. Puyat Avenue, Makati City, Metro Manila",
+        "overview": "A museum of art, design, and architecture that hosts rotating exhibits of Filipino and international artists.",
         "description": "Located in Makati, Yuchengco Museum hosts rotating contemporary art exhibitions, design showcases, and cultural events. It complements the Ayala Museum with a focus on art, design, and heritage in a more intimate museum setting."
     }
 ]}
