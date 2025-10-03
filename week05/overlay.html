@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Visit Overlay Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Overlay background */
+        #last-visit-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            /* dimmed background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        /* Overlay box */
+        #last-visit-overlay .overlay-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Close button */
+        #close-overlay {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background: #1b5e20;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #close-overlay:hover {
+            background: #2e7d32;
+        }
+
+        /* Example page content */
+        main {
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Welcome to My Page</h1>
+        <p>This is the main page content.</p>
+    </main>
+
+    <!-- Overlay -->
+    <div id="last-visit-overlay">
+        <div class="overlay-content">
+            <p id="last-visit"></p>
+            <button id="close-overlay">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function lastVisit() {
+            const lastVisitContainer = document.getElementById("last-visit");
+            const overlay = document.getElementById("last-visit-overlay");
+            const closeBtn = document.getElementById("close-overlay");
+
+            // Get last visit date
+            const lastVisitDate = localStorage.getItem("lastVisit");
+            const today = new Date();
+            localStorage.setItem("lastVisit", today);
+
+            if (lastVisitDate) {
+                const lastStoredDate = new Date(lastVisitDate);
+                lastVisitContainer.textContent =
+                    `Welcome back! Your last visit was on ${lastStoredDate.toDateString()}`;
+            } else {
+                lastVisitContainer.textContent = "Welcome! This is your first visit.";
+            }
+
+            // Close overlay when button is clicked
+            closeBtn.addEventListener("click", () => {
+                overlay.style.display = "none";
+            });
+        }
+
+        // Run function on page load
+        window.onload = lastVisit;
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 export function lastVisit() {
     const lastVisitContainer = document.getElementById("last-visit");
+    const overlay = document.getElementById("last-visit-overlay");
+    const closeButton = document.getElementById("close-overlay");
 
     // Get the last visit date from the localStorage
     const lastVisitDate = localStorage.getItem("lastVisit");
@@ -28,4 +30,11 @@ export function lastVisit() {
     // Save current date as new last visit
     const today = new Date();
     localStorage.setItem("lastVisit", today.toISOString()); // more reliable storage format
+
+    // Hook up close button for overlay
+    if (closeButton) {
+        closeButton.addEventListener("click", () => {
+            overlay.style.display = "none";
+        });
+    }
 }
