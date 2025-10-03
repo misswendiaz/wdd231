@@ -349,6 +349,7 @@ footer .social img {
 /***** LAST VISIT OVERLAY *****/
 /* Overlay background */
 #last-visit-overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
