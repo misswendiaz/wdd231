@@ -48,7 +48,8 @@ body {
 
 h1,
 h2,
-h3, .sitename {
+h3,
+.sitename {
     font-family: var(--font-heading);
     color: var(--primary-color);
     margin-bottom: 0.5rem;
@@ -154,85 +155,6 @@ header {
     color: var(--text-primary);
 }
 
-/* ============================
-   Home Page Layout
-   ============================ */
-main#homepage {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.intro {
-    margin-bottom: 2rem;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.feature-card {
-    background-color: var(--bg-surface);
-    border: 1px solid #aaa;
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease;
-    text-align: center;
-}
-
-.feature-card:hover {
-    transform: translateY(-4px);
-}
-
-.feature-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.feature-card p {
-    font-size: 0.95rem;
-}
-
-.cta {
-    margin-top: 2rem;
-}
-
-.cta a.button {
-    display: inline-block;
-    margin: 0.5rem 1rem;
-    padding: 0.75rem 1.5rem;
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-#cta1 {
-    background-color: var(--secondary-color);
-    color: var(--text-primary);
-}
-
-#cta1:hover {
-    background-color: #689F38;
-}
-
-#cta2 {
-    background-color: var(--accent-color);
-    color: var(--text-primary);
-}
-
-#cta2:hover {
-    background-color: #00796B;
-}
 
 /* ============================
    Responsive Breakpoints 
@@ -294,6 +216,42 @@ main#homepage {
     }
 }
 
+
+/* ============================
+   Contact Confirmation Page
+   ============================ */
+.confirmation-page main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--bg-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.confirmation-page h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#entries {
+    padding: 1rem;
+}
+
+#entries p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#entries strong {
+    display: inline-block;
+    min-width: 120px;
+    color: var(--text-primary);
+}
 
 /* ============================
    Footer
