@@ -42,7 +42,8 @@ body {
 
 h1,
 h2,
-h3, .sitename {
+h3,
+.sitename {
     font-family: var(--font-heading);
     color: var(--primary-color);
     margin-bottom: 0.5rem;
@@ -217,100 +218,41 @@ header {
 }
 
 
-
 /* ============================
-   Contact Page Custom Styles
+   Contact Confirmation Page
    ============================ */
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.contact-page .contact-form-area {
+.confirmation-page main {
     max-width: 700px;
     margin: 2rem auto;
     padding: 1rem;
-    background: var(--bg-surface);
+    background-color: var(--bg-surface);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
-.contact-page .form-row {
-    margin-bottom: 1rem;
-}
-
-.contact-page .form-row label {
-    display: block;
-    margin-bottom: 0.25rem;
-    font-weight: 600;
-}
-
-.contact-page .form-row input,
-.contact-page .form-row textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius);
-    font-family: var(--font-body);
-}
-
-.contact-page .form-row input,
-select {
-    text-align: center;
-}
-
-.contact-page .form-row button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.75rem 1.25rem;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color var(--transition);
-}
-
-.contact-page .form-row button:hover {
-    background-color: var(--secondary-color);
-}
-
-.contact-page .contact-info {
-    max-width: 700px;
-    margin: 1rem auto;
-    text-align: center;
-    font-size: 0.95rem;
-}
-
-/* Hide by default */
-.hidden {
-    display: none;
-}
-
-/* FAQ section style */
-.contact-page .faq-section {
-    max-width: 700px;
-    margin: 2rem auto;
-}
-
-.contact-page .faq-item {
-    margin-bottom: 1rem;
-}
-
-.contact-page .faq-item h3 {
-    font-size: 1.1rem;
+.confirmation-page h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
     color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.contact-page input,
-select,
-textarea {
-    min-height: 44px;
-    display: block;
-    border-radius: var(--border-radius);
+#entries {
+    padding: 1rem;
 }
 
+#entries p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#entries strong {
+    display: inline-block;
+    min-width: 120px;
+    color: var(--text-primary);
+}
 
 /* ============================
    Footer
