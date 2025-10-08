@@ -48,7 +48,7 @@ body {
 
 h1,
 h2,
-h3 {
+h3, .sitename {
     font-family: var(--font-heading);
     color: var(--primary-color);
     margin-bottom: 0.5rem;
