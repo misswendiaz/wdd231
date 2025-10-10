@@ -1,0 +1,236 @@
+{
+    "academicReferences": [
+        {
+            "category": "Languages",
+            "items": [
+                {
+                    "title": "Project Gutenberg",
+                    "description": "Public-domain literature and multilingual texts — ideal for language learning.",
+                    "link": "https://www.gutenberg.org"
+                },
+                {
+                    "title": "LibreTexts",
+                    "description": "Open-access textbooks across languages, STEM, humanities, and social sciences.",
+                    "link": "https://libretexts.org"
+                },
+                {
+                    "title": "Wikibooks: Filipino",
+                    "description": "Editable grammar and language guides for Filipino and English learners.",
+                    "link": "https://en.wikibooks.org/wiki/Category:Filipino_language"
+                }
+            ]
+        },
+        {
+            "category": "Math",
+            "items": [
+                {
+                    "title": "OpenStax Math",
+                    "description": "Peer-reviewed textbooks for PreCalculus, Calculus, Statistics, and more.",
+                    "link": "https://openstax.org/subjects/math"
+                },
+                {
+                    "title": "Open Textbook Library – Math",
+                    "description": "Freely licensed textbooks covering algebra, geometry, and other topics.",
+                    "link": "https://open.umn.edu/opentextbooks/subjects/math"
+                },
+                {
+                    "title": "Wikibooks: Mathematics",
+                    "description": "Community-driven math texts from basic to advanced levels.",
+                    "link": "https://en.wikibooks.org/wiki/Category:Mathematics"
+                }
+            ]
+        },
+        {
+            "category": "Science",
+            "items": [
+                {
+                    "title": "OpenStax Science",
+                    "description": "Free textbooks for Biology, Chemistry, Physics, and Environmental Science.",
+                    "link": "https://openstax.org/subjects/science"
+                },
+                {
+                    "title": "Open Textbook – Science",
+                    "description": "Diverse, accessible science textbooks across disciplines.",
+                    "link": "https://open.umn.edu/opentextbooks/subjects/science"
+                },
+                {
+                    "title": "Wikibooks: Science",
+                    "description": "Collaborative science texts covering biology, physics, and technology.",
+                    "link": "https://en.wikibooks.org/wiki/Category:Science"
+                }
+            ]
+        },
+        {
+            "category": "Social Science",
+            "items": [
+                {
+                    "title": "PSSC Social Science Info",
+                    "description": "Open-access articles on Philippine social science and history topics.",
+                    "link": "https://pssc.org.ph/social-science-information/"
+                },
+                {
+                    "title": "Philippine History Source Book",
+                    "description": "Annotated primary sources for Philippine history education.",
+                    "link": "https://k12teacherstaffdevelopment.com/filippinka/philippine-history-source-book"
+                },
+                {
+                    "title": "Wikibooks: Social Science",
+                    "description": "Text-based guides on sociology, anthropology, and related fields.",
+                    "link": "https://en.wikibooks.org/wiki/Category:Social_science"
+                }
+            ]
+        },
+        {
+            "category": "Music",
+            "items": [
+                {
+                    "title": "Wikibooks: Music",
+                    "description": "Free textbooks on music theory, history, and notation.",
+                    "link": "https://en.wikibooks.org/wiki/Category:Music"
+                },
+                {
+                    "title": "Public Domain Music Collection",
+                    "description": "Vintage sheet music and music theory essays in the public domain.",
+                    "link": "https://publicdomaininformation.org/music-waveforms"
+                },
+                {
+                    "title": "Wikimedia: Music Theory",
+                    "description": "Open-access articles on music theory fundamentals.",
+                    "link": "https://en.wikipedia.org/wiki/Category:Music_theory"
+                }
+            ]
+        },
+        {
+            "category": "CK-12 References",
+            "items": [
+                {
+                    "title": "CK-12 FlexBooks®",
+                    "description": "Customizable textbooks with videos, diagrams, and embedded learning tools.",
+                    "link": "https://www.ck12.org/flexbook/"
+                },
+                {
+                    "title": "CK-12 Concept Pages & Videos",
+                    "description": "Concise concept explanations and walkthrough videos in math & science.",
+                    "link": "https://www.ck12.org/concept/"
+                },
+                {
+                    "title": "CK-12 HS Textbooks",
+                    "description": "Grade-level FlexBooks® with structured lessons and supporting resources.",
+                    "link": "https://www.ck12.org/high-school"
+                }
+            ]
+        }
+    ],
+    "interactiveTools": [
+        {
+            "category": "Languages",
+            "items": [
+                {
+                    "title": "Duolingo",
+                    "description": "Free courses for English, Tagalog, Spanish, and more.",
+                    "link": "https://www.duolingo.com"
+                },
+                {
+                    "title": "TypingClub",
+                    "description": "Typing lessons and drills to build keyboard literacy.",
+                    "link": "https://www.typingclub.com"
+                },
+                {
+                    "title": "Epic! (Free Tier)",
+                    "description": "Access digital books and videos for young readers.",
+                    "link": "https://www.epic.com"
+                }
+            ]
+        },
+        {
+            "category": "Math Tools",
+            "items": [
+                {
+                    "title": "Khan Academy",
+                    "description": "Extensive math lessons with practice exercises and tutorials.",
+                    "link": "https://www.khanacademy.org"
+                },
+                {
+                    "title": "Desmos Graphing Calculator",
+                    "description": "Visualize and interact with mathematical equations online.",
+                    "link": "https://www.desmos.com"
+                },
+                {
+                    "title": "GeoGebra Visual Toolkit",
+                    "description": "Dynamic tools for geometry, algebra, calculus, and statistics.",
+                    "link": "https://www.geogebra.org"
+                },
+                {
+                    "title": "Wolfram|Alpha (Free)",
+                    "description": "Computational engine providing answers and visual math solutions.",
+                    "link": "https://www.wolframalpha.com"
+                },
+                {
+                    "title": "Wolfram Arithmetic Manipulatives",
+                    "description": "Interactive fraction and number-line tools designed for elementary learners.",
+                    "link": "https://blog.wolframalpha.com/math-for-all-ages-online-manipulatives-for-basic-arithmetic"
+                }
+            ]
+        },
+        {
+            "category": "CK-12 Tools",
+            "items": [
+                {
+                    "title": "CK-12 Simulations (PLIX)",
+                    "description": "Interactive science and math simulations: manipulate variables and explore models.",
+                    "link": "https://flexbooks.ck12.org/cwatch/"
+                },
+                {
+                    "title": "CK-12 Braingenie Practice",
+                    "description": "Adaptive math & science problem engine with instant feedback.",
+                    "link": "https://www.ck12.org/practice/"
+                },
+                {
+                    "title": "CK-12 FlexBooks® as Tool",
+                    "description": "Use embedded quizzes and manipulatives inside FlexBooks® interactively.",
+                    "link": "https://www.ck12.org/flexbook/"
+                }
+            ]
+        },
+        {
+            "category": "Science Tools",
+            "items": [
+                {
+                    "title": "BioNetwork Virtual Microscope",
+                    "description": "Browser-based microscope simulator with lens switching and specimen viewing.",
+                    "link": "https://www.ncbionetwork.org/educational-resources/elearning/virtual-microscope"
+                },
+                {
+                    "title": "MyScope Explore (SEM)",
+                    "description": "Free scanning-electron microscope simulation with zoom controls.",
+                    "link": "https://www.myscope-explore.org/virtualSEM_explore.html"
+                },
+                {
+                    "title": "CASK Virtual Viewer",
+                    "description": "Zoomable digital slides and anatomy images for browser viewing.",
+                    "link": "https://www.caskanatomy.info/products/caskviewer/"
+                }
+            ]
+        },
+        {
+            "category": "General Tools",
+            "items": [
+                {
+                    "title": "OER Commons",
+                    "description": "Lesson plans and interactive resources created by educators in multiple subjects.",
+                    "link": "https://www.oercommons.org"
+                },
+                {
+                    "title": "Academic Earth",
+                    "description": "Free video lectures covering topics from humanities, science, and more.",
+                    "link": "https://academicearth.org"
+                },
+                {
+                    "title": "HelpTeaching Worksheets",
+                    "description": "Printable worksheets for math, writing, science, social studies, and music.",
+                    "link": "https://helpteaching.com"
+                }
+            ]
+        }
+    ]
+}
