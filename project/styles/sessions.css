@@ -153,6 +153,7 @@ header {
 .current {
     background-color: var(--accent-color);
     color: var(--text-primary);
+    border-radius: var(--border-radius);
 }
 
 
@@ -163,11 +164,18 @@ header {
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    #filters {
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        margin: 0 auto;
+        font-size: 1.8rem;
     }
 
     .header-flex {
@@ -185,7 +193,7 @@ header {
         flex-direction: column;
         width: 100%;
         background-color: var(--bg-surface);
-        padding: 1rem;
+        padding: 0.5rem 0;
         margin-top: 1rem;
         border-radius: var(--border-radius);
     }
@@ -195,24 +203,18 @@ header {
     }
 
     .nav-links a {
-        min-width: 120px;
+        display: block;
+        width: 100%;
+        min-width: 0;
         margin: 0.25rem 0;
+        padding: 0.75rem 1rem;
         text-align: center;
     }
 
-    .features {
-        grid-template-columns: 1fr;
-    }
-
-    .cta {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cta a.button {
-        width: 100%;
-        max-width: 250px;
+    #table th,
+    #table td {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.5rem;
     }
 }
 
@@ -268,6 +270,7 @@ input[type="number"],
 input[type="date"],
 input[type="time"],
 select {
+    min-height: 48px;
     text-align: center;
 }
 
@@ -405,13 +408,6 @@ input:required:valid {
     padding-top: 0.5rem;
 }
 
-/* Medium screen better spacing for filters */
-@media (max-width: 1024px) {
-    #filters {
-        gap: 0.5rem;
-        justify-content: space-between;
-    }
-}
 
 /* Bulk action button wrapper */
 #bulk-action {
@@ -562,15 +558,6 @@ button.toggle-paid-btn.unpaid {
     border-radius: 3px;
 }
 
-/* Responsive tweaks for sessions table on mobile */
-@media (max-width: 768px) {
-
-    #table th,
-    #table td {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.5rem;
-    }
-}
 
 
 
