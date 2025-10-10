@@ -16,7 +16,6 @@
     <meta property="og:image" content="https://misswendiaz.github.io/wdd231/finalproject/images/logo.webp">
     <meta property="og:url" content="https://misswendiaz.github.io/wdd231/finalproject/resources.html">
 
-
     <!-- Fav Icon -->
     <link rel="icon" href="images/favicon.ico">
 
@@ -30,7 +29,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/resources.css">
 
-    <!--JavaScript-->
+    <!-- JavaScript -->
     <script src="scripts/resources.js" defer></script>
 </head>
 
@@ -71,14 +70,18 @@
         <section id="resources">
             <h2>Learning Resources</h2>
             <p>Explore open-access academic references and interactive learning tools.</p>
+            <!-- Container where JS will inject the two-column layout -->
             <div id="resources-container" class="features"></div>
         </section>
-        
+
         <!-- ================================ -->
         <!-- Modal Dialog for "Learn More" -->
         <!-- ================================ -->
         <div id="modal" class="modal" aria-hidden="true">
             <div class="modal-content" role="dialog" aria-modal="true">
+                <!-- ================================ -->
+                <!-- Close button for modal -->
+                <!-- ================================ -->
                 <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
                 <h3 id="modal-title"></h3>
                 <p id="modal-description"></p>

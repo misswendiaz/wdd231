@@ -1,6 +1,26 @@
 {
     "academicReferences": [
         {
+            "category": "CK-12 References",
+            "items": [
+                {
+                    "title": "CK-12 FlexBooks®",
+                    "description": "Customizable textbooks with videos, diagrams, and embedded learning tools.",
+                    "link": "https://www.ck12.org/flexbook/"
+                },
+                {
+                    "title": "CK-12 Concept Pages & Videos",
+                    "description": "Concise concept explanations and walkthrough videos in math & science.",
+                    "link": "https://www.ck12.org/concept/"
+                },
+                {
+                    "title": "CK-12 HS Textbooks",
+                    "description": "Grade-level FlexBooks® with structured lessons and supporting resources.",
+                    "link": "https://www.ck12.org/high-school"
+                }
+            ]
+        },
+        {
             "category": "Languages",
             "items": [
                 {
@@ -21,26 +41,6 @@
             ]
         },
         {
-            "category": "Math",
-            "items": [
-                {
-                    "title": "OpenStax Math",
-                    "description": "Peer-reviewed textbooks for PreCalculus, Calculus, Statistics, and more.",
-                    "link": "https://openstax.org/subjects/math"
-                },
-                {
-                    "title": "Open Textbook Library – Math",
-                    "description": "Freely licensed textbooks covering algebra, geometry, and other topics.",
-                    "link": "https://open.umn.edu/opentextbooks/subjects/math"
-                },
-                {
-                    "title": "Wikibooks: Mathematics",
-                    "description": "Community-driven math texts from basic to advanced levels.",
-                    "link": "https://en.wikibooks.org/wiki/Category:Mathematics"
-                }
-            ]
-        },
-        {
             "category": "Science",
             "items": [
                 {
@@ -57,6 +57,26 @@
                     "title": "Wikibooks: Science",
                     "description": "Collaborative science texts covering biology, physics, and technology.",
                     "link": "https://en.wikibooks.org/wiki/Category:Science"
+                }
+            ]
+        },
+        {
+            "category": "Math",
+            "items": [
+                {
+                    "title": "OpenStax Math",
+                    "description": "Peer-reviewed textbooks for PreCalculus, Calculus, Statistics, and more.",
+                    "link": "https://openstax.org/subjects/math"
+                },
+                {
+                    "title": "Open Textbook Library – Math",
+                    "description": "Freely licensed textbooks covering algebra, geometry, and other topics.",
+                    "link": "https://open.umn.edu/opentextbooks/subjects/math"
+                },
+                {
+                    "title": "Wikibooks: Mathematics",
+                    "description": "Community-driven math texts from basic to advanced levels.",
+                    "link": "https://en.wikibooks.org/wiki/Category:Mathematics"
                 }
             ]
         },
@@ -99,29 +119,29 @@
                     "link": "https://en.wikipedia.org/wiki/Category:Music_theory"
                 }
             ]
-        },
-        {
-            "category": "CK-12 References",
-            "items": [
-                {
-                    "title": "CK-12 FlexBooks®",
-                    "description": "Customizable textbooks with videos, diagrams, and embedded learning tools.",
-                    "link": "https://www.ck12.org/flexbook/"
-                },
-                {
-                    "title": "CK-12 Concept Pages & Videos",
-                    "description": "Concise concept explanations and walkthrough videos in math & science.",
-                    "link": "https://www.ck12.org/concept/"
-                },
-                {
-                    "title": "CK-12 HS Textbooks",
-                    "description": "Grade-level FlexBooks® with structured lessons and supporting resources.",
-                    "link": "https://www.ck12.org/high-school"
-                }
-            ]
         }
     ],
     "interactiveTools": [
+        {
+            "category": "CK-12 Tools",
+            "items": [
+                {
+                    "title": "CK-12 Simulations (PLIX)",
+                    "description": "Interactive science and math simulations: manipulate variables and explore models.",
+                    "link": "https://flexbooks.ck12.org/cwatch/"
+                },
+                {
+                    "title": "CK-12 Braingenie Practice",
+                    "description": "Adaptive math & science problem engine with instant feedback.",
+                    "link": "https://www.ck12.org/practice/"
+                },
+                {
+                    "title": "CK-12 FlexBooks® as Tool",
+                    "description": "Use embedded quizzes and manipulatives inside FlexBooks® interactively.",
+                    "link": "https://www.ck12.org/flexbook/"
+                }
+            ]
+        },
         {
             "category": "Languages",
             "items": [
@@ -139,6 +159,26 @@
                     "title": "Epic! (Free Tier)",
                     "description": "Access digital books and videos for young readers.",
                     "link": "https://www.epic.com"
+                }
+            ]
+        },
+        {
+            "category": "Science Tools",
+            "items": [
+                {
+                    "title": "BioNetwork Virtual Microscope",
+                    "description": "Browser-based microscope simulator with lens switching and specimen viewing.",
+                    "link": "https://www.ncbionetwork.org/educational-resources/elearning/virtual-microscope"
+                },
+                {
+                    "title": "MyScope Explore (SEM)",
+                    "description": "Free scanning-electron microscope simulation with zoom controls.",
+                    "link": "https://www.myscope-explore.org/virtualSEM_explore.html"
+                },
+                {
+                    "title": "CASK Virtual Viewer",
+                    "description": "Zoomable digital slides and anatomy images for browser viewing.",
+                    "link": "https://www.caskanatomy.info/products/caskviewer/"
                 }
             ]
         },
@@ -169,46 +209,6 @@
                     "title": "Wolfram Arithmetic Manipulatives",
                     "description": "Interactive fraction and number-line tools designed for elementary learners.",
                     "link": "https://blog.wolframalpha.com/math-for-all-ages-online-manipulatives-for-basic-arithmetic"
-                }
-            ]
-        },
-        {
-            "category": "CK-12 Tools",
-            "items": [
-                {
-                    "title": "CK-12 Simulations (PLIX)",
-                    "description": "Interactive science and math simulations: manipulate variables and explore models.",
-                    "link": "https://flexbooks.ck12.org/cwatch/"
-                },
-                {
-                    "title": "CK-12 Braingenie Practice",
-                    "description": "Adaptive math & science problem engine with instant feedback.",
-                    "link": "https://www.ck12.org/practice/"
-                },
-                {
-                    "title": "CK-12 FlexBooks® as Tool",
-                    "description": "Use embedded quizzes and manipulatives inside FlexBooks® interactively.",
-                    "link": "https://www.ck12.org/flexbook/"
-                }
-            ]
-        },
-        {
-            "category": "Science Tools",
-            "items": [
-                {
-                    "title": "BioNetwork Virtual Microscope",
-                    "description": "Browser-based microscope simulator with lens switching and specimen viewing.",
-                    "link": "https://www.ncbionetwork.org/educational-resources/elearning/virtual-microscope"
-                },
-                {
-                    "title": "MyScope Explore (SEM)",
-                    "description": "Free scanning-electron microscope simulation with zoom controls.",
-                    "link": "https://www.myscope-explore.org/virtualSEM_explore.html"
-                },
-                {
-                    "title": "CASK Virtual Viewer",
-                    "description": "Zoomable digital slides and anatomy images for browser viewing.",
-                    "link": "https://www.caskanatomy.info/products/caskviewer/"
                 }
             ]
         },

@@ -4,27 +4,41 @@
 
 async function loadResources() {
     try {
-        const response = await fetch("resources.json");
+        const response = await fetch("data/resources.json");
         if (!response.ok) throw new Error("Failed to load resources.");
         const data = await response.json();
 
         const container = document.getElementById("resources-container");
 
-        // Combine both academic and interactive sections
+        // ================================
+        // Create a two-column container for References and Tools
+        // ================================
+        const columnsWrapper = document.createElement("div");
+        columnsWrapper.classList.add("columns-wrapper");
+
         const allSections = [
             { title: "Academic References", content: data.academicReferences },
             { title: "Free Interactive Tools", content: data.interactiveTools },
         ];
 
         allSections.forEach((section) => {
+            // ================================
+            // Each section is a column
+            // ================================
+            const sectionColumn = document.createElement("div");
+            sectionColumn.classList.add("section-column");
+
             const sectionHeader = document.createElement("h3");
             sectionHeader.textContent = section.title;
-            container.appendChild(sectionHeader);
+            sectionColumn.appendChild(sectionHeader);
 
             section.content.forEach((group) => {
+                const categoryDiv = document.createElement("div");
+                categoryDiv.classList.add("category-group");
+
                 const groupTitle = document.createElement("h4");
                 groupTitle.textContent = group.category;
-                container.appendChild(groupTitle);
+                categoryDiv.appendChild(groupTitle);
 
                 const groupDiv = document.createElement("div");
                 groupDiv.classList.add("features");
@@ -34,18 +48,23 @@ async function loadResources() {
                     card.classList.add("feature-card");
 
                     card.innerHTML = `
-            <h5>${item.title}</h5>
-            <button class="learn-more-btn" data-title="${item.title}" 
-              data-description="${item.description}" data-link="${item.link}">
-              Learn More
-            </button>
-          `;
+                        <h5>${item.title}</h5>
+                        <button class="learn-more-btn" data-title="${item.title}" 
+                          data-description="${item.description}" data-link="${item.link}">
+                          Learn More
+                        </button>
+                    `;
                     groupDiv.appendChild(card);
                 });
 
-                container.appendChild(groupDiv);
+                categoryDiv.appendChild(groupDiv);
+                sectionColumn.appendChild(categoryDiv);
             });
+
+            columnsWrapper.appendChild(sectionColumn);
         });
+
+        container.appendChild(columnsWrapper);
 
         attachModalEvents();
     } catch (error) {
@@ -55,6 +74,9 @@ async function loadResources() {
     }
 }
 
+/* ================================ */
+/* Modal Events */
+/* ================================ */
 function attachModalEvents() {
     const modal = document.getElementById("modal");
     const closeBtn = document.getElementById("close-modal");
@@ -62,6 +84,7 @@ function attachModalEvents() {
     const modalDesc = document.getElementById("modal-description");
     const modalLink = document.getElementById("modal-link");
 
+    // Open modal when clicking Learn More
     document.querySelectorAll(".learn-more-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
             modalTitle.textContent = btn.dataset.title;
@@ -72,11 +95,13 @@ function attachModalEvents() {
         });
     });
 
+    // Close modal when clicking close button
     closeBtn.addEventListener("click", () => {
         modal.classList.remove("show");
         modal.setAttribute("aria-hidden", "true");
     });
 
+    // Close modal when clicking outside the modal content
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.classList.remove("show");
