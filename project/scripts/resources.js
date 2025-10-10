@@ -50,17 +50,20 @@ async function loadResources() {
 
                     card.innerHTML = `
                         <h5>${item.title}</h5>
-                        <p><strong>Category:</strong> ${item.category}</p>
-                        <p><strong>Grade:</strong> ${item.grade}</p>
-                        <p><strong>Type:</strong> ${item.type}</p>
-                        <p><strong>Cost:</strong> ${item.cost}</p>
+                        <div class="meta-info">
+                            <span><strong>Category:</strong> ${item.category}</span>
+                            <span><strong>Grade:</strong> ${item.grade}</span>
+                            <span><strong>Type:</strong> ${item.type}</span>
+                            <span><strong>Cost:</strong> ${item.cost}</span>
+                        </div>
                         <button class="learn-more-btn" 
-                          data-title="${item.title}" 
-                          data-description="${item.description}" 
-                          data-link="${item.link}">
-                          Learn More
+                        data-title="${item.title}" 
+                        data-description="${item.description}" 
+                        data-link="${item.link}">
+                        Learn More
                         </button>
                     `;
+
                     groupDiv.appendChild(card);
                 });
 
