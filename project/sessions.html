@@ -66,21 +66,21 @@
             <section id="form">
                 <h2>Add Session</h2>
 
-                <form id="addSession">
+                <form id="addSession" action="session-confirmation.html" method="get">
                     <fieldset>
                         <legend>Session</legend>
-                        <label>Date* <input type="date" id="date" required></label>
-                        <label>Start Time* <input type="time" id="start" required></label>
-                        <label>End Time* <input type="time" id="end" required></label>
+                        <label>Date* <input type="date" id="date" name="Date" required></label>
+                        <label>Start Time* <input type="time" id="start" name="Start" required></label>
+                        <label>End Time* <input type="time" id="end" name="End" required></label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Student</legend>
-                        <label>Name* <input type="text" id="name" required></label>
+                        <label>Name* <input type="text" id="name" name="Name" required></label>
                         <label for="grade">Grade Level</label>
-                        <select name="grade" id="grade">
+                        <select id="grade" name="Grade">
                             <option value="">--Select the Grade Level--</option>
-                            <option value="k">Kindergarten</option>
+                            <option value="Kindergarten">Kindergarten</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -93,45 +93,44 @@
                             <option value="10">10</option>
                             <option value="11">11</option>
                             <option value="12">12</option>
-                            <option value="college">College</option>
+                            <option value="College">College</option>
                         </select>
                         <label for="subject">Subject</label>
-                        <select name="subject" id="subject">
+                        <select id="subject" name="Subject">
                             <option value="">--Select the Subject--</option>
-                            <option value="language">Language</option>
-                            <option value="english">English</option>
-                            <option value="filipino">Filipino</option>
-                            <option value="math">Mathematics</option>
-                            <option value="algebra">Algebra</option>
-                            <option value="calculus">Calculus</option>
-                            <option value="geometry">Geometry</option>
-                            <option value="probability">Probability</option>
-                            <option value="stat">Statistics</option>
-                            <option value="trigo">Trigonometry</option>
-                            <option value="science">Science</option>
-                            <option value="bio">Biology</option>
-                            <option value="chem">Chemistry</option>
-                            <option value="geol">Geology</option>
-                            <option value="physics">Physics</option>
-                            <option value="socsci">Social Science</option>
-                            <option value="geog">Geography</option>
-                            <option value="history">History</option>
-                            <option value="music">Music</option>
-                            <option value="other">Others</option>
+                            <option value="Language">Language</option>
+                            <option value="English">English</option>
+                            <option value="Filipino">Filipino</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Algebra">Algebra</option>
+                            <option value="Calculus">Calculus</option>
+                            <option value="Geometry">Geometry</option>
+                            <option value="Probability">Probability</option>
+                            <option value="Stat">Statistics</option>
+                            <option value="Trigonometry">Trigonometry</option>
+                            <option value="Science">Science</option>
+                            <option value="Biology">Biology</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Geology">Geology</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Social Science">Social Science</option>
+                            <option value="Geography">Geography</option>
+                            <option value="History">History</option>
+                            <option value="Music">Music</option>
+                            <option value="Other">Others</option>
                         </select>
                         <div id="other" class="hidden">
-                            <label>Please specify: <input type="text" id="other-specifics"
-                                    placeholder="Subject"></label>
+                            <label>Please specify: <input type="text" id="other-specifics" name="Other" placeholder="Subject"></label>
                         </div>
-                        <label>Topic <input type="text" id="topic"></label>
+                        <label>Topic <input type="text" id="topic" name="Topic"></label>
                         <label for="feedback">Feedback</label>
-                        <textarea name="feedback" id="feedback" placeholder="Type your feedback here."></textarea>
+                        <textarea id="feedback" name="Feedback" placeholder="Type your feedback here."></textarea>
                     </fieldset>
 
                     <fieldset>
                         <legend>Billing Details</legend>
-                        <label>Hourly Rate <input type="number" id="rate" required></label>
-                        <label>Discount (%) <input type="number" id="discount" min="0" max="100" value="0"></label>
+                        <label>Hourly Rate <input type="number" id="rate" name="Rate" required></label>
+                        <label>Discount (%) <input type="number" id="discount" name="Discount" min="0" max="100" value="0"></label>
                     </fieldset>
                     <button type="submit" class="button" id="save">Save Session</button>
                 </form>
@@ -163,7 +162,7 @@
             <div id="summary"></div>
 
             <!-- ============================
-                 Sessions Table (Compact View)
+                 Sessions Table
                  ============================ -->
             <section id="table">
                 <h2>Logged Sessions</h2>
@@ -187,16 +186,51 @@
 
             <!-- ============================
                  Dialog Box for Details
-                 (Styled like Resources dialog)
                  ============================ -->
             <dialog id="session-dialog" class="session-dialog">
                 <div class="session-dialog-content">
                     <button id="close-dialog" class="session-dialog-close">Close</button>
                     <h3 id="dialog-title">Session Details</h3>
                     <div id="dialog-body"></div>
+                    <div class="dialog-buttons">
+                        <button id="edit-session" class="button">Edit</button>
+                        <button id="delete-session" class="button" disabled>Delete</button>
+                    </div>
+
                 </div>
             </dialog>
         </div>
+
+        <!-- ============================
+             Edit Session Dialog
+             ============================ -->
+        <dialog id="edit-dialog" class="session-dialog">
+            <div class="session-dialog-content">
+                <h3>Edit Session</h3>
+                <form id="editSessionForm" action="session-confirmation.html" method="get">
+                    <label>Date* <input type="date" id="edit-date" name="Date" required></label>
+                    <label>Start Time* <input type="time" id="edit-start" name="Start" required></label>
+                    <label>End Time* <input type="time" id="edit-end" name="End" required></label>
+                    <label>Name* <input type="text" id="edit-name" name="Name" required></label>
+                    <label>Grade Level
+                        <input type="text" id="edit-grade" name="Grade" placeholder="e.g. 9, 10, College">
+                    </label>
+                    <label>Subject <input type="text" id="edit-subject" name="Subject"></label>
+                    <label>Topic <input type="text" id="edit-topic" name="Topic"></label>
+                    <label>Feedback
+                        <textarea id="edit-feedback" name="Feedback" placeholder="Type feedback here."></textarea>
+                    </label>
+                    <label>Hourly Rate <input type="number" id="edit-rate" name="Rate" required></label>
+                    <label>Discount (%) <input type="number" id="edit-discount" name="Discount" min="0" max="100" value="0"></label>
+        
+                    <div class="dialog-buttons">
+                        <button type="button" id="cancel-edit" class="button">Cancel</button>
+                        <button type="submit" class="button">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+
     </main>
 
     <footer>

@@ -364,10 +364,11 @@ input:required:valid {
     justify-content: flex-end;
 }
 
-.filter-actions button {
+.filter-actions button, .dialog-buttons button {
     background-color: var(--secondary-color);
     color: var(--text-primary);
     border: none;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -375,7 +376,7 @@ input:required:valid {
     transition: background-color var(--transition);
 }
 
-.filter-actions button:hover {
+.filter-actions button:hover, .dialog-buttons button:hover {
     background-color: var(--info-color)
 }
 
