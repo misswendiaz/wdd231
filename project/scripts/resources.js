@@ -1,4 +1,13 @@
 /* ================================ */
+/* Import Hamburger Module */
+/* ================================ */
+import { initNavigation } from './hamburger.mjs';
+
+// Initialize hamburger menu immediately
+initNavigation();
+
+
+/* ================================ */
 /* Dynamic Resources + Modal */
 /* ================================ */
 
@@ -10,9 +19,6 @@ async function loadResources() {
 
         const container = document.getElementById("resources-container");
 
-        // ================================
-        // Create a two-column container for References and Tools
-        // ================================
         const columnsWrapper = document.createElement("div");
         columnsWrapper.classList.add("columns-wrapper");
 
@@ -22,9 +28,6 @@ async function loadResources() {
         ];
 
         allSections.forEach((section) => {
-            // ================================
-            // Each section is a column
-            // ================================
             const sectionColumn = document.createElement("div");
             sectionColumn.classList.add("section-column");
 
@@ -74,6 +77,7 @@ async function loadResources() {
     }
 }
 
+
 /* ================================ */
 /* Modal Events */
 /* ================================ */
@@ -84,7 +88,6 @@ function attachModalEvents() {
     const modalDesc = document.getElementById("modal-description");
     const modalLink = document.getElementById("modal-link");
 
-    // Open modal when clicking Learn More
     document.querySelectorAll(".learn-more-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
             modalTitle.textContent = btn.dataset.title;
@@ -95,13 +98,11 @@ function attachModalEvents() {
         });
     });
 
-    // Close modal when clicking close button
     closeBtn.addEventListener("click", () => {
         modal.classList.remove("show");
         modal.setAttribute("aria-hidden", "true");
     });
 
-    // Close modal when clicking outside the modal content
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.classList.remove("show");
@@ -110,5 +111,6 @@ function attachModalEvents() {
     });
 }
 
-// Load resources on page load
+
+// Load resources after DOM is ready
 document.addEventListener("DOMContentLoaded", loadResources);

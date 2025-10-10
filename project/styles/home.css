@@ -216,22 +216,13 @@ main#homepage {
     font-size: 1rem;
 }
 
-#cta1 {
+.button {
     background-color: var(--secondary-color);
     color: var(--text-primary);
 }
 
-#cta1:hover {
+.button:hover {
     background-color: #689F38;
-}
-
-#cta2 {
-    background-color: var(--accent-color);
-    color: var(--text-primary);
-}
-
-#cta2:hover {
-    background-color: #00796B;
 }
 
 /* ============================

@@ -371,3 +371,16 @@ h4 {
     color: var(--text-primary);
     cursor: pointer;
 }
+
+
+/* ============================
+   Footer
+   ============================ */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 2rem;
+}
