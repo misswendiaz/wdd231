@@ -171,11 +171,12 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Name</th> <!-- Name first -->
-                            <th>Duration</th>
-                            <th>Fee</th>
-                            <th>Actions</th>
+                            <th class="essential">Date</th>
+                            <th class="essential">Name</th>
+                            <th class="essential">Duration</th>
+                            <th class="essential">Fee</th>
+                            <th class="essential">Paid</th>
+                            <th class="essential">Actions</th>
                         </tr>
                     </thead>
 
@@ -186,14 +187,15 @@
 
             <!-- ============================
                  Dialog Box for Details
+                 (Styled like Resources dialog)
                  ============================ -->
-            <div id="session-dialog" class="hidden">
-                <div class="dialog-content">
-                    <button id="close-dialog">&times;</button>
+            <dialog id="session-dialog" class="session-dialog">
+                <div class="session-dialog-content">
+                    <button id="close-dialog" class="session-dialog-close">Close</button>
+                    <h3 id="dialog-title">Session Details</h3>
                     <div id="dialog-body"></div>
                 </div>
-            </div>
-
+            </dialog>
         </div>
     </main>
 

@@ -51,12 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>${s.date}</td>
-                <td>${s.name}</td>
-                <td>${duration.toFixed(2)}</td>
-                <td>₱${fee}</td> <!-- CHANGED: $ → ₱ -->
-                <td><button class="details-btn" data-index="${index}">Details</button></td>
+                <td class="essential">${s.date}</td>
+                <td class="essential">${s.name}</td>
+                <td class="essential">${duration.toFixed(2)}</td>
+                <td class="essential">₱${fee}</td>
+                <td class="essential"><input type="checkbox" class="paid-checkbox" data-index="${index}" ${s.paid ? "checked" : ""}></td>
+                <td class="essential"><button class="details-btn" data-index="${index}">Details</button></td>
             `;
+
+
 
             tableBody.appendChild(row);
         });
@@ -87,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ================================
-    // Details Dialog
+    // Details Dialog (Updated for <dialog> element)
     // ================================
     function attachDetailButtons() {
         document.querySelectorAll(".details-btn").forEach(btn => {
@@ -96,27 +99,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 const duration = calculateDuration(session.start, session.end).toFixed(2);
                 const fee = (duration * session.rate * (1 - session.discount / 100)).toFixed(2);
 
+                // Fill dialog content
                 dialogBody.innerHTML = `
-                    <p><strong>Date:</strong> ${session.date}</p>
-                    <p><strong>Name:</strong> ${session.name}</p>
-                    <p><strong>Grade Level:</strong> ${session.grade}</p>
-                    <p><strong>Subject:</strong> ${session.subject}</p>
-                    <p><strong>Topic:</strong> ${session.topic}</p>
-                    <p><strong>Feedback:</strong> ${session.feedback}</p>
-                    <p><strong>Start Time:</strong> ${session.start}</p>
-                    <p><strong>End Time:</strong> ${session.end}</p>
-                    <p><strong>Duration:</strong> ${duration} hrs</p>
-                    <p><strong>Hourly Rate:</strong> ₱${session.rate}</p> <!-- CHANGED -->
-                    <p><strong>Discount:</strong> ${session.discount}%</p>
-                    <p><strong>Fee:</strong> ₱${fee}</p> <!-- CHANGED -->
-                    <p><strong>Status:</strong> ${session.paid ? "Paid" : "Unpaid"}</p>
-                `;
-                dialog.classList.remove("hidden");
+                <p><strong>Date:</strong> ${session.date}</p>
+                <p><strong>Name:</strong> ${session.name}</p>
+                <p><strong>Grade Level:</strong> ${session.grade}</p>
+                <p><strong>Subject:</strong> ${session.subject}</p>
+                <p><strong>Topic:</strong> ${session.topic}</p>
+                <p><strong>Feedback:</strong> ${session.feedback}</p>
+                <p><strong>Start Time:</strong> ${session.start}</p>
+                <p><strong>End Time:</strong> ${session.end}</p>
+                <p><strong>Duration:</strong> ${duration} hrs</p>
+                <p><strong>Hourly Rate:</strong> ₱${session.rate}</p>
+                <p><strong>Discount:</strong> ${session.discount}%</p>
+                <p><strong>Fee:</strong> ₱${fee}</p>
+                <p><strong>Status:</strong> ${session.paid ? "Paid" : "Unpaid"}</p>
+            `;
+
+                // Show dialog
+                dialog.showModal();
             });
         });
     }
 
-    closeDialogBtn.addEventListener("click", () => dialog.classList.add("hidden"));
+    // Close button and click-outside handler
+    closeDialogBtn.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (e) => {
+        if (e.target === dialog) dialog.close();
+    });
+
+
 
     // ================================
     // Filtering
