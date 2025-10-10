@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("addSession");
     const tableBody = document.querySelector("#table tbody");
     const summary = document.getElementById("summary");
+    const markFilteredBtn = document.getElementById("mark-all-paid");
 
     /* ================================ */
-    /* Prefill form from query params   */
+    /* Prefill form from query params */
     /* ================================ */
     (function prefillFormFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -34,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("rate").value = urlParams.get("rate") || "";
         document.getElementById("discount").value = urlParams.get("discount") || 0;
     })();
-
 
     const dialog = document.getElementById("session-dialog");
     const dialogBody = document.getElementById("dialog-body");
@@ -72,12 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("tutorBuddySessions", JSON.stringify(sessions));
     }
 
-    /* ============*/
+    /* ================================ */
     /* Add Session */
-    /* =========== */
+    /* ================================ */
     if (form) {
         form.addEventListener("submit", (e) => {
-            // Instead of saving immediately, we store in localStorage for confirmation
             const session = {
                 date: document.getElementById("date").value,
                 start: document.getElementById("start").value,
@@ -92,11 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 paid: false,
             };
 
-            // ✅ Save temporary session data before navigating to confirmation page
             localStorage.setItem("pendingSession", JSON.stringify(session));
-
-            // Let the form submit normally (GET method → confirmation page)
-            // so we don’t call preventDefault()
         });
     }
 
@@ -123,20 +118,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td class="essential">${s.date}</td>
-                <td class="essential">${s.name}</td>
-                <td class="essential">${duration.toFixed(2)}</td>
-                <td class="essential">₱${fee}</td>
-                <td class="essential"><input type="checkbox" class="paid-checkbox" data-index="${originalIndex}" ${s.paid ? "checked" : ""}></td>
-                <td class="essential"><button class="details-btn" data-index="${originalIndex}">Details</button></td>
-            `;
+            <td class="essential">${s.date}</td>
+            <td class="essential">${s.name}</td>
+            <td class="essential">${duration.toFixed(2)}</td>
+            <td class="essential">₱${fee}</td>
+            <td class="essential"><input type="checkbox" class="paid-checkbox" data-index="${originalIndex}" ${s.paid ? "checked" : ""}></td>
+            <td class="essential"><button class="details-btn" data-index="${originalIndex}">Details</button></td>
+        `;
 
             tableBody.appendChild(row);
         });
 
         attachDetailButtons();
-        attachPaidCheckboxes();
+        attachPaidCheckboxes(data);
         updateSummary(data);
+        updateMarkFilteredButton(); // ✅ update button dynamically
     }
 
     /* ================================ */
@@ -144,8 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ================================ */
     function updateSummary(data) {
         const total = data.reduce((acc, s) => {
-            const duration = calculateDuration(s.start, s.end);
-            return acc + duration * s.rate * (1 - s.discount / 100);
+            if (!s.paid) {
+                const duration = calculateDuration(s.start, s.end);
+                return acc + duration * s.rate * (1 - s.discount / 100);
+            }
+            return acc;
         }, 0);
         summary.textContent = `Amount Due: ₱${total.toFixed(2)}`;
     }
@@ -153,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ================================ */
     /* Paid checkboxes handling */
     /* ================================ */
-    function attachPaidCheckboxes() {
+    function attachPaidCheckboxes(data) {
         document.querySelectorAll(".paid-checkbox").forEach(cb => {
             cb.onchange = null;
             cb.addEventListener("change", () => {
@@ -161,7 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (sessions[index]) {
                     sessions[index].paid = cb.checked;
                     saveSessions();
-                    updateSummary(sessions);
+                    updateSummary(data);
+                    updateMarkFilteredButton();
                 }
             });
         });
@@ -199,19 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 currentEditIndex = originalIndex;
 
-                /* ================================ */
-                /* Edit button setup */
-                /* ================================ */
                 if (editSessionBtn) {
                     editSessionBtn.onclick = null;
-                    editSessionBtn.addEventListener("click", () => {
-                        openEditDialog(currentEditIndex);
-                    });
+                    editSessionBtn.addEventListener("click", () => openEditDialog(currentEditIndex));
                 }
 
-                /* ================================ */
-                /* Delete button setup */
-                /* ================================ */
                 if (deleteSessionBtn) {
                     deleteSessionBtn.disabled = false;
                     deleteSessionBtn.onclick = null;
@@ -327,12 +319,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ================================ */
-    /* Bulk mark paid */
+    /* Bulk mark filtered as Paid/Unpaid */
     /* ================================ */
-    document.getElementById("mark-all-paid").addEventListener("click", () => {
-        sessions.forEach(s => s.paid = true);
+    function updateMarkFilteredButton() {
+        const filteredSessions = Array.from(tableBody.querySelectorAll("tr")).map(row => {
+            const index = Number(row.querySelector(".paid-checkbox").dataset.index);
+            return sessions[index];
+        });
+        if (filteredSessions.length === 0) return;
+        const anyUnpaid = filteredSessions.some(s => !s.paid);
+        markFilteredBtn.textContent = anyUnpaid ? "Mark Filtered as Paid" : "Mark Filtered as Unpaid";
+    }
+
+    markFilteredBtn.addEventListener("click", () => {
+        const filteredSessions = Array.from(tableBody.querySelectorAll("tr")).map(row => {
+            const index = Number(row.querySelector(".paid-checkbox").dataset.index);
+            return sessions[index];
+        });
+        if (filteredSessions.length === 0) return;
+
+        const anyUnpaid = filteredSessions.some(s => !s.paid);
+        filteredSessions.forEach(s => s.paid = anyUnpaid);
+
         saveSessions();
-        renderTable(sessions);
+        renderTable(filteredSessions);
     });
 
     /* ================================ */
