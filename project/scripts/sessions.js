@@ -118,12 +118,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const row = document.createElement("tr");
 
             row.innerHTML = `
-            <td class="essential">${s.date}</td>
-            <td class="essential">${s.name}</td>
-            <td class="essential">${duration.toFixed(2)}</td>
-            <td class="essential">₱${fee}</td>
-            <td class="essential"><input type="checkbox" class="paid-checkbox" data-index="${originalIndex}" ${s.paid ? "checked" : ""}></td>
-            <td class="essential"><button class="details-btn" data-index="${originalIndex}">Details</button></td>
+            <td">${s.date}</td>
+            <td>${s.name}</td>
+            <td>${duration.toFixed(2)}</td>
+            <td>₱${fee}</td>
+            <td><input type="checkbox" class="paid-checkbox" data-index="${originalIndex}" ${s.paid ? "checked" : ""}></td>
+            <td><button class="details-btn" data-index="${originalIndex}">Details</button></td>
         `;
 
             tableBody.appendChild(row);
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         attachDetailButtons();
         attachPaidCheckboxes(data);
         updateSummary(data);
-        updateMarkFilteredButton(); // ✅ update button dynamically
+        updateMarkFilteredButton(); //
     }
 
     /* ================================ */
