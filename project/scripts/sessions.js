@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const duration = calculateDuration(s.start, s.end);
             return acc + duration * s.rate * (1 - s.discount / 100);
         }, 0);
-        summary.textContent = `Total Earnings: ₱${total.toFixed(2)}`;
+        summary.textContent = `Amount Due: ₱${total.toFixed(2)}`;
     }
 
     /* ================================ */
