@@ -156,14 +156,15 @@
                 </div>
             </section>
 
-
             <div id="bulk-action">
                 <button id="mark-all-paid" class="button">Mark Filtered as Paid</button>
             </div>
 
             <div id="summary"></div>
 
-
+            <!-- ============================
+                 Sessions Table (Compact View)
+                 ============================ -->
             <section id="table">
                 <h2>Logged Sessions</h2>
 
@@ -171,19 +172,9 @@
                     <thead>
                         <tr>
                             <th>Date</th>
-                            <th>Start</th>
-                            <th>End</th>
-                            <th>Name</th>
-                            <th>Grade Level</th>
-                            <th>Subject</th>
-                            <th>Topic</th>
-                            <th>Feedback</th>
+                            <th>Name</th> <!-- Name first -->
                             <th>Duration</th>
-                            <th>Hourly Rate</th>
                             <th>Fee</th>
-                            <th>Status</th>
-                            <th>Date Paid</th>
-                            <th>Payment Mode</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -192,6 +183,17 @@
                     </tbody>
                 </table>
             </section>
+
+            <!-- ============================
+                 Dialog Box for Details
+                 ============================ -->
+            <div id="session-dialog" class="hidden">
+                <div class="dialog-content">
+                    <button id="close-dialog">&times;</button>
+                    <div id="dialog-body"></div>
+                </div>
+            </div>
+
         </div>
     </main>
 

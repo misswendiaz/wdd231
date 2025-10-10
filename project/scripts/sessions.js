@@ -6,12 +6,14 @@ import { initNavigation } from './hamburger.mjs';
 // Initialize hamburger menu immediately
 initNavigation();
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("addSession");
     const tableBody = document.querySelector("#table tbody");
     const summary = document.getElementById("summary");
+
+    const dialog = document.getElementById("session-dialog");
+    const dialogBody = document.getElementById("dialog-body");
+    const closeDialogBtn = document.getElementById("close-dialog");
 
     let sessions = [];
 
@@ -39,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ================================
-    // Render Table
+    // Render Table (Compact View)
     // ================================
     function renderTable(data) {
         tableBody.innerHTML = "";
@@ -50,25 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
             row.innerHTML = `
                 <td>${s.date}</td>
-                <td>${s.start}</td>
-                <td>${s.end}</td>
                 <td>${s.name}</td>
-                <td>${s.grade}</td>
-                <td>${s.subject}</td>
-                <td>${s.topic}</td>
-                <td>${s.feedback}</td>
                 <td>${duration.toFixed(2)}</td>
-                <td>${s.rate}</td>
-                <td>${fee}</td>
-                <td>${s.paid ? "Paid" : "Unpaid"}</td>
-                <td>${s.paid ? new Date().toLocaleDateString() : ""}</td>
-                <td>${s.paid ? "N/A" : ""}</td>
-                <td><button data-index="${index}" class="mark-paid">Mark Paid</button></td>
+                <td>₱${fee}</td> <!-- CHANGED: $ → ₱ -->
+                <td><button class="details-btn" data-index="${index}">Details</button></td>
             `;
+
             tableBody.appendChild(row);
         });
 
-        attachMarkPaidButtons();
+        attachDetailButtons();
         updateSummary(data);
     }
 
@@ -90,34 +83,48 @@ document.addEventListener("DOMContentLoaded", () => {
             const duration = calculateDuration(s.start, s.end);
             return acc + duration * s.rate * (1 - s.discount / 100);
         }, 0);
-        summary.textContent = `Total Earnings: $${total.toFixed(2)}`;
+        summary.textContent = `Total Earnings: ₱${total.toFixed(2)}`; // CHANGED: $ → ₱
     }
 
     // ================================
-    // Mark Paid Buttons
+    // Details Dialog
     // ================================
-    function attachMarkPaidButtons() {
-        document.querySelectorAll(".mark-paid").forEach((btn) => {
+    function attachDetailButtons() {
+        document.querySelectorAll(".details-btn").forEach(btn => {
             btn.addEventListener("click", () => {
-                const index = btn.dataset.index;
-                sessions[index].paid = true;
-                renderTable(sessions);
+                const session = sessions[btn.dataset.index];
+                const duration = calculateDuration(session.start, session.end).toFixed(2);
+                const fee = (duration * session.rate * (1 - session.discount / 100)).toFixed(2);
+
+                dialogBody.innerHTML = `
+                    <p><strong>Date:</strong> ${session.date}</p>
+                    <p><strong>Name:</strong> ${session.name}</p>
+                    <p><strong>Grade Level:</strong> ${session.grade}</p>
+                    <p><strong>Subject:</strong> ${session.subject}</p>
+                    <p><strong>Topic:</strong> ${session.topic}</p>
+                    <p><strong>Feedback:</strong> ${session.feedback}</p>
+                    <p><strong>Start Time:</strong> ${session.start}</p>
+                    <p><strong>End Time:</strong> ${session.end}</p>
+                    <p><strong>Duration:</strong> ${duration} hrs</p>
+                    <p><strong>Hourly Rate:</strong> ₱${session.rate}</p> <!-- CHANGED -->
+                    <p><strong>Discount:</strong> ${session.discount}%</p>
+                    <p><strong>Fee:</strong> ₱${fee}</p> <!-- CHANGED -->
+                    <p><strong>Status:</strong> ${session.paid ? "Paid" : "Unpaid"}</p>
+                `;
+                dialog.classList.remove("hidden");
             });
         });
     }
 
+    closeDialogBtn.addEventListener("click", () => dialog.classList.add("hidden"));
+
     // ================================
-    // Filtering (basic example)
+    // Filtering
     // ================================
     document.getElementById("apply-filters").addEventListener("click", () => {
         let filtered = [...sessions];
-
         const studentFilter = document.getElementById("filter-student").value.toLowerCase();
-        if (studentFilter) {
-            filtered = filtered.filter(s => s.name.toLowerCase().includes(studentFilter));
-        }
-
-        // Add more filters (dates/times) as needed
+        if (studentFilter) filtered = filtered.filter(s => s.name.toLowerCase().includes(studentFilter));
         renderTable(filtered);
     });
 
