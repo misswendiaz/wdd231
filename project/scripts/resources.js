@@ -6,11 +6,9 @@ import { initNavigation } from './hamburger.mjs';
 // Initialize hamburger menu immediately
 initNavigation();
 
-
 /* ================================ */
 /* Dynamic Resources + Modal */
 /* ================================ */
-
 async function loadResources() {
     try {
         const response = await fetch("data/resources.json");
@@ -52,8 +50,14 @@ async function loadResources() {
 
                     card.innerHTML = `
                         <h5>${item.title}</h5>
-                        <button class="learn-more-btn" data-title="${item.title}" 
-                          data-description="${item.description}" data-link="${item.link}">
+                        <p><strong>Category:</strong> ${item.category}</p>
+                        <p><strong>Grade:</strong> ${item.grade}</p>
+                        <p><strong>Type:</strong> ${item.type}</p>
+                        <p><strong>Cost:</strong> ${item.cost}</p>
+                        <button class="learn-more-btn" 
+                          data-title="${item.title}" 
+                          data-description="${item.description}" 
+                          data-link="${item.link}">
                           Learn More
                         </button>
                     `;
@@ -76,7 +80,6 @@ async function loadResources() {
             "<p>Sorry, we couldn’t load the resources at this time.</p>";
     }
 }
-
 
 /* ================================ */
 /* Modal Events */
@@ -110,7 +113,6 @@ function attachModalEvents() {
         }
     });
 }
-
 
 // Load resources after DOM is ready
 document.addEventListener("DOMContentLoaded", loadResources);

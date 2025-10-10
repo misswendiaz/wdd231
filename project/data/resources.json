@@ -5,16 +5,28 @@
             "items": [
                 {
                     "title": "CK-12 FlexBooks®",
+                    "category": "CK-12 References",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Customizable textbooks with videos, diagrams, and embedded learning tools.",
                     "link": "https://www.ck12.org/flexbook/"
                 },
                 {
                     "title": "CK-12 Concept Pages & Videos",
+                    "category": "CK-12 References",
+                    "grade": "All Grades",
+                    "type": "Video",
+                    "cost": "Free",
                     "description": "Concise concept explanations and walkthrough videos in math & science.",
                     "link": "https://www.ck12.org/concept/"
                 },
                 {
                     "title": "CK-12 HS Textbooks",
+                    "category": "CK-12 References",
+                    "grade": "High School",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Grade-level FlexBooks® with structured lessons and supporting resources.",
                     "link": "https://www.ck12.org/high-school"
                 }
@@ -25,16 +37,28 @@
             "items": [
                 {
                     "title": "Project Gutenberg",
+                    "category": "Languages",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Public-domain literature and multilingual texts — ideal for language learning.",
                     "link": "https://www.gutenberg.org"
                 },
                 {
                     "title": "LibreTexts",
+                    "category": "Languages",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Open-access textbooks across languages, STEM, humanities, and social sciences.",
                     "link": "https://libretexts.org"
                 },
                 {
                     "title": "Wikibooks: Filipino",
+                    "category": "Languages",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Editable grammar and language guides for Filipino and English learners.",
                     "link": "https://en.wikibooks.org/wiki/Category:Filipino_language"
                 }
@@ -45,16 +69,28 @@
             "items": [
                 {
                     "title": "OpenStax Science",
+                    "category": "Science",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Free textbooks for Biology, Chemistry, Physics, and Environmental Science.",
                     "link": "https://openstax.org/subjects/science"
                 },
                 {
                     "title": "Open Textbook – Science",
+                    "category": "Science",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Diverse, accessible science textbooks across disciplines.",
                     "link": "https://open.umn.edu/opentextbooks/subjects/science"
                 },
                 {
                     "title": "Wikibooks: Science",
+                    "category": "Science",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Collaborative science texts covering biology, physics, and technology.",
                     "link": "https://en.wikibooks.org/wiki/Category:Science"
                 }
@@ -65,16 +101,28 @@
             "items": [
                 {
                     "title": "OpenStax Math",
+                    "category": "Math",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Peer-reviewed textbooks for PreCalculus, Calculus, Statistics, and more.",
                     "link": "https://openstax.org/subjects/math"
                 },
                 {
                     "title": "Open Textbook Library – Math",
+                    "category": "Math",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Freely licensed textbooks covering algebra, geometry, and other topics.",
                     "link": "https://open.umn.edu/opentextbooks/subjects/math"
                 },
                 {
                     "title": "Wikibooks: Mathematics",
+                    "category": "Math",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Community-driven math texts from basic to advanced levels.",
                     "link": "https://en.wikibooks.org/wiki/Category:Mathematics"
                 }
@@ -85,16 +133,28 @@
             "items": [
                 {
                     "title": "PSSC Social Science Info",
+                    "category": "Social Science",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Open-access articles on Philippine social science and history topics.",
                     "link": "https://pssc.org.ph/social-science-information/"
                 },
                 {
                     "title": "Philippine History Source Book",
+                    "category": "Social Science",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Annotated primary sources for Philippine history education.",
                     "link": "https://k12teacherstaffdevelopment.com/filippinka/philippine-history-source-book"
                 },
                 {
                     "title": "Wikibooks: Social Science",
+                    "category": "Social Science",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Text-based guides on sociology, anthropology, and related fields.",
                     "link": "https://en.wikibooks.org/wiki/Category:Social_science"
                 }
@@ -105,16 +165,28 @@
             "items": [
                 {
                     "title": "Wikibooks: Music",
+                    "category": "Music",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Free textbooks on music theory, history, and notation.",
                     "link": "https://en.wikibooks.org/wiki/Category:Music"
                 },
                 {
                     "title": "Public Domain Music Collection",
+                    "category": "Music",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Vintage sheet music and music theory essays in the public domain.",
                     "link": "https://publicdomaininformation.org/music-waveforms"
                 },
                 {
                     "title": "Wikimedia: Music Theory",
+                    "category": "Music",
+                    "grade": "All Grades",
+                    "type": "Textbook",
+                    "cost": "Free",
                     "description": "Open-access articles on music theory fundamentals.",
                     "link": "https://en.wikipedia.org/wiki/Category:Music_theory"
                 }
@@ -127,16 +199,28 @@
             "items": [
                 {
                     "title": "CK-12 Simulations (PLIX)",
+                    "category": "CK-12 Tools",
+                    "grade": "All Grades",
+                    "type": "Simulation",
+                    "cost": "Free",
                     "description": "Interactive science and math simulations: manipulate variables and explore models.",
                     "link": "https://flexbooks.ck12.org/cwatch/"
                 },
                 {
                     "title": "CK-12 Braingenie Practice",
+                    "category": "CK-12 Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Adaptive math & science problem engine with instant feedback.",
                     "link": "https://www.ck12.org/practice/"
                 },
                 {
                     "title": "CK-12 FlexBooks® as Tool",
+                    "category": "CK-12 Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Use embedded quizzes and manipulatives inside FlexBooks® interactively.",
                     "link": "https://www.ck12.org/flexbook/"
                 }
@@ -147,16 +231,28 @@
             "items": [
                 {
                     "title": "Duolingo",
+                    "category": "Languages",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Free courses for English, Tagalog, Spanish, and more.",
                     "link": "https://www.duolingo.com"
                 },
                 {
                     "title": "TypingClub",
+                    "category": "Languages",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Typing lessons and drills to build keyboard literacy.",
                     "link": "https://www.typingclub.com"
                 },
                 {
                     "title": "Epic! (Free Tier)",
+                    "category": "Languages",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Access digital books and videos for young readers.",
                     "link": "https://www.epic.com"
                 }
@@ -167,16 +263,28 @@
             "items": [
                 {
                     "title": "BioNetwork Virtual Microscope",
+                    "category": "Science Tools",
+                    "grade": "All Grades",
+                    "type": "Simulation",
+                    "cost": "Free",
                     "description": "Browser-based microscope simulator with lens switching and specimen viewing.",
                     "link": "https://www.ncbionetwork.org/educational-resources/elearning/virtual-microscope"
                 },
                 {
                     "title": "MyScope Explore (SEM)",
+                    "category": "Science Tools",
+                    "grade": "All Grades",
+                    "type": "Simulation",
+                    "cost": "Free",
                     "description": "Free scanning-electron microscope simulation with zoom controls.",
                     "link": "https://www.myscope-explore.org/virtualSEM_explore.html"
                 },
                 {
                     "title": "CASK Virtual Viewer",
+                    "category": "Science Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Zoomable digital slides and anatomy images for browser viewing.",
                     "link": "https://www.caskanatomy.info/products/caskviewer/"
                 }
@@ -187,26 +295,46 @@
             "items": [
                 {
                     "title": "Khan Academy",
+                    "category": "Math Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Extensive math lessons with practice exercises and tutorials.",
                     "link": "https://www.khanacademy.org"
                 },
                 {
                     "title": "Desmos Graphing Calculator",
+                    "category": "Math Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Visualize and interact with mathematical equations online.",
                     "link": "https://www.desmos.com"
                 },
                 {
                     "title": "GeoGebra Visual Toolkit",
+                    "category": "Math Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Dynamic tools for geometry, algebra, calculus, and statistics.",
                     "link": "https://www.geogebra.org"
                 },
                 {
                     "title": "Wolfram|Alpha (Free)",
+                    "category": "Math Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Computational engine providing answers and visual math solutions.",
                     "link": "https://www.wolframalpha.com"
                 },
                 {
                     "title": "Wolfram Arithmetic Manipulatives",
+                    "category": "Math Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Interactive fraction and number-line tools designed for elementary learners.",
                     "link": "https://blog.wolframalpha.com/math-for-all-ages-online-manipulatives-for-basic-arithmetic"
                 }
@@ -217,16 +345,28 @@
             "items": [
                 {
                     "title": "OER Commons",
+                    "category": "General Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Lesson plans and interactive resources created by educators in multiple subjects.",
                     "link": "https://www.oercommons.org"
                 },
                 {
                     "title": "Academic Earth",
+                    "category": "General Tools",
+                    "grade": "All Grades",
+                    "type": "Video",
+                    "cost": "Free",
                     "description": "Free video lectures covering topics from humanities, science, and more.",
                     "link": "https://academicearth.org"
                 },
                 {
                     "title": "HelpTeaching Worksheets",
+                    "category": "General Tools",
+                    "grade": "All Grades",
+                    "type": "Interactive Tool",
+                    "cost": "Free",
                     "description": "Printable worksheets for math, writing, science, social studies, and music.",
                     "link": "https://helpteaching.com"
                 }
