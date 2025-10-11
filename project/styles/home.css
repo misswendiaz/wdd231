@@ -169,6 +169,10 @@ main#homepage {
     padding: 1rem;
 }
 
+#hero {
+    width: 75vw;
+}
+
 .intro {
     margin-bottom: 2rem;
 }
