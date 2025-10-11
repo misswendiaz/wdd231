@@ -23,9 +23,9 @@
     --transition: 0.3s ease;
 }
 
-/* ============================
+/* =============
    Base Styling
-   ============================ */
+   ============= */
 body {
     font-family: var(--font-body);
     background-color: var(--bg-main);
@@ -59,9 +59,9 @@ header h1 {
     padding: 1rem;
 }
 
-/* ============================
+/* ==================
    Confirmation Card
-   ============================ */
+   ================== */
 .confirmation-card {
     background-color: var(--bg-surface);
     border-radius: var(--border-radius);
@@ -77,9 +77,9 @@ header h1 {
     color: var(--primary-color);
 }
 
-/* ============================
+/* ===============
    Session Details
-   ============================ */
+   =============== */
 #session-details {
     display: flex;
     flex-direction: column;
@@ -110,9 +110,9 @@ header h1 {
     max-width: 60%;
 }
 
-/* ============================
+/* =======
    Buttons
-   ============================ */
+   ======= */
 .confirmation-actions {
     display: flex;
     justify-content: center;
@@ -153,9 +153,9 @@ header h1 {
     color: var(--text-primary);
 }
 
-/* ============================
+/* ======
    Footer
-   ============================ */
+   ====== */
 footer {
     text-align: center;
     padding: 1rem;
@@ -164,9 +164,9 @@ footer {
     margin-top: 2rem;
 }
 
-/* ============================
+/* ==========
    Animations
-   ============================ */
+   ========== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -179,9 +179,9 @@ footer {
     }
 }
 
-/* ============================
+/* ==========
    Responsive
-   ============================ */
+   ========== */
 @media (max-width: 600px) {
     .confirmation-item {
         flex-direction: column;

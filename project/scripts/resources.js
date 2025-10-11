@@ -1,14 +1,13 @@
-/* ================================ */
+/* ======================= */
 /* Import Hamburger Module */
-/* ================================ */
+/* ======================= */
 import { initNavigation } from './hamburger.mjs';
 
-// Initialize hamburger menu immediately
 initNavigation();
 
-/* ================================ */
+/* ========================= */
 /* Dynamic Resources + Modal */
-/* ================================ */
+/* ========================= */
 async function loadResources() {
     try {
         const response = await fetch("data/resources.json");
@@ -84,9 +83,9 @@ async function loadResources() {
     }
 }
 
-/* ================================ */
+/* ============ */
 /* Modal Events */
-/* ================================ */
+/* ============ */
 function attachModalEvents() {
     const modal = document.getElementById("modal");
     const closeBtn = document.getElementById("close-modal");
@@ -117,5 +116,4 @@ function attachModalEvents() {
     });
 }
 
-// Load resources after DOM is ready
 document.addEventListener("DOMContentLoaded", loadResources);

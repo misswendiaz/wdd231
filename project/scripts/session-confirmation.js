@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!confirmationSection) return;
 
     const params = new URLSearchParams(window.location.search);
-    // Map URL params to sessionData with the correct keys
+    
     const sessionData = {
         date: params.get("Date") || "",
         start: params.get("Start") || "",
@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
         paid: false
     };
 
-    // Populate the confirmation section
+    
     for (const [key, value] of Object.entries(sessionData)) {
-        if (key === "paid") continue; // skip paid status in confirmation page
+        if (key === "paid") continue;
         const item = document.createElement("div");
         item.classList.add("confirmation-item");
         item.innerHTML = `<strong>${formatLabel(key)}:</strong> <span>${value || '—'}</span>`;
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         confirmBtn.addEventListener("click", () => {
             const existing = JSON.parse(localStorage.getItem("tutorBuddySessions")) || [];
 
-            // Ensure numeric fields and boolean paid
+            
             sessionData.Rate = parseFloat(sessionData.Rate) || 0;
             sessionData.Discount = parseFloat(sessionData.Discount) || 0;
             sessionData.paid = false;
@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ================================
-    // Edit Button: prefill session form
-    // ================================
+    // ============
+    // Edit Button
+    // ============
     const editBtn = document.getElementById("editBtn");
     if (editBtn) {
         editBtn.addEventListener("click", () => {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 params.set(key, value);
             }
 
-            // Redirect to sessions.html with all fields as query params
+            
             window.location.href = `sessions.html?${params.toString()}`;
         });
     }

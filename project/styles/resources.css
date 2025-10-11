@@ -65,9 +65,9 @@ p {
     color: var(--text-secondary);
 }
 
-/* ============================
+/* ====================
    Header & Navigation
-   ============================ */
+   ==================== */
 header {
     background-color: var(--bg-surface);
     box-shadow: var(--shadow);
@@ -162,9 +162,9 @@ header {
     border-radius: var(--border-radius);
 }
 
-/* ============================
+/* =======================
    Responsive Breakpoints
-   ============================ */
+   ======================= */
 
 @media (max-width: 768px) {
     .hamburger {
@@ -217,7 +217,6 @@ header {
     .category-group .features {
         display: grid;
         grid-template-columns: 1fr;
-        /* cards in one column on mobile */
         gap: 1rem;
         margin: 0.5rem 0;
     }
@@ -247,22 +246,20 @@ header {
     text-decoration: underline;
 }
 
-/* ============================
-   Columns Wrapper for References & Tools
-   ============================ */
+/* ===================
+   References & Tools
+   =================== */
 .columns-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
-/* Each section (References or Tools) is a column */
 .section-column {
     display: flex;
     flex-direction: column;
 }
 
-/* Section headers inside each column */
 .section-column h3 {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -272,7 +269,6 @@ header {
     padding-bottom: 0.25rem;
 }
 
-/* Cards inside each category stacked vertically */
 .category-group .features {
     display: flex;
     flex-direction: column;
@@ -285,9 +281,9 @@ h4 {
     margin-top: 1.5rem;
 }
 
-/* ============================
+/* =====================
    Feature Card Styling
-   ============================ */
+   ===================== */
 .feature-card {
     background-color: var(--bg-surface);
     border: 1px solid #aaa;
@@ -344,9 +340,9 @@ h4 {
     color: var(--bg-surface);
 }
 
-/* ============================
+/* ====================
    Modal Dialog Styles
-   ============================ */
+   ==================== */
 .modal {
     position: fixed;
     top: 0;
@@ -373,7 +369,6 @@ h4 {
     text-align: center;
     box-shadow: var(--shadow);
     position: relative;
-    /* needed for close button */
 }
 
 .modal-content h3 {
@@ -413,9 +408,9 @@ h4 {
 }
 
 
-/* ============================
+/* =======
    Footer
-   ============================ */
+   ======= */
 
 footer {
     text-align: center;

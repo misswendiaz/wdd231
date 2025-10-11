@@ -1,28 +1,28 @@
-/* ================================ */
+/* ======================= */
 /* Import Hamburger Module */
-/* ================================ */
+/* ======================= */
 import { initNavigation } from './hamburger.mjs';
 
-/* ================================ */
+/* ===================== */
 /* Initialize Navigation */
-/* ================================ */
+/* ===================== */
 initNavigation();
 
 document.addEventListener("DOMContentLoaded", () => {
-    /* ================================ */
+    /* ================== */
     /* Element references */
-    /* ================================ */
+    /* ================== */
     const form = document.getElementById("addSession");
     const tableBody = document.querySelector("#table tbody");
     const summary = document.getElementById("summary");
     const markFilteredBtn = document.getElementById("mark-all-paid");
 
-    /* ================================ */
+    /* ============================== */
     /* Prefill form from query params */
-    /* ================================ */
+    /* ============================== */
     (function prefillFormFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
-        if (!form || !urlParams.has("date")) return; // exit if no form or no session data
+        if (!form || !urlParams.has("date")) return;
 
         document.getElementById("date").value = urlParams.get("date") || "";
         document.getElementById("start").value = urlParams.get("start") || "";
@@ -46,15 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const editForm = document.getElementById("editSessionForm");
     const cancelEditBtn = document.getElementById("cancel-edit");
 
-    /* ================================ */
+    /* ===== */
     /* State */
-    /* ================================ */
+    /* ===== */
     let sessions = [];
-    let currentEditIndex = null; // original index in `sessions` for the currently opened item
+    let currentEditIndex = null;
 
-    /* ================================ */
+    /* ========================= */
     /* LocalStorage: load & save */
-    /* ================================ */
+    /* ========================= */
     function loadSessions() {
         const saved = localStorage.getItem("tutorBuddySessions");
         if (saved) {
@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("tutorBuddySessions", JSON.stringify(sessions));
     }
 
-    /* ================================ */
+    /* =========== */
     /* Add Session */
-    /* ================================ */
+    /* =========== */
     if (form) {
         form.addEventListener("submit", (e) => {
             const session = {
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ================================ */
+    /* ================== */
     /* Calculate Duration */
-    /* ================================ */
+    /* ================== */
     function calculateDuration(start, end) {
         const startTime = new Date(`1970-01-01T${start}:00`);
         const endTime = new Date(`1970-01-01T${end}:00`);
@@ -105,9 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return diff > 0 ? diff : 0;
     }
 
-    /* ================================ */
+    /* ============ */
     /* Render Table */
-    /* ================================ */
+    /* ============ */
     function renderTable(data) {
         tableBody.innerHTML = "";
 
@@ -132,12 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
         attachDetailButtons();
         attachPaidCheckboxes(data);
         updateSummary(data);
-        updateMarkFilteredButton(); //
+        updateMarkFilteredButton(); 
     }
 
-    /* ================================ */
+    /* ============== */
     /* Update Summary */
-    /* ================================ */
+    /* ============== */
     function updateSummary(data) {
         const total = data.reduce((acc, s) => {
             if (!s.paid) {
@@ -149,9 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
         summary.textContent = `Amount Due: ₱${total.toFixed(2)}`;
     }
 
-    /* ================================ */
+    /* ======================== */
     /* Paid checkboxes handling */
-    /* ================================ */
+    /* ======================== */
     function attachPaidCheckboxes(data) {
         document.querySelectorAll(".paid-checkbox").forEach(cb => {
             cb.onchange = null;
@@ -167,9 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ================================ */
+    /* ============== */
     /* Details Dialog */
-    /* ================================ */
+    /* ============== */
     function attachDetailButtons() {
         document.querySelectorAll(".details-btn").forEach(btn => {
             btn.onclick = null;
@@ -224,9 +224,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ================================ */
+    /* ============ */
     /* Close Dialog */
-    /* ================================ */
+    /* ============ */
     if (closeDialogBtn) {
         closeDialogBtn.addEventListener("click", () => {
             if (typeof dialog.close === "function") dialog.close();
@@ -243,9 +243,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ================================ */
+    /* ================= */
     /* Edit Dialog Logic */
-    /* ================================ */
+    /* ================= */
     function openEditDialog(index) {
         if (!sessions[index]) return;
 
@@ -303,9 +303,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ================================ */
+    /* ======= */
     /* Filters */
-    /* ================================ */
+    /* ======= */
     document.getElementById("apply-filters").addEventListener("click", () => {
         let filtered = [...sessions];
         const studentFilter = document.getElementById("filter-student").value.toLowerCase();
@@ -318,9 +318,9 @@ document.addEventListener("DOMContentLoaded", () => {
         renderTable(sessions);
     });
 
-    /* ================================ */
+    /* ================================= */
     /* Bulk mark filtered as Paid/Unpaid */
-    /* ================================ */
+    /* ================================= */
     function updateMarkFilteredButton() {
         const filteredSessions = Array.from(tableBody.querySelectorAll("tr")).map(row => {
             const index = Number(row.querySelector(".paid-checkbox").dataset.index);
@@ -345,8 +345,8 @@ document.addEventListener("DOMContentLoaded", () => {
         renderTable(filteredSessions);
     });
 
-    /* ================================ */
+    /* ============ */
     /* Initial load */
-    /* ================================ */
+    /* ============ */
     loadSessions();
 });
