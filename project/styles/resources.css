@@ -156,7 +156,7 @@ header {
     color: white;
 }
 
-.current {
+.nav-links li.current a {
     background-color: var(--accent-color);
     color: var(--text-primary);
     border-radius: var(--border-radius);

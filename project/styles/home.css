@@ -117,7 +117,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     list-style: none;
 }
 
@@ -127,7 +127,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 140px;
-    height: 40px;
     padding: 0 0.5rem;
     text-align: center;
     color: var(--primary-color);
@@ -149,7 +148,7 @@ header {
     color: white;
 }
 
-.current {
+.nav-links li.current a {
     background-color: var(--accent-color);
     color: var(--text-primary);
     border-radius: var(--border-radius);
